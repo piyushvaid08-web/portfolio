@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services by Piyush Vaid | Digital Marketing & AI Websites</title>
+    <meta
+      name="description"
+      content="Explore the premium services offered by Piyush Vaid. Specializing in luxury branding, high-end digital marketing, AI-driven website development, and visual storytelling."
+    />
+    <meta name="keywords" content="Piyush Vaid, digital marketing services, AI website development, brand strategy, luxury branding, videography, photography" />
+    <meta name="theme-color" content="#050505" />
+    <meta property="og:title" content="Services by Piyush Vaid | Digital Marketing & AI Websites" />
+    <meta property="og:description" content="Elevate your brand with digital marketing, AI web design, and creative strategy by Piyush Vaid." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              accent: '#48CAE4',
+              gold: '#90E0EF',
+              deep: '#0B132B',
+              soft: 'rgba(255,255,255,0.05)'
+            },
+            boxShadow: {
+              glow: '0 0 0 1px rgba(255,255,255,0.08), 0 20px 80px rgba(72,202,228,0.18)'
+            }
+          }
+        }
+      };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.3/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r156/three.min.js"></script>
+  </head>
+  <body>
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-shell">
+        <div class="loading-orb"></div>
+        <p>Loading Services by Piyush Vaid</p>
+      </div>
+    </div>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="scroll-progress"></div>
+    <button class="scroll-top" aria-label="Scroll to top">↑</button>
+
+    <div class="site-bg" aria-hidden="true"></div>
+    <canvas id="mesh-canvas" aria-hidden="true"></canvas>
+
+    <header class="sticky top-0 z-50 px-4 py-4 md:px-8 lg:px-10">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-xl">
+        <a href="index.html" class="brand-mark text-lg font-semibold tracking-[0.3em] uppercase text-white">Piyush Vaid</a>
+        <div class="hidden items-center gap-6 text-sm text-white/70 md:flex">
+          <a href="index.html" class="transition hover:text-white">Home</a>
+          <a href="about-piyush-vaid.html" class="transition hover:text-white">About</a>
+          <a href="services.html" class="text-white">Services</a>
+          <a href="case-studies.html" class="transition hover:text-white">Case Studies</a>
+          <a href="index.html#contact" class="transition hover:text-white">Contact</a>
+        </div>
+        <button id="theme-toggle" class="magnetic rounded-full border border-white/10 bg-white/10 px-3 py-2 text-sm text-white/80 transition hover:bg-white/20">Dark / Light</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="relative isolate overflow-hidden px-4 pb-24 pt-6 md:px-8 lg:px-10 lg:pb-32 lg:pt-12">
+        <div class="mx-auto max-w-4xl space-y-8">
+          <div class="space-y-5 text-center">
+            <h1 class="text-reveal text-5xl font-semibold leading-[0.9] text-white sm:text-6xl">
+              Services by Piyush Vaid
+            </h1>
+            <p class="mx-auto max-w-2xl text-lg leading-8 text-white/70">
+              Comprehensive digital solutions crafted by Piyush Vaid to elevate your brand's presence and performance.
+            </p>
+          </div>
+          
+          <div class="grid gap-6 mt-12">
+            <!-- Digital Marketing -->
+            <div class="glass-card reveal rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-2xl">
+              <h2 class="text-2xl font-semibold text-white mb-4">Digital Marketing Strategies</h2>
+              <p class="text-white/80 leading-relaxed mb-4">
+                Piyush Vaid specializes in creating data-driven digital marketing campaigns. By analyzing market trends and audience behaviors, Piyush Vaid designs strategies that maximize engagement, improve conversion rates, and build lasting customer loyalty. From SEO to social media and paid advertising, every campaign is optimized for high ROI.
+              </p>
+            </div>
+            
+            <!-- AI Web Development -->
+            <div class="glass-card reveal rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-2xl">
+              <h2 class="text-2xl font-semibold text-white mb-4">AI-Driven Website Development</h2>
+              <p class="text-white/80 leading-relaxed mb-4">
+                In today's fast-paced digital world, a static website isn't enough. Piyush Vaid builds dynamic, AI-integrated websites that offer personalized user experiences. Leveraging cutting-edge technologies, the websites developed by Piyush Vaid are fast, secure, visually stunning, and highly optimized for search engines.
+              </p>
+            </div>
+            
+            <!-- Luxury Branding -->
+            <div class="glass-card reveal rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-2xl">
+              <h2 class="text-2xl font-semibold text-white mb-4">Luxury Branding & Content Systems</h2>
+              <p class="text-white/80 leading-relaxed mb-4">
+                A strong brand identity is crucial. Drawing from experience in the premium product space, Piyush Vaid helps businesses position themselves as luxury leaders. This service encompasses everything from visual identity and brand voice to high-end content creation, ensuring your brand communicates value at every touchpoint.
+              </p>
+            </div>
+
+            <!-- Photography & Videography -->
+            <div class="glass-card reveal rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-2xl">
+              <h2 class="text-2xl font-semibold text-white mb-4">Photography & Videography</h2>
+              <p class="text-white/80 leading-relaxed mb-4">
+                Visual storytelling is at the heart of engagement. Piyush Vaid offers professional photography and videography services to showcase your products, services, and brand story. Whether it's for an ad campaign, website content, or social media, the visual assets produced by Piyush Vaid are designed to captivate and convert.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="px-4 pb-10 pt-4 md:px-8 lg:px-10">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 rounded-[2rem] border border-white/10 bg-white/5 px-6 py-6 text-center text-sm text-white/60 backdrop-blur-xl md:flex-row md:text-left">
+        <div>
+          <p class="text-lg font-semibold text-white">Piyush Vaid</p>
+          <p>Luxury brand builder, storyteller, and digital creator.</p>
+        </div>
+        <div class="flex gap-3">
+          <a href="#" class="rounded-full border border-white/10 bg-black/20 px-3 py-2 transition hover:text-white">Instagram</a>
+          <a href="#" class="rounded-full border border-white/10 bg-black/20 px-3 py-2 transition hover:text-white">LinkedIn</a>
+          <a href="#" class="rounded-full border border-white/10 bg-black/20 px-3 py-2 transition hover:text-white">Email</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

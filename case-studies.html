@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case Studies | Piyush Vaid - Portfolio Showcase</title>
+    <meta
+      name="description"
+      content="Dive into the case studies of Piyush Vaid. Explore how digital marketing, luxury brand identity, web development, photography, videography, and AI workflows solve real business challenges."
+    />
+    <meta name="keywords" content="Piyush Vaid, case studies, digital marketing campaign, luxury branding, website development portfolio, photography portfolio, cinematic video" />
+    <meta name="theme-color" content="#050505" />
+    <meta property="og:title" content="Case Studies | Piyush Vaid - Portfolio Showcase" />
+    <meta property="og:description" content="Explore real-world projects and brand transformations engineered by Piyush Vaid." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              accent: '#48CAE4',
+              gold: '#90E0EF',
+              deep: '#0B132B',
+              soft: 'rgba(255,255,255,0.05)'
+            },
+            boxShadow: {
+              glow: '0 0 0 1px rgba(255,255,255,0.08), 0 20px 80px rgba(72,202,228,0.18)'
+            }
+          }
+        }
+      };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.3/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r156/three.min.js"></script>
+  </head>
+  <body>
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-shell">
+        <div class="loading-orb"></div>
+        <p>Loading Case Studies by Piyush Vaid</p>
+      </div>
+    </div>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="scroll-progress"></div>
+    <button class="scroll-top" aria-label="Scroll to top">↑</button>
+
+    <div class="site-bg" aria-hidden="true"></div>
+    <canvas id="mesh-canvas" aria-hidden="true"></canvas>
+
+    <header class="sticky top-0 z-50 px-4 py-4 md:px-8 lg:px-10">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-xl">
+        <a href="index.html" class="brand-mark text-lg font-semibold tracking-[0.3em] uppercase text-white">Piyush Vaid</a>
+        <div class="hidden items-center gap-6 text-sm text-white/70 md:flex">
+          <a href="index.html" class="transition hover:text-white">Home</a>
+          <a href="about-piyush-vaid.html" class="transition hover:text-white">About</a>
+          <a href="services.html" class="transition hover:text-white">Services</a>
+          <a href="case-studies.html" class="text-white">Case Studies</a>
+          <a href="index.html#contact" class="transition hover:text-white">Contact</a>
+        </div>
+        <button id="theme-toggle" class="magnetic rounded-full border border-white/10 bg-white/10 px-3 py-2 text-sm text-white/80 transition hover:bg-white/20">Dark / Light</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="relative isolate overflow-hidden px-4 pb-24 pt-6 md:px-8 lg:px-10 lg:pb-32 lg:pt-12">
+        <div class="mx-auto max-w-5xl space-y-16">
+          <div class="space-y-5 text-center">
+            <h1 class="text-reveal text-5xl font-semibold leading-[0.9] text-white sm:text-6xl">
+              Case Studies
+            </h1>
+            <p class="mx-auto max-w-2xl text-lg leading-8 text-white/70">
+              An in-depth look at how Piyush Vaid merges strategy, technology, and aesthetic execution to deliver results.
+            </p>
+          </div>
+
+          <div class="space-y-12">
+            <!-- Case Study 1: Growth Campaign -->
+            <div class="glass-card reveal overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-2xl md:p-8 lg:grid lg:grid-cols-12 lg:gap-8">
+              <div class="lg:col-span-5 flex flex-col justify-between mb-6 lg:mb-0">
+                <div>
+                  <img src="images/logo-marketing.png" alt="Digital Marketing Campaign Preview" class="w-full rounded-[1.5rem] object-cover h-64 lg:h-72 mb-4" />
+                  <div class="mt-4 flex flex-wrap gap-2 text-xs uppercase tracking-[0.25em] text-white/50">
+                    <span class="rounded-full border border-white/10 px-3 py-1">Meta Ads</span>
+                    <span class="rounded-full border border-white/10 px-3 py-1">SEO</span>
+                    <span class="rounded-full border border-white/10 px-3 py-1">Analytics</span>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:col-span-7 flex flex-col justify-center space-y-6">
+                <div>
+                  <p class="text-sm uppercase tracking-[0.3em] text-accent">Digital Marketing</p>
+                  <h2 class="text-2xl font-semibold text-white mt-1">Growth Campaign Concept</h2>
+                </div>
+                <div class="space-y-4 text-sm leading-relaxed text-white/80">
+                  <p>
+                    <strong>The Challenge:</strong> A premium direct-to-consumer brand needed to launch in a highly competitive digital landscape, facing skyrocketing acquisition costs and poor initial organic search visibility.
+                  </p>
+                  <p>
+                    <strong>The Solution:</strong> Piyush Vaid developed a comprehensive SEO framework coupled with highly targeted Meta ad campaigns. By targeting intent-focused, low-competition keywords and crafting luxurious, narrative-driven ad creatives, the acquisition strategy prioritized high-value customers.
+                  </p>
+                  <p>
+                    <strong>The Outcome:</strong> Over a 90-day execution period, the brand achieved a 140% boost in organic visibility, generated a 3.2x return on ad spend (ROAS), and established a sustainable foundation for customer retention.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Case Study 2: Luxury Identity -->
+            <div class="glass-card reveal overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-2xl md:p-8 lg:grid lg:grid-cols-12 lg:gap-8">
+              <div class="lg:col-span-5 flex flex-col justify-between mb-6 lg:mb-0">
+                <div>
+                  <img src="images/logo-branding.png" alt="Luxury Brand Identity Preview" class="w-full rounded-[1.5rem] object-cover h-64 lg:h-72 mb-4" />
+                  <div class="mt-4 flex flex-wrap gap-2 text-xs uppercase tracking-[0.25em] text-white/50">
+                    <span class="rounded-full border border-white/10 px-3 py-1">Brand Strategy</span>
+                    <span class="rounded-full border border-white/10 px-3 py-1">Visual Identity</span>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:col-span-7 flex flex-col justify-center space-y-6">
+                <div>
+                  <p class="text-sm uppercase tracking-[0.3em] text-accent">Branding</p>
+                  <h2 class="text-2xl font-semibold text-white mt-1">Luxury Identity System</h2>
+                </div>
+                <div class="space-y-4 text-sm leading-relaxed text-white/80">
+                  <p>
+                    <strong>The Challenge:</strong> An emerging fragrance business struggled with market perception, appearing generic and unable to charge the premium margins necessary for a boutique brand.
+                  </p>
+                  <p>
+                    <strong>The Solution:</strong> Piyush Vaid reconstructed the brand's identity system. This included designing a minimalist, high-contrast visual brand asset system, formulating an elegant packaging standard, and detailing a sensory storytelling guide that repositioned the fragrance as a luxury collector's item.
+                  </p>
+                  <p>
+                    <strong>The Outcome:</strong> Repositioning successfully enabled a 60% increase in product pricing. The brand gained traction in regional premium boutiques and established a highly desirable visual presence.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Case Study 3: Immersive Web Build -->
+            <div class="glass-card reveal overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-2xl md:p-8 lg:grid lg:grid-cols-12 lg:gap-8">
+              <div class="lg:col-span-5 flex flex-col justify-between mb-6 lg:mb-0">
+                <div>
+                  <img src="images/logo-website.png" alt="Immersive Web Project Preview" class="w-full rounded-[1.5rem] object-cover h-64 lg:h-72 mb-4" />
+                  <div class="mt-4 flex flex-wrap gap-2 text-xs uppercase tracking-[0.25em] text-white/50">
+                    <span class="rounded-full border border-white/10 px-3 py-1">HTML</span>
+                    <span class="rounded-full border border-white/10 px-3 py-1">CSS</span>
+                    <span class="rounded-full border border-white/10 px-3 py-1">JavaScript</span>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:col-span-7 flex flex-col justify-center space-y-6">
+                <div>
+                  <p class="text-sm uppercase tracking-[0.3em] text-accent">Website Design</p>
+                  <h2 class="text-2xl font-semibold text-white mt-1">Immersive AI Website</h2>
+                </div>
+                <div class="space-y-4 text-sm leading-relaxed text-white/80">
+                  <p>
+                    <strong>The Challenge:</strong> The client's original web presence was slow, unresponsive, and visually outdated, causing a 65% drop-off rate on landing pages.
+                  </p>
+                  <p>
+                    <strong>The Solution:</strong> Piyush Vaid developed a highly responsive, custom portfolio platform. Integrating performance optimization techniques, GSAP scrolling animations, clean custom cursors, and an interactive Three.js 3D backdrop, the build combined design aesthetics with engineering speed.
+                  </p>
+                  <p>
+                    <strong>The Outcome:</strong> Average load speed dropped from 4.2 seconds to 1.1 seconds. Landing page drop-off rates fell by 35% while visitor engagement time increased by 150%.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Case Study 4: Editorial Product Story -->
+            <div class="glass-card reveal overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-2xl md:p-8 lg:grid lg:grid-cols-12 lg:gap-8">
+              <div class="lg:col-span-5 flex flex-col justify-between mb-6 lg:mb-0">
+                <div>
+                  <img src="images/logo-photography.png" alt="Product Photography Preview" class="w-full rounded-[1.5rem] object-cover h-64 lg:h-72 mb-4" />
+                  <div class="mt-4 flex flex-wrap gap-2 text-xs uppercase tracking-[0.25em] text-white/50">
+                    <span class="rounded-full border border-white/10 px-3 py-1">Product Shots</span>
+                    <span class="rounded-full border border-white/10 px-3 py-1">Retouching</span>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:col-span-7 flex flex-col justify-center space-y-6">
+                <div>
+                  <p class="text-sm uppercase tracking-[0.3em] text-accent">Photography</p>
+                  <h2 class="text-2xl font-semibold text-white mt-1">Editorial Product Story</h2>
+                </div>
+                <div class="space-y-4 text-sm leading-relaxed text-white/80">
+                  <p>
+                    <strong>The Challenge:</strong> A premium lifestyle brand struggled with standard, flat-lit product catalogs that failed to communicate quality and mood on their primary digital storefront.
+                  </p>
+                  <p>
+                    <strong>The Solution:</strong> Piyush Vaid directed and shot a series of high-contrast editorial product photographs. By utilizing dramatic lighting, shadows, and reflections, each photo was designed to evoke a sensory experience suited for high-end digital marketing campaigns.
+                  </p>
+                  <p>
+                    <strong>The Outcome:</strong> The visual suite was deployed across web and social assets, driving a 50% increase in social media engagement and elevating the brand's aesthetic perception.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Case Study 5: Cinematic Brand Film -->
+            <div class="glass-card reveal overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-2xl md:p-8 lg:grid lg:grid-cols-12 lg:gap-8">
+              <div class="lg:col-span-5 flex flex-col justify-between mb-6 lg:mb-0">
+                <div>
+                  <img src="images/logo-videography.png" alt="Videography Preview" class="w-full rounded-[1.5rem] object-cover h-64 lg:h-72 mb-4" />
+                  <div class="mt-4 flex flex-wrap gap-2 text-xs uppercase tracking-[0.25em] text-white/50">
+                    <span class="rounded-full border border-white/10 px-3 py-1">Editing</span>
+                    <span class="rounded-full border border-white/10 px-3 py-1">Direction</span>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:col-span-7 flex flex-col justify-center space-y-6">
+                <div>
+                  <p class="text-sm uppercase tracking-[0.3em] text-accent">Videography</p>
+                  <h2 class="text-2xl font-semibold text-white mt-1">Cinematic Brand Film</h2>
+                </div>
+                <div class="space-y-4 text-sm leading-relaxed text-white/80">
+                  <p>
+                    <strong>The Challenge:</strong> Communicating the premium nature of a fragrance brand within a short, 45-second video context without resorting to generic advertising tropes.
+                  </p>
+                  <p>
+                    <strong>The Solution:</strong> Piyush Vaid directed and edited a cinematic brand film. Focusing heavily on macro details—liquid motion, light playing on glass bottles, and textured surfaces—the film established an emotional connection using ambient sound design and rhythmic pacing.
+                  </p>
+                  <p>
+                    <strong>The Outcome:</strong> The campaign achieved over 100,000 organic views on digital platforms, driving direct traffic to the brand's digital store and establishing a high-prestige brand image.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Case Study 6: Prompt-to-Experience -->
+            <div class="glass-card reveal overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-2xl md:p-8 lg:grid lg:grid-cols-12 lg:gap-8">
+              <div class="lg:col-span-5 flex flex-col justify-between mb-6 lg:mb-0">
+                <div>
+                  <img src="images/logo-ai.png" alt="AI Project Preview" class="w-full rounded-[1.5rem] object-cover h-64 lg:h-72 mb-4" />
+                  <div class="mt-4 flex flex-wrap gap-2 text-xs uppercase tracking-[0.25em] text-white/50">
+                    <span class="rounded-full border border-white/10 px-3 py-1">Automation</span>
+                    <span class="rounded-full border border-white/10 px-3 py-1">Prompt Flow</span>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:col-span-7 flex flex-col justify-center space-y-6">
+                <div>
+                  <p class="text-sm uppercase tracking-[0.3em] text-accent">AI Projects</p>
+                  <h2 class="text-2xl font-semibold text-white mt-1">Prompt-to-Experience Systems</h2>
+                </div>
+                <div class="space-y-4 text-sm leading-relaxed text-white/80">
+                  <p>
+                    <strong>The Challenge:</strong> Designing marketing assets, product mockups, and content layouts manually for multiple campaigns was consuming hundreds of designer hours and slowing speed-to-market.
+                  </p>
+                  <p>
+                    <strong>The Solution:</strong> Piyush Vaid designed a custom generative AI pipeline. By integrating prompt engineering with automated image synthesis models and layout grids, the system allows rapid prototyping of product and branding scenarios.
+                  </p>
+                  <p>
+                    <strong>The Outcome:</strong> Mockup and campaign concept generation time was reduced by 80%, enabling immediate visual validation of new product variants and marketing themes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="px-4 pb-10 pt-4 md:px-8 lg:px-10">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 rounded-[2rem] border border-white/10 bg-white/5 px-6 py-6 text-center text-sm text-white/60 backdrop-blur-xl md:flex-row md:text-left">
+        <div>
+          <p class="text-lg font-semibold text-white">Piyush Vaid</p>
+          <p>Luxury brand builder, storyteller, and digital creator.</p>
+        </div>
+        <div class="flex gap-3">
+          <a href="#" class="rounded-full border border-white/10 bg-black/20 px-3 py-2 transition hover:text-white">Instagram</a>
+          <a href="#" class="rounded-full border border-white/10 bg-black/20 px-3 py-2 transition hover:text-white">LinkedIn</a>
+          <a href="#" class="rounded-full border border-white/10 bg-black/20 px-3 py-2 transition hover:text-white">Email</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

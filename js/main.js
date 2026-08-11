@@ -33,8 +33,8 @@ function updateProgress() {
   const scrollTop = window.scrollY;
   const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
   const progress = maxScroll > 0 ? scrollTop / maxScroll : 0;
-  progressBar.style.transform = `scaleX(${progress})`;
-  scrollTopBtn.style.display = scrollTop > 600 ? 'grid' : 'none';
+  if (progressBar) progressBar.style.transform = `scaleX(${progress})`;
+  if (scrollTopBtn) scrollTopBtn.style.display = scrollTop > 600 ? 'grid' : 'none';
 }
 
 window.addEventListener('scroll', updateProgress);
@@ -102,22 +102,30 @@ magneticItems.forEach((item) => {
 });
 
 window.addEventListener('mousemove', (e) => {
-  cursorDot.style.left = `${e.clientX}px`;
-  cursorDot.style.top = `${e.clientY}px`;
-  cursorOutline.style.left = `${e.clientX}px`;
-  cursorOutline.style.top = `${e.clientY}px`;
+  if (cursorDot) {
+    cursorDot.style.left = `${e.clientX}px`;
+    cursorDot.style.top = `${e.clientY}px`;
+  }
+  if (cursorOutline) {
+    cursorOutline.style.left = `${e.clientX}px`;
+    cursorOutline.style.top = `${e.clientY}px`;
+  }
 });
 
 document.querySelectorAll('a, button, input, textarea, .project-card, .skill-card').forEach((el) => {
   el.addEventListener('mouseenter', () => {
-    cursorOutline.style.width = '46px';
-    cursorOutline.style.height = '46px';
-    cursorOutline.style.borderColor = 'rgba(201, 168, 106, 0.7)';
+    if (cursorOutline) {
+      cursorOutline.style.width = '46px';
+      cursorOutline.style.height = '46px';
+      cursorOutline.style.borderColor = 'rgba(201, 168, 106, 0.7)';
+    }
   });
   el.addEventListener('mouseleave', () => {
-    cursorOutline.style.width = '34px';
-    cursorOutline.style.height = '34px';
-    cursorOutline.style.borderColor = 'rgba(255, 255, 255, 0.4)';
+    if (cursorOutline) {
+      cursorOutline.style.width = '34px';
+      cursorOutline.style.height = '34px';
+      cursorOutline.style.borderColor = 'rgba(255, 255, 255, 0.4)';
+    }
   });
 });
 
@@ -130,21 +138,24 @@ themeToggle?.addEventListener('click', () => {
 
 let carouselIndex = 0;
 function updateCarousel() {
+  if (!carouselTrack) return;
   const slides = carouselTrack.querySelectorAll('article');
   const offset = carouselIndex * -(100 / 3);
   carouselTrack.style.transform = `translateX(${offset}%)`;
 }
 
-carouselButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const direction = button.dataset.direction === 'next' ? 1 : -1;
-    const slides = carouselTrack.querySelectorAll('article');
-    carouselIndex = (carouselIndex + direction + slides.length) % slides.length;
-    updateCarousel();
+if (carouselTrack) {
+  carouselButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const direction = button.dataset.direction === 'next' ? 1 : -1;
+      const slides = carouselTrack.querySelectorAll('article');
+      carouselIndex = (carouselIndex + direction + slides.length) % slides.length;
+      updateCarousel();
+    });
   });
-});
 
-updateCarousel();
+  updateCarousel();
+}
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
