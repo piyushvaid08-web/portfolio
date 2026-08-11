@@ -80,6 +80,11 @@ body[data-theme='light'] .loading-screen {
   background: rgba(247, 242, 234, 0.96);
 }
 
+/* If JS or the animation libraries are unavailable, never let the loader block the page. */
+html:not(.animations-ready) .loading-screen {
+  display: none;
+}
+
 .loading-shell {
   display: flex;
   flex-direction: column;
@@ -182,7 +187,8 @@ body[data-theme='light'] .scroll-top {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-.reveal {
+/* Reveal-on-scroll hiding only applies when JS has confirmed the animation libraries are ready. */
+html.animations-ready .reveal {
   opacity: 0;
   transform: translateY(30px) scale(0.98);
   filter: blur(8px);
