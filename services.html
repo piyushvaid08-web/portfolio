@@ -4,20 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href="https://piyushvaid.online/services.html" />
-    <title>Services by Piyush Vaid | Digital Marketing & AI Websites</title>
+    <title>Services — Piyush Vaid</title>
     <meta
       name="description"
-      content="Explore the premium services offered by Piyush Vaid. Specializing in luxury branding, high-end digital marketing, AI-driven website development, and visual storytelling."
+      content="Premium services by Piyush Vaid — digital marketing, AI-driven website development, luxury branding, and visual storytelling."
     />
-    <meta name="keywords" content="Piyush Vaid, digital marketing services, AI website development, brand strategy, luxury branding, videography, photography" />
-    <meta name="theme-color" content="#050505" />
-    <meta property="og:title" content="Services by Piyush Vaid | Digital Marketing & AI Websites" />
-    <meta property="og:description" content="Elevate your brand with digital marketing, AI web design, and creative strategy by Piyush Vaid." />
+    <meta name="keywords" content="Piyush Vaid, digital marketing services, AI website development, brand strategy, luxury branding" />
+    <meta name="theme-color" content="#0e0b08" />
+    <meta property="og:title" content="Services — Piyush Vaid" />
+    <meta property="og:description" content="Digital marketing, AI web design, and creative strategy by Piyush Vaid." />
     <meta property="og:type" content="website" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -25,13 +25,10 @@
         theme: {
           extend: {
             colors: {
-              accent: '#48CAE4',
-              gold: '#90E0EF',
-              deep: '#0B132B',
-              soft: 'rgba(255,255,255,0.05)'
-            },
-            boxShadow: {
-              glow: '0 0 0 1px rgba(255,255,255,0.08), 0 20px 80px rgba(72,202,228,0.18)'
+              accent: '#c8956a',
+              warm: '#e8d5b7',
+              deep: '#0e0b08',
+              soft: 'rgba(255,255,255,0.04)'
             }
           }
         }
@@ -40,13 +37,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.3/dist/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r156/three.min.js"></script>
   </head>
   <body>
     <div id="loading-screen" class="loading-screen">
       <div class="loading-shell">
         <div class="loading-orb"></div>
-        <p>Loading Services by Piyush Vaid</p>
+        <p>Piyush Vaid</p>
       </div>
     </div>
 
@@ -56,81 +52,125 @@
     <button class="scroll-top" aria-label="Scroll to top">↑</button>
 
     <div class="site-bg" aria-hidden="true"></div>
-    <canvas id="mesh-canvas" aria-hidden="true"></canvas>
 
-    <header class="sticky top-0 z-50 px-4 py-4 md:px-8 lg:px-10">
-      <nav class="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-xl">
-        <a href="index.html" class="brand-mark text-lg font-semibold tracking-[0.3em] uppercase text-white">Piyush Vaid</a>
-        <div class="hidden items-center gap-6 text-sm text-white/70 md:flex">
+    <header class="sticky top-0 z-50 px-5 py-4 md:px-8 lg:px-12">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between py-3">
+        <a href="index.html" class="brand-mark text-white">Piyush Vaid</a>
+        <div class="hidden items-center gap-8 text-[0.8rem] text-white/50 md:flex" style="letter-spacing: 0.06em;">
           <a href="index.html" class="transition hover:text-white">Home</a>
           <a href="about-piyush-vaid.html" class="transition hover:text-white">About</a>
           <a href="services.html" class="text-white">Services</a>
-          <a href="case-studies.html" class="transition hover:text-white">Case Studies</a>
+          <a href="case-studies.html" class="transition hover:text-white">Work</a>
           <a href="index.html#contact" class="transition hover:text-white">Contact</a>
         </div>
-        <button id="theme-toggle" class="magnetic rounded-full border border-white/10 bg-white/10 px-3 py-2 text-sm text-white/80 transition hover:bg-white/20">Dark / Light</button>
+        <button id="theme-toggle" class="rounded-full border border-white/10 px-4 py-2 text-xs text-white/60 transition hover:text-white hover:border-white/20">Theme</button>
       </nav>
     </header>
 
     <main>
-      <section class="relative isolate overflow-hidden px-4 pb-24 pt-6 md:px-8 lg:px-10 lg:pb-32 lg:pt-12">
+      <!-- Hero -->
+      <section class="px-5 pt-16 pb-20 md:px-8 lg:px-12 lg:pt-24 lg:pb-28">
         <div class="mx-auto max-w-4xl space-y-8">
-          <div class="space-y-5 text-center">
-            <h1 class="text-reveal text-5xl font-semibold leading-[0.9] text-white sm:text-6xl">
-              Services by Piyush Vaid
+          <div class="flex items-center gap-3">
+            <span class="h-px w-8 bg-accent opacity-60"></span>
+            <span class="section-label">Services</span>
+          </div>
+          <div class="space-y-6">
+            <h1 class="text-reveal editorial-heading text-5xl text-white sm:text-6xl">
+              What I do<br/>and how I do it.
             </h1>
-            <p class="mx-auto max-w-2xl text-lg leading-8 text-white/70">
-              Comprehensive digital solutions crafted by Piyush Vaid to elevate your brand's presence and performance.
+            <p class="max-w-xl body-text text-white/60">
+              Comprehensive digital solutions crafted to elevate your brand's presence and performance.
             </p>
           </div>
-          
-          <div class="grid gap-6 mt-12">
-            <!-- Digital Marketing -->
-            <div class="glass-card reveal rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-2xl">
-              <h2 class="text-2xl font-semibold text-white mb-4">Digital Marketing Strategies</h2>
-              <p class="text-white/80 leading-relaxed mb-4">
-                Piyush Vaid specializes in creating data-driven digital marketing campaigns. By analyzing market trends and audience behaviors, Piyush Vaid designs strategies that maximize engagement, improve conversion rates, and build lasting customer loyalty. From SEO to social media and paid advertising, every campaign is optimized for high ROI.
-              </p>
-            </div>
-            
-            <!-- AI Web Development -->
-            <div class="glass-card reveal rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-2xl">
-              <h2 class="text-2xl font-semibold text-white mb-4">AI-Driven Website Development</h2>
-              <p class="text-white/80 leading-relaxed mb-4">
-                In today's fast-paced digital world, a static website isn't enough. Piyush Vaid builds dynamic, AI-integrated websites that offer personalized user experiences. Leveraging cutting-edge technologies, the websites developed by Piyush Vaid are fast, secure, visually stunning, and highly optimized for search engines.
-              </p>
-            </div>
-            
-            <!-- Luxury Branding -->
-            <div class="glass-card reveal rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-2xl">
-              <h2 class="text-2xl font-semibold text-white mb-4">Luxury Branding & Content Systems</h2>
-              <p class="text-white/80 leading-relaxed mb-4">
-                A strong brand identity is crucial. Drawing from experience in the premium product space, Piyush Vaid helps businesses position themselves as luxury leaders. This service encompasses everything from visual identity and brand voice to high-end content creation, ensuring your brand communicates value at every touchpoint.
-              </p>
-            </div>
+        </div>
+      </section>
 
-            <!-- Photography & Videography -->
-            <div class="glass-card reveal rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-2xl">
-              <h2 class="text-2xl font-semibold text-white mb-4">Photography & Videography</h2>
-              <p class="text-white/80 leading-relaxed mb-4">
-                Visual storytelling is at the heart of engagement. Piyush Vaid offers professional photography and videography services to showcase your products, services, and brand story. Whether it's for an ad campaign, website content, or social media, the visual assets produced by Piyush Vaid are designed to captivate and convert.
-              </p>
+      <!-- Services — editorial list -->
+      <section class="px-5 pb-24 md:px-8 lg:px-12">
+        <div class="mx-auto max-w-4xl space-y-5">
+          <div class="card-warm reveal rounded-2xl p-8 lg:p-10">
+            <div class="flex items-start gap-6">
+              <span class="text-accent text-3xl font-light mt-1">01</span>
+              <div>
+                <h2 class="editorial-heading text-2xl text-white">Digital Marketing Strategies</h2>
+                <p class="body-text text-sm text-white/60 mt-3 leading-relaxed">
+                  Data-driven campaigns that maximize engagement, improve conversion rates, and build lasting customer loyalty. From SEO to social media and paid advertising — every campaign is optimized for high ROI and real business outcomes.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="tag">SEO</span>
+                  <span class="tag">Paid Media</span>
+                  <span class="tag">Analytics</span>
+                  <span class="tag">Content Strategy</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-warm reveal rounded-2xl p-8 lg:p-10">
+            <div class="flex items-start gap-6">
+              <span class="text-accent text-3xl font-light mt-1">02</span>
+              <div>
+                <h2 class="editorial-heading text-2xl text-white">AI-Driven Website Development</h2>
+                <p class="body-text text-sm text-white/60 mt-3 leading-relaxed">
+                  Dynamic, AI-integrated websites that offer personalized user experiences. Built for speed, security, visual impact, and search engine optimization. No templates — every build is purpose-made.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="tag">HTML/CSS/JS</span>
+                  <span class="tag">AI Integration</span>
+                  <span class="tag">Performance</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-warm reveal rounded-2xl p-8 lg:p-10">
+            <div class="flex items-start gap-6">
+              <span class="text-accent text-3xl font-light mt-1">03</span>
+              <div>
+                <h2 class="editorial-heading text-2xl text-white">Luxury Branding & Content Systems</h2>
+                <p class="body-text text-sm text-white/60 mt-3 leading-relaxed">
+                  From visual identity and brand voice to high-end content creation — every touchpoint communicates value. Drawing from real experience in the premium product space, I help businesses position themselves as leaders.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="tag">Brand Identity</span>
+                  <span class="tag">Packaging</span>
+                  <span class="tag">Storytelling</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-warm reveal rounded-2xl p-8 lg:p-10">
+            <div class="flex items-start gap-6">
+              <span class="text-accent text-3xl font-light mt-1">04</span>
+              <div>
+                <h2 class="editorial-heading text-2xl text-white">Photography & Videography</h2>
+                <p class="body-text text-sm text-white/60 mt-3 leading-relaxed">
+                  Visual storytelling at the heart of engagement. Professional photography and videography for ad campaigns, website content, and social media — designed to captivate and convert.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="tag">Product Photography</span>
+                  <span class="tag">Brand Films</span>
+                  <span class="tag">Retouching</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="px-4 pb-10 pt-4 md:px-8 lg:px-10">
-      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 rounded-[2rem] border border-white/10 bg-white/5 px-6 py-6 text-center text-sm text-white/60 backdrop-blur-xl md:flex-row md:text-left">
+    <footer class="site-footer px-5 py-10 md:px-8 lg:px-12">
+      <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 md:flex-row">
         <div>
-          <p class="text-lg font-semibold text-white">Piyush Vaid</p>
-          <p>Luxury brand builder, storyteller, and digital creator.</p>
+          <p class="editorial-heading text-xl text-white">Piyush Vaid</p>
+          <p class="text-xs text-white/40 mt-1">Brand builder, storyteller, digital creator.</p>
         </div>
-        <div class="flex gap-3">
-          <a href="#" class="rounded-full border border-white/10 bg-black/20 px-3 py-2 transition hover:text-white">Instagram</a>
-          <a href="#" class="rounded-full border border-white/10 bg-black/20 px-3 py-2 transition hover:text-white">LinkedIn</a>
-          <a href="#" class="rounded-full border border-white/10 bg-black/20 px-3 py-2 transition hover:text-white">Email</a>
+        <div class="flex gap-4">
+          <a href="#" class="text-xs text-white/40 transition hover:text-white">Instagram</a>
+          <a href="#" class="text-xs text-white/40 transition hover:text-white">LinkedIn</a>
+          <a href="#" class="text-xs text-white/40 transition hover:text-white">Email</a>
         </div>
       </div>
     </footer>

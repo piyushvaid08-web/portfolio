@@ -4,12 +4,9 @@ const scrollTopBtn = document.querySelector('.scroll-top');
 const cursorDot = document.querySelector('.cursor-dot');
 const cursorOutline = document.querySelector('.cursor-outline');
 const progressBar = document.querySelector('.scroll-progress');
-const carouselTrack = document.querySelector('.carousel-track');
-const carouselButtons = document.querySelectorAll('.carousel-btn');
 
 // SEO/safety: content is only hidden (reveal-on-scroll) and the loader is only
-// shown once we know the animation libraries are available. If any of them fail
-// to load, the page stays fully readable without JavaScript.
+// shown once we know the animation libraries are available.
 const gsapAvailable = typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined';
 
 if (!gsapAvailable) {
@@ -18,28 +15,30 @@ if (!gsapAvailable) {
   document.documentElement.classList.add('animations-ready');
 }
 
+// ── Loading screen ──
 if (loadingScreen && gsapAvailable) {
   window.addEventListener('load', () => {
     gsap.to(loadingScreen, {
       opacity: 0,
-      duration: 0.8,
+      duration: 0.6,
+      ease: 'power2.inOut',
       onComplete: () => loadingScreen.remove()
     });
   });
-  // Safety net: if the load event stalls, never let the loader block the page.
   setTimeout(() => {
     if (document.body.contains(loadingScreen)) {
       loadingScreen.style.opacity = '0';
       loadingScreen.style.pointerEvents = 'none';
-      setTimeout(() => loadingScreen.remove(), 800);
+      setTimeout(() => loadingScreen.remove(), 600);
     }
-  }, 5000);
+  }, 4000);
 }
 
+// ── Lenis smooth scroll ──
 let lenis = null;
 if (typeof Lenis !== 'undefined') {
   lenis = new Lenis({
-    duration: 1.2,
+    duration: 1.0,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
   });
 
@@ -51,6 +50,7 @@ if (typeof Lenis !== 'undefined') {
   requestAnimationFrame(raf);
 }
 
+// ── Scroll progress + back-to-top ──
 function updateProgress() {
   const scrollTop = window.scrollY;
   const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
@@ -59,7 +59,7 @@ function updateProgress() {
   if (scrollTopBtn) scrollTopBtn.style.display = scrollTop > 600 ? 'grid' : 'none';
 }
 
-window.addEventListener('scroll', updateProgress);
+window.addEventListener('scroll', updateProgress, { passive: true });
 window.addEventListener('resize', updateProgress);
 updateProgress();
 
@@ -71,158 +71,87 @@ scrollTopBtn?.addEventListener('click', () => {
   }
 });
 
+// ── GSAP animations ──
 if (gsapAvailable) {
   gsap.registerPlugin(ScrollTrigger);
 
+  // Reveal on scroll — subtle, editorial feel
   gsap.utils.toArray('.reveal').forEach((el) => {
     gsap.fromTo(
       el,
-      { opacity: 0, y: 40, scale: 0.97 },
+      { opacity: 0, y: 20 },
       {
         opacity: 1,
         y: 0,
-        scale: 1,
-        filter: 'blur(0px)',
-        duration: 1,
-        ease: 'power3.out',
+        duration: 0.8,
+        ease: 'power2.out',
         scrollTrigger: {
           trigger: el,
-          start: 'top 88%',
-          toggleActions: 'play none none reverse'
+          start: 'top 90%',
+          toggleActions: 'play none none none'
         }
       }
     );
   });
 
+  // Hero text reveal
   gsap.from('.text-reveal', {
-    y: 80,
+    y: 40,
     opacity: 0,
-    duration: 1.2,
-    filter: 'blur(16px)',
+    duration: 1,
     ease: 'power3.out',
-    delay: 0.2
+    delay: 0.15
   });
 
-  gsap.utils.toArray('.project-card, .skill-card').forEach((card) => {
+  // Subtle card hover — just a gentle lift, no scale
+  gsap.utils.toArray('.card-elevated, .card-warm').forEach((card) => {
     card.addEventListener('mouseenter', () => {
-      gsap.to(card, { y: -8, scale: 1.01, duration: 0.3, ease: 'power2.out' });
+      gsap.to(card, { y: -3, duration: 0.4, ease: 'power2.out' });
     });
     card.addEventListener('mouseleave', () => {
-      gsap.to(card, { y: 0, scale: 1, duration: 0.3, ease: 'power2.out' });
-    });
-  });
-
-  const magneticItems = document.querySelectorAll('.magnetic');
-  magneticItems.forEach((item) => {
-    item.addEventListener('mousemove', (e) => {
-      const rect = item.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      gsap.to(item, {
-        x: (x - rect.width / 2) * 0.08,
-        y: (y - rect.height / 2) * 0.08,
-        duration: 0.3,
-        ease: 'power2.out'
-      });
-    });
-    item.addEventListener('mouseleave', () => {
-      gsap.to(item, { x: 0, y: 0, duration: 0.3, ease: 'power2.out' });
+      gsap.to(card, { y: 0, duration: 0.4, ease: 'power2.out' });
     });
   });
 }
 
-window.addEventListener('mousemove', (e) => {
-  if (cursorDot) {
-    cursorDot.style.left = `${e.clientX}px`;
-    cursorDot.style.top = `${e.clientY}px`;
-  }
-  if (cursorOutline) {
-    cursorOutline.style.left = `${e.clientX}px`;
-    cursorOutline.style.top = `${e.clientY}px`;
-  }
-});
+// ── Custom cursor (desktop only) ──
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-document.querySelectorAll('a, button, input, textarea, .project-card, .skill-card').forEach((el) => {
-  el.addEventListener('mouseenter', () => {
+if (!isTouchDevice) {
+  window.addEventListener('mousemove', (e) => {
+    if (cursorDot) {
+      cursorDot.style.left = `${e.clientX}px`;
+      cursorDot.style.top = `${e.clientY}px`;
+    }
     if (cursorOutline) {
-      cursorOutline.style.width = '46px';
-      cursorOutline.style.height = '46px';
-      cursorOutline.style.borderColor = 'rgba(201, 168, 106, 0.7)';
+      cursorOutline.style.left = `${e.clientX}px`;
+      cursorOutline.style.top = `${e.clientY}px`;
     }
   });
-  el.addEventListener('mouseleave', () => {
-    if (cursorOutline) {
-      cursorOutline.style.width = '34px';
-      cursorOutline.style.height = '34px';
-      cursorOutline.style.borderColor = 'rgba(255, 255, 255, 0.4)';
-    }
-  });
-});
 
+  // Subtle cursor expansion on interactive elements
+  document.querySelectorAll('a, button, input, textarea, .card-elevated, .card-warm').forEach((el) => {
+    el.addEventListener('mouseenter', () => {
+      if (cursorOutline) {
+        cursorOutline.style.width = '36px';
+        cursorOutline.style.height = '36px';
+        cursorOutline.style.borderColor = 'rgba(200, 149, 106, 0.5)';
+      }
+    });
+    el.addEventListener('mouseleave', () => {
+      if (cursorOutline) {
+        cursorOutline.style.width = '28px';
+        cursorOutline.style.height = '28px';
+        cursorOutline.style.borderColor = 'rgba(240, 236, 228, 0.2)';
+      }
+    });
+  });
+}
+
+// ── Theme toggle ──
 themeToggle?.addEventListener('click', () => {
   const current = document.documentElement.getAttribute('data-theme');
   const next = current === 'dark' ? 'light' : 'dark';
   document.documentElement.setAttribute('data-theme', next);
   document.body.setAttribute('data-theme', next);
 });
-
-let carouselIndex = 0;
-function updateCarousel() {
-  if (!carouselTrack) return;
-  const slides = carouselTrack.querySelectorAll('article');
-  const offset = carouselIndex * -(100 / 3);
-  carouselTrack.style.transform = `translateX(${offset}%)`;
-}
-
-if (carouselTrack) {
-  carouselButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      const direction = button.dataset.direction === 'next' ? 1 : -1;
-      const slides = carouselTrack.querySelectorAll('article');
-      carouselIndex = (carouselIndex + direction + slides.length) % slides.length;
-      updateCarousel();
-    });
-  });
-
-  updateCarousel();
-}
-
-if (typeof THREE !== 'undefined') {
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
-  const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('mesh-canvas'), alpha: true, antialias: true });
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
-  const geometry = new THREE.PlaneGeometry(14, 8, 80, 80);
-  const material = new THREE.MeshPhysicalMaterial({
-    color: 0x111111,
-    emissive: 0x111111,
-    transparent: true,
-    opacity: 0.65,
-    roughness: 0.22,
-    metalness: 0.16,
-    clearcoat: 0.78,
-    transmission: 0.12
-  });
-  const mesh = new THREE.Mesh(geometry, material);
-  mesh.position.z = -4;
-  scene.add(mesh);
-
-  camera.position.z = 6;
-
-  function animateScene() {
-    requestAnimationFrame(animateScene);
-    mesh.rotation.x = 0.18 + Math.sin(Date.now() * 0.0002) * 0.03;
-    mesh.rotation.y = 0.22 + Math.cos(Date.now() * 0.0002) * 0.04;
-    renderer.render(scene, camera);
-  }
-
-  animateScene();
-
-  window.addEventListener('resize', () => {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-  });
-}
