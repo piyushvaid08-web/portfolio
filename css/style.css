@@ -135,36 +135,7 @@ html:not(.animations-ready) .loading-screen {
   50% { width: 120px; opacity: 1; }
 }
 
-/* ── Custom cursor (subtle) ── */
-.cursor-dot,
-.cursor-outline {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  border-radius: 999px;
-  transform: translate(-50%, -50%);
-  z-index: 10000;
-}
 
-.cursor-dot {
-  width: 6px;
-  height: 6px;
-  background: var(--accent);
-  transition: width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
-}
-
-.cursor-outline {
-  width: 28px;
-  height: 28px;
-  border: 1px solid rgba(240, 236, 228, 0.2);
-  transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
-}
-
-.cursor-hidden .cursor-dot,
-.cursor-hidden .cursor-outline {
-  opacity: 0;
-}
 
 /* ── Scroll progress ── */
 .scroll-progress {
@@ -440,9 +411,4 @@ textarea.input-field {
 }
 
 /* ── Responsive ── */
-@media (max-width: 768px) {
-  .cursor-dot,
-  .cursor-outline {
-    display: none;
-  }
-}
+

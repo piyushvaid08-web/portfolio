@@ -1,8 +1,6 @@
 const loadingScreen = document.getElementById('loading-screen');
 const themeToggle = document.getElementById('theme-toggle');
 const scrollTopBtn = document.querySelector('.scroll-top');
-const cursorDot = document.querySelector('.cursor-dot');
-const cursorOutline = document.querySelector('.cursor-outline');
 const progressBar = document.querySelector('.scroll-progress');
 
 // SEO/safety: content is only hidden (reveal-on-scroll) and the loader is only
@@ -114,39 +112,7 @@ if (gsapAvailable) {
   });
 }
 
-// ── Custom cursor (desktop only) ──
-const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-if (!isTouchDevice) {
-  window.addEventListener('mousemove', (e) => {
-    if (cursorDot) {
-      cursorDot.style.left = `${e.clientX}px`;
-      cursorDot.style.top = `${e.clientY}px`;
-    }
-    if (cursorOutline) {
-      cursorOutline.style.left = `${e.clientX}px`;
-      cursorOutline.style.top = `${e.clientY}px`;
-    }
-  });
-
-  // Subtle cursor expansion on interactive elements
-  document.querySelectorAll('a, button, input, textarea, .card-elevated, .card-warm').forEach((el) => {
-    el.addEventListener('mouseenter', () => {
-      if (cursorOutline) {
-        cursorOutline.style.width = '36px';
-        cursorOutline.style.height = '36px';
-        cursorOutline.style.borderColor = 'rgba(200, 149, 106, 0.5)';
-      }
-    });
-    el.addEventListener('mouseleave', () => {
-      if (cursorOutline) {
-        cursorOutline.style.width = '28px';
-        cursorOutline.style.height = '28px';
-        cursorOutline.style.borderColor = 'rgba(240, 236, 228, 0.2)';
-      }
-    });
-  });
-}
 
 // ── Theme toggle ──
 themeToggle?.addEventListener('click', () => {
