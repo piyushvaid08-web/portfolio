@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href="https://piyushvaid.online/about-piyush-vaid.html" />
-    <title>About Piyush Vaid â€” Digital Marketer, Entrepreneur & Brand Builder</title>
-    <meta name="description" content="Learn about Piyush Vaid â€” a digital marketer, entrepreneur, and creative technologist. Piyush Vaid builds brands through strategy, design, photography, and technology. Discover the journey of Piyush Vaid." />
+    <title>About Piyush Vaid — Digital Marketer, Entrepreneur & Brand Builder</title>
+    <meta name="description" content="Learn about Piyush Vaid — a digital marketer, entrepreneur, and creative technologist. Piyush Vaid builds brands through strategy, design, photography, and technology. Discover the journey of Piyush Vaid." />
     <meta name="keywords" content="about Piyush Vaid, Piyush Vaid biography, Piyush Vaid journey, Piyush Vaid entrepreneur, Piyush Vaid digital marketer, who is Piyush Vaid" />
-    <meta name="theme-color" content="#0e0b08" />
-    <meta property="og:title" content="About Piyush Vaid â€” Digital Marketer, Entrepreneur & Brand Builder" />
-    <meta property="og:description" content="The journey of Piyush Vaid â€” building brands through strategy and technology." />
+    <meta name="theme-color" content="#090b11" />
+    <meta property="og:title" content="About Piyush Vaid — Digital Marketer, Entrepreneur & Brand Builder" />
+    <meta property="og:description" content="The journey of Piyush Vaid — building brands through strategy and technology." />
     <meta property="og:type" content="profile" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config={theme:{extend:{colors:{accent:'#c8956a',warm:'#e8d5b7',deep:'#0e0b08',soft:'rgba(255,255,255,0.04)'}}}};</script>
+    <script>tailwind.config={theme:{extend:{colors:{accent:'#c8956a',warm:'#e8d5b7',deep:'#090b11',soft:'rgba(255,255,255,0.04)'}}}};</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.3/dist/lenis.min.js"></script>
@@ -26,25 +26,59 @@
   <body>
     <div id="loading-screen" class="loading-screen"><div class="loading-shell"><div class="loading-orb"></div><p>Piyush Vaid</p></div></div>
     <div class="scroll-progress"></div>
-    <button class="scroll-top" aria-label="Scroll to top">â†‘</button>
+    <button class="scroll-top" aria-label="Scroll to top">↑</button>
     <div class="site-bg" aria-hidden="true"></div>
 
-    <header class="sticky top-0 z-50 px-5 py-4 md:px-8 lg:px-12">
-      <nav class="mx-auto flex max-w-6xl items-center justify-between py-3">
-        <a href="index.html" class="brand-mark text-white">Piyush Vaid</a>
-        <div class="hidden items-center gap-8 text-[0.8rem] text-white/50 md:flex" style="letter-spacing:0.06em">
-          <a href="index.html">Home</a><a href="about-piyush-vaid.html" class="text-white">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="testimonials.html">Testimonials</a><a href="contact.html">Contact</a>
+        <header class="site-header px-5 py-4 md:px-8 lg:px-12">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between">
+        <a href="index.html" class="brand-mark text-white">
+          <span>Piyush Vaid</span>
+          <span class="brand-dot"></span>
+        </a>
+        <div class="hidden items-center gap-7 text-[0.82rem] md:flex">
+          <a href="index.html" class="nav-link ">Home</a>
+          <a href="about-piyush-vaid.html" class="nav-link active">About</a>
+          <a href="services.html" class="nav-link ">Services</a>
+          <a href="portfolio.html" class="nav-link ">Portfolio</a>
+          <a href="case-studies.html" class="nav-link ">Case Studies</a>
+          <a href="blog.html" class="nav-link ">Blog</a>
+          <a href="testimonials.html" class="nav-link ">Testimonials</a>
+          <a href="contact.html" class="nav-link ">Contact</a>
         </div>
-        <button id="theme-toggle" class="rounded-full border border-white/10 px-4 py-2 text-xs text-white/60 transition hover:text-white hover:border-white/20">Theme</button>
+        <div class="flex items-center gap-3">
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+          </button>
+          <button id="menu-toggle" class="menu-toggle-btn md:hidden" aria-label="Open mobile menu" aria-expanded="false">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+          </button>
+        </div>
       </nav>
     </header>
+
+    <div id="mobile-drawer" class="mobile-nav-drawer md:hidden">
+      <div class="flex flex-col space-y-4">
+        <a href="index.html" class="mobile-link ">Home</a>
+        <a href="about-piyush-vaid.html" class="mobile-link active">About</a>
+        <a href="services.html" class="mobile-link ">Services</a>
+        <a href="portfolio.html" class="mobile-link ">Portfolio</a>
+        <a href="case-studies.html" class="mobile-link ">Case Studies</a>
+        <a href="blog.html" class="mobile-link ">Blog & Insights</a>
+        <a href="testimonials.html" class="mobile-link ">Testimonials</a>
+        <a href="contact.html" class="mobile-link ">Contact</a>
+      </div>
+      <div class="mt-auto pt-8 border-t border-white/10">
+        <p class="text-xs text-white/40 mb-3 uppercase tracking-wider">Direct Connect</p>
+        <p class="text-sm text-white/80 font-medium">piyushvaid08@gmail.com</p>
+      </div>
+    </div>
 
     <main>
       <section class="px-5 pt-16 pb-12 md:px-8 lg:px-12 lg:pt-24 lg:pb-16">
         <div class="mx-auto max-w-4xl space-y-8">
           <div class="flex items-center gap-3"><span class="h-px w-8 bg-accent opacity-60"></span><span class="section-label">About</span></div>
-          <h1 class="text-reveal editorial-heading text-5xl text-white sm:text-6xl">The story<br/>of I.</h1>
-          <p class="max-w-2xl body-text text-white/60">The person behind the portfolio â€” and what drives the my work every day.</p>
+          <h1 class="text-reveal editorial-heading text-5xl text-white sm:text-6xl">The Story of<br/>Piyush Vaid.</h1>
+          <p class="max-w-2xl body-text text-white/60">The person behind the portfolio — and what drives the my work every day.</p>
         </div>
       </section>
 
@@ -52,39 +86,39 @@
         <div class="mx-auto max-w-4xl">
           <div class="card-warm reveal rounded-2xl p-8 lg:p-12">
             <div class="space-y-8 body-text text-white/70 text-base leading-relaxed">
-              <p><strong class="text-white">Me</strong> is a digital marketer, entrepreneur, and creative strategist. I build brands â€” from the strategy layer to the visual identity to the digital experience. The my approach blends analytical thinking with high-end creative design, resulting in work that performs as beautifully as it looks.</p>
+              <p><strong class="text-white">Piyush Vaid</strong> is a digital marketer, entrepreneur, and creative strategist. I build brands — from the strategy layer to the visual identity to the digital experience. The my approach blends analytical thinking with high-end creative design, resulting in work that performs as beautifully as it looks.</p>
               <p>The philosophy that drives I am simple: a brand is more than a logo. It is a story. As a creative technologist, I use modern tools like AI-driven web development to craft websites that perform as well as they look. I believe that technology should serve creativity, not replace it.</p>
 
               <div class="divider-wide"></div>
 
-              <h3 class="editorial-heading text-2xl text-white">The Early Journey of I</h3>
-              <p>I completed 10+2 and immediately began building practical skills in digital marketing, photography, and web development. Unlike many professionals who follow a traditional career path, I learned by doing â€” taking on real projects, making real mistakes, and iterating in real time. This hands-on approach gave I a depth of knowledge that classroom education alone cannot provide.</p>
+              <h3 class="editorial-heading text-2xl text-white">The Early Journey of Piyush Vaid</h3>
+              <p>I completed 10+2 and immediately began building practical skills in digital marketing, photography, and web development. Unlike many professionals who follow a traditional career path, I learned by doing — taking on real projects, making real mistakes, and iterating in real time. This hands-on approach gave me a depth of knowledge that classroom education alone cannot provide.</p>
               <p>From the beginning, I was drawn to the intersection of creativity and technology. I saw early on that the brands that stood out were the ones that combined strong storytelling with polished digital experiences. This insight became the foundation of everything I would build.</p>
 
               <div class="divider-wide"></div>
 
-              <h3 class="editorial-heading text-2xl text-white">I as an Entrepreneur</h3>
-              <p>I am the founder of a premium perfume brand â€” a venture that demonstrates real-world entrepreneurial success and an intrinsic understanding of luxury branding. The perfume brand that I built is rooted in sensory storytelling, premium positioning, and meticulous attention to detail. I handle everything from product development to brand identity to digital marketing for the business.</p>
-              <p>This entrepreneurial experience is what separates I from most digital marketers and brand consultants. I do not just advise on brand building â€” I do it every day with real stakes and real outcomes. Clients who work with me benefit from insights that can only come from running a business, not just serving one.</p>
+              <h3 class="editorial-heading text-2xl text-white">Entrepreneurial Ventures</h3>
+              <p>I am the founder of a premium perfume brand — a venture that demonstrates real-world entrepreneurial success and an intrinsic understanding of luxury branding. The perfume brand that I built is rooted in sensory storytelling, premium positioning, and meticulous attention to detail. I handle everything from product development to brand identity to digital marketing for the business.</p>
+              <p>This entrepreneurial experience is what separates I from most digital marketers and brand consultants. I do not just advise on brand building — I do it every day with real stakes and real outcomes. Clients who work with me benefit from insights that can only come from running a business, not just serving one.</p>
 
               <div class="divider-wide"></div>
 
-              <h3 class="editorial-heading text-2xl text-white">I as a Brand Builder</h3>
-              <p>I approach brand building as a multidisciplinary practice. I handle strategy, visual identity, web development, photography, videography, and digital marketing â€” all under one creative vision. This end-to-end capability is rare in the industry, and it is what makes the my work consistently cohesive and high-quality.</p>
-              <p>Brands that work with me get a partner who understands the full picture. I do not just design a logo and walk away â€” I build the entire brand ecosystem, from positioning and messaging to website and social media presence. This comprehensive approach ensures that every touchpoint tells the same story.</p>
+              <h3 class="editorial-heading text-2xl text-white">Brand Building & Creative Craft</h3>
+              <p>I approach brand building as a multidisciplinary practice. I handle strategy, visual identity, web development, photography, videography, and digital marketing — all under one creative vision. This end-to-end capability is rare in the industry, and it is what makes the my work consistently cohesive and high-quality.</p>
+              <p>Brands that work with me get a partner who understands the full picture. I do not just design a logo and walk away — I build the entire brand ecosystem, from positioning and messaging to website and social media presence. This comprehensive approach ensures that every touchpoint tells the same story.</p>
 
               <div class="divider-wide"></div>
 
-              <h3 class="editorial-heading text-2xl text-white">What Drives I</h3>
-              <p>I am driven by curiosity and a commitment to craft. I believe that the best work happens when creative ambition meets strategic thinking. I am not interested in trends for the sake of trends â€” I build work that is timeless, intentional, and effective.</p>
-              <p>I also believes in sharing knowledge openly. Through the blog, resources, and social media presence of I, insights on marketing, branding, and creative technology are shared freely with the community. I believe that lifting others up strengthens the entire industry.</p>
+              <h3 class="editorial-heading text-2xl text-white">What Drives Piyush Vaid</h3>
+              <p>I am driven by curiosity and a commitment to craft. I believe that the best work happens when creative ambition meets strategic thinking. I am not interested in trends for the sake of trends — I build work that is timeless, intentional, and effective.</p>
+              <p>I also believe in sharing knowledge openly. Through the blog, resources, and social media channels, insights on marketing, branding, and creative technology are shared freely with the community. I believe that lifting others up strengthens the entire industry.</p>
 
               <div class="divider-wide"></div>
 
-              <h3 class="editorial-heading text-2xl text-white">Why Work with me?</h3>
-              <p>Whether you need a comprehensive digital marketing strategy or a bespoke website, I bring a multidisciplinary approach. From high-quality photography and videography that captures the essence of a product, to sophisticated digital marketing campaigns designed by me to maximize ROI â€” every touchpoint is meticulously crafted.</p>
-              <p>my clients include brands across luxury, fashion, beauty, technology, and e-commerce. The common thread among all clients of I am a desire for premium quality and measurable results. I deliver on both fronts, consistently.</p>
-              <p>If you are looking to elevate your brand, choosing I guarantees a partner who is dedicated to your growth, aesthetics, and long-term success. I do not just execute projects â€” I build lasting relationships and brands that endure.</p>
+              <h3 class="editorial-heading text-2xl text-white">Why Partner With Piyush Vaid?</h3>
+              <p>Whether you need a comprehensive digital marketing strategy or a bespoke website, I bring a multidisciplinary approach. From high-quality photography and videography that captures the essence of a product, to sophisticated digital marketing campaigns designed by Piyush Vaid to maximize ROI — every touchpoint is meticulously crafted.</p>
+              <p>my clients include brands across luxury, fashion, beauty, technology, and e-commerce. The common thread among all my clients is a desire for premium quality and measurable results. I deliver on both fronts, consistently.</p>
+              <p>If you are looking to elevate your brand, choosing I guarantees a partner who is dedicated to your growth, aesthetics, and long-term success. I do not just execute projects — I build lasting relationships and brands that endure.</p>
             </div>
           </div>
         </div>
@@ -97,7 +131,7 @@
             <h2 class="editorial-heading text-3xl text-white">Skills & Values</h2>
             <div class="divider"></div>
             <div class="body-text text-white/60 text-base space-y-5">
-              <p>I work across digital marketing, brand strategy, web development, photography, videography, and AI automation. This multidisciplinary range means clients get cohesive creative direction under one vision â€” from strategy through to final execution.</p>
+              <p>I work across digital marketing, brand strategy, web development, photography, videography, and AI automation. This multidisciplinary range means clients get cohesive creative direction under one vision — from strategy through to final execution.</p>
               <p>Guided by three core principles: strategy before execution, design with intention, and quality over speed. I stay current with evolving tools and techniques, and shares insights openly through the blog and resources.</p>
               <p>Based in India, available worldwide. <a href="contact.html" class="text-accent hover:underline">Get in touch</a> to start a conversation.</p>
             </div>
@@ -107,10 +141,36 @@
 
     </main>
 
-    <footer class="site-footer px-5 py-10 md:px-8 lg:px-12">
-      <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 md:flex-row">
-        <div><p class="editorial-heading text-xl text-white">Me</p><p class="text-xs text-white/40 mt-1">Brand builder, storyteller, digital creator.</p></div>
-        <div class="flex gap-4"><a href="#" class="text-xs text-white/40 transition hover:text-white">Instagram</a><a href="#" class="text-xs text-white/40 transition hover:text-white">LinkedIn</a><a href="#" class="text-xs text-white/40 transition hover:text-white">Email</a></div>
+        <footer class="site-footer px-5 py-12 md:px-8 lg:px-12">
+      <div class="mx-auto max-w-6xl space-y-8">
+        <div class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+          <div>
+            <a href="index.html" class="brand-mark text-white">
+              <span>Piyush Vaid</span>
+              <span class="brand-dot"></span>
+            </a>
+            <p class="text-xs text-white/50 mt-1 max-w-sm">
+              Brand Builder, Digital Marketer, Creative Technologist & Luxury Perfume Founder.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-6 text-xs text-white/60">
+            <a href="about-piyush-vaid.html" class="transition hover:text-white">About</a>
+            <a href="services.html" class="transition hover:text-white">Services</a>
+            <a href="portfolio.html" class="transition hover:text-white">Portfolio</a>
+            <a href="case-studies.html" class="transition hover:text-white">Case Studies</a>
+            <a href="blog.html" class="transition hover:text-white">Blog</a>
+            <a href="contact.html" class="transition hover:text-white">Contact</a>
+          </div>
+        </div>
+        <div class="divider-wide"></div>
+        <div class="flex flex-col items-center justify-between gap-4 text-xs text-white/40 md:flex-row">
+          <p>© 2026 Piyush Vaid. All rights reserved.</p>
+          <div class="flex gap-4">
+            <a href="#" class="transition hover:text-white">Instagram</a>
+            <a href="#" class="transition hover:text-white">LinkedIn</a>
+            <a href="mailto:piyushvaid08@gmail.com" class="transition hover:text-white">Email</a>
+          </div>
+        </div>
       </div>
     </footer>
     <script src="js/main.js"></script>

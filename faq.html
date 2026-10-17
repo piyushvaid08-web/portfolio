@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href="https://piyushvaid.online/faq.html" />
-    <title>FAQ â€” Frequently Asked Questions About Piyush Vaid</title>
-    <meta name="description" content="Frequently asked questions about Piyush Vaid â€” services, pricing, process, availability, and how to work with Piyush Vaid on your next project." />
+    <title>FAQ — Frequently Asked Questions About Piyush Vaid</title>
+    <meta name="description" content="Frequently asked questions about Piyush Vaid — services, pricing, process, availability, and how to work with Piyush Vaid on your next project." />
     <meta name="keywords" content="Piyush Vaid FAQ, Piyush Vaid questions, hire Piyush Vaid, Piyush Vaid pricing, Piyush Vaid process, Piyush Vaid availability" />
-    <meta name="theme-color" content="#0e0b08" />
-    <meta property="og:title" content="FAQ â€” Frequently Asked Questions About Piyush Vaid" />
+    <meta name="theme-color" content="#090b11" />
+    <meta property="og:title" content="FAQ — Frequently Asked Questions About Piyush Vaid" />
     <meta property="og:description" content="Answers to common questions about working with Piyush Vaid." />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config={theme:{extend:{colors:{accent:'#c8956a',warm:'#e8d5b7',deep:'#0e0b08',soft:'rgba(255,255,255,0.04)'}}}};</script>
+    <script>tailwind.config={theme:{extend:{colors:{accent:'#c8956a',warm:'#e8d5b7',deep:'#090b11',soft:'rgba(255,255,255,0.04)'}}}};</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.3/dist/lenis.min.js"></script>
@@ -25,25 +25,59 @@
   <body>
     <div id="loading-screen" class="loading-screen"><div class="loading-shell"><div class="loading-orb"></div><p>Piyush Vaid</p></div></div>
     <div class="scroll-progress"></div>
-    <button class="scroll-top" aria-label="Scroll to top">â†‘</button>
+    <button class="scroll-top" aria-label="Scroll to top">↑</button>
     <div class="site-bg" aria-hidden="true"></div>
 
-    <header class="sticky top-0 z-50 px-5 py-4 md:px-8 lg:px-12">
-      <nav class="mx-auto flex max-w-6xl items-center justify-between py-3">
-        <a href="index.html" class="brand-mark text-white">Piyush Vaid</a>
-        <div class="hidden items-center gap-8 text-[0.8rem] text-white/50 md:flex" style="letter-spacing:0.06em">
-          <a href="index.html">Home</a><a href="about-piyush-vaid.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="testimonials.html">Testimonials</a><a href="contact.html">Contact</a>
+        <header class="site-header px-5 py-4 md:px-8 lg:px-12">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between">
+        <a href="index.html" class="brand-mark text-white">
+          <span>Piyush Vaid</span>
+          <span class="brand-dot"></span>
+        </a>
+        <div class="hidden items-center gap-7 text-[0.82rem] md:flex">
+          <a href="index.html" class="nav-link ">Home</a>
+          <a href="about-piyush-vaid.html" class="nav-link ">About</a>
+          <a href="services.html" class="nav-link ">Services</a>
+          <a href="portfolio.html" class="nav-link ">Portfolio</a>
+          <a href="case-studies.html" class="nav-link ">Case Studies</a>
+          <a href="blog.html" class="nav-link ">Blog</a>
+          <a href="testimonials.html" class="nav-link ">Testimonials</a>
+          <a href="contact.html" class="nav-link ">Contact</a>
         </div>
-        <button id="theme-toggle" class="rounded-full border border-white/10 px-4 py-2 text-xs text-white/60 transition hover:text-white hover:border-white/20">Theme</button>
+        <div class="flex items-center gap-3">
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+          </button>
+          <button id="menu-toggle" class="menu-toggle-btn md:hidden" aria-label="Open mobile menu" aria-expanded="false">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+          </button>
+        </div>
       </nav>
     </header>
+
+    <div id="mobile-drawer" class="mobile-nav-drawer md:hidden">
+      <div class="flex flex-col space-y-4">
+        <a href="index.html" class="mobile-link ">Home</a>
+        <a href="about-piyush-vaid.html" class="mobile-link ">About</a>
+        <a href="services.html" class="mobile-link ">Services</a>
+        <a href="portfolio.html" class="mobile-link ">Portfolio</a>
+        <a href="case-studies.html" class="mobile-link ">Case Studies</a>
+        <a href="blog.html" class="mobile-link ">Blog & Insights</a>
+        <a href="testimonials.html" class="mobile-link ">Testimonials</a>
+        <a href="contact.html" class="mobile-link ">Contact</a>
+      </div>
+      <div class="mt-auto pt-8 border-t border-white/10">
+        <p class="text-xs text-white/40 mb-3 uppercase tracking-wider">Direct Connect</p>
+        <p class="text-sm text-white/80 font-medium">piyushvaid08@gmail.com</p>
+      </div>
+    </div>
 
     <main>
       <section class="px-5 pt-16 pb-12 md:px-8 lg:px-12 lg:pt-24 lg:pb-16">
         <div class="mx-auto max-w-4xl space-y-8">
           <div class="flex items-center gap-3"><span class="h-px w-8 bg-accent opacity-60"></span><span class="section-label">FAQ</span></div>
           <h1 class="text-reveal editorial-heading text-5xl text-white sm:text-6xl">Questions about<br/>I.</h1>
-          <p class="max-w-2xl body-text text-white/60">Everything you need to know about working with me â€” services, process, pricing, and more.</p>
+          <p class="max-w-2xl body-text text-white/60">Everything you need to know about working with me — services, process, pricing, and more.</p>
         </div>
       </section>
 
@@ -58,7 +92,7 @@
             <p class="body-text text-sm text-white/60 mt-3">To hire I, visit the contact page on this website or email I directly at piyushvaid@example.com. I will respond within 24 hours to schedule an initial consultation. During this call, I will learn about your brand, goals, and project requirements before proposing a tailored approach.</p>
           </div>
           <div class="reveal card-warm rounded-2xl p-7">
-            <h3 class="editorial-heading text-lg text-white">What is the pricing structure of I?</h3>
+            <h3 class="editorial-heading text-lg text-white">What is the pricing structure?</h3>
             <p class="body-text text-sm text-white/60 mt-3">I provides custom pricing based on the scope, complexity, and timeline of each project. I do not use a one-size-fits-all pricing model because every brand has different needs. contact me for a free consultation and a transparent quote tailored to your specific requirements.</p>
           </div>
           <div class="reveal card-warm rounded-2xl p-7">
@@ -67,7 +101,7 @@
           </div>
           <div class="reveal card-warm rounded-2xl p-7">
             <h3 class="editorial-heading text-lg text-white">What industries does I specialize in?</h3>
-            <p class="body-text text-sm text-white/60 mt-3">I have experience across luxury, fashion, beauty, technology, e-commerce, and lifestyle industries. my versatility comes from a foundation in brand strategy that applies universally â€” understanding the audience, crafting the message, and executing with precision. I also brings unique expertise in the fragrance industry as the founder of a premium perfume brand.</p>
+            <p class="body-text text-sm text-white/60 mt-3">I have experience across luxury, fashion, beauty, technology, e-commerce, and lifestyle industries. my versatility comes from a foundation in brand strategy that applies universally — understanding the audience, crafting the message, and executing with precision. I also brings unique expertise in the fragrance industry as the founder of a premium perfume brand.</p>
           </div>
           <div class="reveal card-warm rounded-2xl p-7">
             <h3 class="editorial-heading text-lg text-white">How long does a typical project with me take?</h3>
@@ -75,15 +109,15 @@
           </div>
           <div class="reveal card-warm rounded-2xl p-7">
             <h3 class="editorial-heading text-lg text-white">Does I handle projects end-to-end?</h3>
-            <p class="body-text text-sm text-white/60 mt-3">Yes, I manages projects from strategy through execution to delivery. When you work with me, you get I â€” not a team of junior designers or outsourced contractors. I maintains direct, hands-on involvement at every stage, ensuring quality and consistency throughout the project.</p>
+            <p class="body-text text-sm text-white/60 mt-3">Yes, I manages projects from strategy through execution to delivery. When you work with me, you get I — not a team of junior designers or outsourced contractors. I maintains direct, hands-on involvement at every stage, ensuring quality and consistency throughout the project.</p>
           </div>
           <div class="reveal card-warm rounded-2xl p-7">
-            <h3 class="editorial-heading text-lg text-white">What makes I different from other marketers?</h3>
-            <p class="body-text text-sm text-white/60 mt-3">I am not just a digital marketer â€” I am a brand builder. I combine marketing strategy with brand design, web development, photography, and video production. This multidisciplinary approach means I understands how every piece of a brand's digital presence connects. I also runs a real business (a premium perfume brand), giving I first-hand entrepreneurial experience that most marketers lack.</p>
+            <h3 class="editorial-heading text-lg text-white">What Sets Piyush Vaid Apart from other marketers?</h3>
+            <p class="body-text text-sm text-white/60 mt-3">I am not just a digital marketer — I am a brand builder. I combine marketing strategy with brand design, web development, photography, and video production. This multidisciplinary approach means I understands how every piece of a brand's digital presence connects. I also runs a real business (a premium perfume brand), giving I first-hand entrepreneurial experience that most marketers lack.</p>
           </div>
           <div class="reveal card-warm rounded-2xl p-7">
             <h3 class="editorial-heading text-lg text-white">Can I help with AI and automation?</h3>
-            <p class="body-text text-sm text-white/60 mt-3">Absolutely. I am experienced in AI-powered web development, prompt engineering, and workflow automation. I have built AI pipelines for rapid prototyping, automated content generation, and marketing asset creation. I use AI as a creative accelerator â€” not a replacement for human creativity, but a tool that amplifies it.</p>
+            <p class="body-text text-sm text-white/60 mt-3">Absolutely. I am experienced in AI-powered web development, prompt engineering, and workflow automation. I have built AI pipelines for rapid prototyping, automated content generation, and marketing asset creation. I use AI as a creative accelerator — not a replacement for human creativity, but a tool that amplifies it.</p>
           </div>
           <div class="reveal card-warm rounded-2xl p-7">
             <h3 class="editorial-heading text-lg text-white">Does I offer consulting or only full projects?</h3>
@@ -99,8 +133,8 @@
             <h2 class="editorial-heading text-3xl text-white">Working with me</h2>
             <div class="divider"></div>
             <div class="body-text text-white/60 text-base space-y-5">
-              <p>I work with businesses of all sizes â€” from startups to established brands â€” and offers both full project engagements and consulting sessions. Work is handled directly (no junior handoffs), with clear communication and a structured process: discovery, strategy, execution, optimization.</p>
-              <p>Revisions are included in every scope. I collaborates smoothly with existing teams and agencies. Currently accepting projects for Q3â€“Q4 2026. <a href="contact.html" class="text-accent hover:underline">Get in touch</a> to secure a spot.</p>
+              <p>I work with businesses of all sizes — from startups to established brands — and offers both full project engagements and consulting sessions. Work is handled directly (no junior handoffs), with clear communication and a structured process: discovery, strategy, execution, optimization.</p>
+              <p>Revisions are included in every scope. I collaborates smoothly with existing teams and agencies. Currently accepting projects for Q3–Q4 2026. <a href="contact.html" class="text-accent hover:underline">Get in touch</a> to secure a spot.</p>
             </div>
           </div>
         </div>
@@ -108,10 +142,36 @@
 
     </main>
 
-    <footer class="site-footer px-5 py-10 md:px-8 lg:px-12">
-      <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 md:flex-row">
-        <div><p class="editorial-heading text-xl text-white">Me</p><p class="text-xs text-white/40 mt-1">Brand builder, storyteller, digital creator.</p></div>
-        <div class="flex gap-4"><a href="#" class="text-xs text-white/40 transition hover:text-white">Instagram</a><a href="#" class="text-xs text-white/40 transition hover:text-white">LinkedIn</a><a href="#" class="text-xs text-white/40 transition hover:text-white">Email</a></div>
+        <footer class="site-footer px-5 py-12 md:px-8 lg:px-12">
+      <div class="mx-auto max-w-6xl space-y-8">
+        <div class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+          <div>
+            <a href="index.html" class="brand-mark text-white">
+              <span>Piyush Vaid</span>
+              <span class="brand-dot"></span>
+            </a>
+            <p class="text-xs text-white/50 mt-1 max-w-sm">
+              Brand Builder, Digital Marketer, Creative Technologist & Luxury Perfume Founder.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-6 text-xs text-white/60">
+            <a href="about-piyush-vaid.html" class="transition hover:text-white">About</a>
+            <a href="services.html" class="transition hover:text-white">Services</a>
+            <a href="portfolio.html" class="transition hover:text-white">Portfolio</a>
+            <a href="case-studies.html" class="transition hover:text-white">Case Studies</a>
+            <a href="blog.html" class="transition hover:text-white">Blog</a>
+            <a href="contact.html" class="transition hover:text-white">Contact</a>
+          </div>
+        </div>
+        <div class="divider-wide"></div>
+        <div class="flex flex-col items-center justify-between gap-4 text-xs text-white/40 md:flex-row">
+          <p>© 2026 Piyush Vaid. All rights reserved.</p>
+          <div class="flex gap-4">
+            <a href="#" class="transition hover:text-white">Instagram</a>
+            <a href="#" class="transition hover:text-white">LinkedIn</a>
+            <a href="mailto:piyushvaid08@gmail.com" class="transition hover:text-white">Email</a>
+          </div>
+        </div>
       </div>
     </footer>
     <script src="js/main.js"></script>

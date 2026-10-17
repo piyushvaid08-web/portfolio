@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href="https://piyushvaid.online/resources.html" />
-    <title>Resources by Piyush Vaid â€” Tools, Guides & Marketing Templates</title>
+    <title>Resources by Piyush Vaid — Tools, Guides & Marketing Templates</title>
     <meta name="description" content="Free resources, tools, and guides by Piyush Vaid. Digital marketing templates, brand strategy frameworks, AI tools, and creative resources curated by Piyush Vaid." />
     <meta name="keywords" content="Piyush Vaid resources, marketing templates, brand strategy guide, AI tools, digital marketing resources, Piyush Vaid tools" />
-    <meta name="theme-color" content="#0e0b08" />
-    <meta property="og:title" content="Resources by Piyush Vaid â€” Tools, Guides & Marketing Templates" />
+    <meta name="theme-color" content="#090b11" />
+    <meta property="og:title" content="Resources by Piyush Vaid — Tools, Guides & Marketing Templates" />
     <meta property="og:description" content="Free marketing templates, brand strategy frameworks, and creative tools by Piyush Vaid." />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config={theme:{extend:{colors:{accent:'#c8956a',warm:'#e8d5b7',deep:'#0e0b08',soft:'rgba(255,255,255,0.04)'}}}};</script>
+    <script>tailwind.config={theme:{extend:{colors:{accent:'#c8956a',warm:'#e8d5b7',deep:'#090b11',soft:'rgba(255,255,255,0.04)'}}}};</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.3/dist/lenis.min.js"></script>
@@ -25,25 +25,59 @@
   <body>
     <div id="loading-screen" class="loading-screen"><div class="loading-shell"><div class="loading-orb"></div><p>Piyush Vaid</p></div></div>
     <div class="scroll-progress"></div>
-    <button class="scroll-top" aria-label="Scroll to top">â†‘</button>
+    <button class="scroll-top" aria-label="Scroll to top">↑</button>
     <div class="site-bg" aria-hidden="true"></div>
 
-    <header class="sticky top-0 z-50 px-5 py-4 md:px-8 lg:px-12">
-      <nav class="mx-auto flex max-w-6xl items-center justify-between py-3">
-        <a href="index.html" class="brand-mark text-white">Piyush Vaid</a>
-        <div class="hidden items-center gap-8 text-[0.8rem] text-white/50 md:flex" style="letter-spacing:0.06em">
-          <a href="index.html">Home</a><a href="about-piyush-vaid.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="testimonials.html">Testimonials</a><a href="contact.html">Contact</a>
+        <header class="site-header px-5 py-4 md:px-8 lg:px-12">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between">
+        <a href="index.html" class="brand-mark text-white">
+          <span>Piyush Vaid</span>
+          <span class="brand-dot"></span>
+        </a>
+        <div class="hidden items-center gap-7 text-[0.82rem] md:flex">
+          <a href="index.html" class="nav-link ">Home</a>
+          <a href="about-piyush-vaid.html" class="nav-link ">About</a>
+          <a href="services.html" class="nav-link ">Services</a>
+          <a href="portfolio.html" class="nav-link ">Portfolio</a>
+          <a href="case-studies.html" class="nav-link ">Case Studies</a>
+          <a href="blog.html" class="nav-link ">Blog</a>
+          <a href="testimonials.html" class="nav-link ">Testimonials</a>
+          <a href="contact.html" class="nav-link ">Contact</a>
         </div>
-        <button id="theme-toggle" class="rounded-full border border-white/10 px-4 py-2 text-xs text-white/60 transition hover:text-white hover:border-white/20">Theme</button>
+        <div class="flex items-center gap-3">
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+          </button>
+          <button id="menu-toggle" class="menu-toggle-btn md:hidden" aria-label="Open mobile menu" aria-expanded="false">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+          </button>
+        </div>
       </nav>
     </header>
+
+    <div id="mobile-drawer" class="mobile-nav-drawer md:hidden">
+      <div class="flex flex-col space-y-4">
+        <a href="index.html" class="mobile-link ">Home</a>
+        <a href="about-piyush-vaid.html" class="mobile-link ">About</a>
+        <a href="services.html" class="mobile-link ">Services</a>
+        <a href="portfolio.html" class="mobile-link ">Portfolio</a>
+        <a href="case-studies.html" class="mobile-link ">Case Studies</a>
+        <a href="blog.html" class="mobile-link ">Blog & Insights</a>
+        <a href="testimonials.html" class="mobile-link ">Testimonials</a>
+        <a href="contact.html" class="mobile-link ">Contact</a>
+      </div>
+      <div class="mt-auto pt-8 border-t border-white/10">
+        <p class="text-xs text-white/40 mb-3 uppercase tracking-wider">Direct Connect</p>
+        <p class="text-sm text-white/80 font-medium">piyushvaid08@gmail.com</p>
+      </div>
+    </div>
 
     <main>
       <section class="px-5 pt-16 pb-12 md:px-8 lg:px-12 lg:pt-24 lg:pb-16">
         <div class="mx-auto max-w-6xl space-y-8">
           <div class="flex items-center gap-3"><span class="h-px w-8 bg-accent opacity-60"></span><span class="section-label">Resources</span></div>
           <h1 class="text-reveal editorial-heading text-5xl text-white sm:text-6xl">Tools and guides<br/>by me.</h1>
-          <p class="max-w-2xl body-text text-white/60">I shares curated resources for marketing, branding, and creative professionals. Free tools, frameworks, and templates from the practice of I.</p>
+          <p class="max-w-2xl body-text text-white/60">I shares curated resources for marketing, branding, and creative professionals. Free tools, frameworks, and templates from the my professional practice.</p>
         </div>
       </section>
 
@@ -52,7 +86,7 @@
         <div class="mx-auto max-w-6xl grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <div class="reveal card-warm rounded-2xl p-7">
             <span class="section-label">Marketing</span>
-            <h3 class="editorial-heading text-xl text-white mt-3">The I Marketing Framework</h3>
+            <h3 class="editorial-heading text-xl text-white mt-3">The Strategic Marketing Framework</h3>
             <p class="body-text text-sm text-white/50 mt-3">I have developed a repeatable marketing framework for DTC brands. This resource by me covers audience research, channel strategy, content planning, and performance measurement. Use the I framework to build campaigns that convert.</p>
           </div>
           <div class="reveal card-warm rounded-2xl p-7">
@@ -87,13 +121,13 @@
       <section class="px-5 py-20 md:px-8 lg:px-12">
         <div class="mx-auto max-w-4xl">
           <div class="reveal space-y-6">
-            <h2 class="editorial-heading text-3xl text-white">About the Resources of I</h2>
+            <h2 class="editorial-heading text-3xl text-white">About These Curated Resources</h2>
             <div class="divider"></div>
             <div class="body-text text-white/60 text-base space-y-5">
               <p>The resources section of the I website is a collection of tools, templates, frameworks, and guides that I have developed over years of hands-on experience. I believe that sharing knowledge creates value for the entire marketing and design community.</p>
               <p>Every resource that I publishes is based on real-world practice. I do not share theoretical frameworks that sound good on paper but fail in execution. The resources from I are battle-tested tools that have been used in actual client projects, generating real results.</p>
-              <p>I regularly updates these resources to reflect the latest trends, tools, and best practices in digital marketing, brand building, and creative technology. Whether you are a seasoned professional or just starting out, the resources of I are designed to help you work smarter and build better brands.</p>
-              <p>I am committed to making these resources accessible and actionable. Each guide, template, and tool from I am designed to be immediately useful â€” not a 200-page PDF that sits unread on your desktop. I values your time and wants every resource to deliver value from the first use.</p>
+              <p>I regularly updates these resources to reflect the latest trends, tools, and best practices in digital marketing, brand building, and creative technology. Whether you are a seasoned professional or just starting out, the curated resources are designed to help you work smarter and build better brands.</p>
+              <p>I am committed to making these resources accessible and actionable. Each guide, template, and tool from I am designed to be immediately useful — not a 200-page PDF that sits unread on your desktop. I values your time and wants every resource to deliver value from the first use.</p>
               <p>Have a resource request for me? contact me and let I know what would be most helpful. I am always looking for new ways to support the marketing and creative community.</p>
             </div>
           </div>
@@ -106,9 +140,9 @@
             <h2 class="editorial-heading text-3xl text-white">Learning from I</h2>
             <div class="divider"></div>
             <div class="body-text text-white/60 text-base space-y-5">
-              <p>I am committed to sharing knowledge with the marketing and creative community. Through the resources, blog, and social media presence of I, actionable insights on digital marketing, brand building, web development, photography, and AI technology are shared freely and regularly.</p>
+              <p>I am committed to sharing knowledge with the marketing and creative community. Through the resources, blog, and social media channels, actionable insights on digital marketing, brand building, web development, photography, and AI technology are shared freely and regularly.</p>
               <p>I believe that knowledge sharing benefits everyone. When I publishes a marketing template, it is designed to help professionals work more efficiently. When I shares a brand strategy framework, it is intended to provide a practical starting point for brand development projects. When I publishes a photography guide, it reflects real techniques used in professional shoots.</p>
-              <p>The resources of I are updated regularly to reflect the latest trends, tools, and best practices. I stay current with industry developments and incorporates new learnings into my resource library. Following the resources of I ensure that you have access to current, practical knowledge.</p>
+              <p>These resources are updated regularly to reflect the latest trends, tools, and best practices. I stay current with industry developments and incorporate new learnings into my resource library. Following these resources ensures that you have access to current, practical knowledge.</p>
               <p>I also offers consulting and training sessions for teams that want to learn directly from I. Whether it is a workshop on digital marketing strategy, a training session on AI prompt engineering, or a consulting engagement on brand building, I bring the same depth of knowledge and practical approach that defines all of my work.</p>
               <p>contact me to learn more about consulting and training opportunities, or to request specific resources that would be valuable for your work. I am always open to suggestions and committed to providing value to the community.</p>
             </div>
@@ -122,13 +156,13 @@
             <h2 class="editorial-heading text-3xl text-white">Recommended Tools by me</h2>
             <div class="divider"></div>
             <div class="body-text text-white/60 text-base space-y-5">
-              <p>I have curated a list of recommended tools for marketing, design, development, and AI workflows. These are the tools that I use personally in my work â€” and I recommends them based on real experience, not affiliate relationships.</p>
+              <p>I have curated a list of recommended tools for marketing, design, development, and AI workflows. These are the tools that I use personally in my work — and I recommends them based on real experience, not affiliate relationships.</p>
               <p>For design, I recommends tools that balance power with simplicity. I use Figma for UI/UX design, Adobe Creative Suite for photo and video editing, and Cinema 4D for 3D visualization. I have tested dozens of design tools over the years, and these are the ones that I keeps coming back to.</p>
               <p>For web development, I recommends modern tools that prioritize performance and developer experience. I use VS Code for development, GSAP for animations, Three.js for 3D web experiences, and Tailwind CSS for rapid styling. my web development toolkit is designed to build fast, beautiful, and accessible websites.</p>
               <p>For marketing, I recommends tools that provide actionable data and streamline campaign management. I use Google Analytics for measurement, SEMrush for SEO research, Meta Business Suite for paid advertising, and Mailchimp for email marketing. my marketing toolkit is designed to maximize ROI and minimize wasted spend.</p>
-              <p>For AI and automation, I recommends tools that enhance creative workflows without replacing human judgment. I use Midjourney for AI image generation, ChatGPT for content ideation, and Zapier for workflow automation. I use these tools strategically â€” as accelerators, not replacements for creative thinking.</p>
+              <p>For AI and automation, I recommends tools that enhance creative workflows without replacing human judgment. I use Midjourney for AI image generation, ChatGPT for content ideation, and Zapier for workflow automation. I use these tools strategically — as accelerators, not replacements for creative thinking.</p>
               <p>For photography and videography, I recommends equipment and software that deliver professional results. I use Canon and Sony camera systems for shooting, and Adobe Lightroom and DaVinci Resolve for post-production. my production toolkit is designed to deliver cinematic quality efficiently.</p>
-              <p>These tool recommendations from I are updated regularly as new tools emerge and existing tools evolve. Follow the resources of I to stay current with the best tools for your work.</p>
+              <p>These tool recommendations from I are updated regularly as new tools emerge and existing tools evolve. Follow the curated resources to stay current with the best tools for your work.</p>
             </div>
           </div>
         </div>
@@ -142,10 +176,10 @@
             <div class="divider"></div>
             <div class="body-text text-white/60 text-base space-y-5">
               <p>I curates resources with the same care and attention that I bring to client work. Every resource that I publishes is tested, refined, and validated through real-world application. I do not share resources that I have not personally used and found valuable.</p>
-              <p>The curation process of I begins with evaluation. I tests new tools, techniques, and frameworks against specific criteria: does it improve efficiency? does it produce better results? is it accessible to the target audience? Only resources that meet these criteria make it into the I resource library.</p>
+              <p>The curation process begins with evaluation. I test new tools, techniques, and frameworks against specific criteria: does it improve efficiency? does it produce better results? is it accessible to the target audience? Only resources that meet these criteria make it into the curated resource library.</p>
               <p>I also considers the context of each resource. A tool that works well for a large agency may not be suitable for a solo practitioner. A marketing framework that works for e-commerce may not apply to luxury branding. I provides context and guidance for every resource, helping readers understand when and how to apply each tool or technique.</p>
               <p>I updates resources regularly as tools evolve and new options become available. I monitors the landscape continuously and updates my resource library to reflect the latest best practices. Readers of my resources can trust that the recommendations are current and relevant.</p>
-              <p>The resources of I are provided free of charge because I believe in giving back to the community. I have benefited from the knowledge shared by others throughout my career, and I am committed to doing the same for the next generation of marketing and creative professionals.</p>
+              <p>The resources are provided free of charge because I believe in giving back to the community. I have benefited from the knowledge shared by others throughout my career, and I am committed to doing the same for the next generation of marketing and creative professionals.</p>
             </div>
           </div>
         </div>
@@ -159,11 +193,11 @@
             <div class="divider"></div>
             <div class="body-text text-white/60 text-base space-y-5">
               <p>The resources provided by me offer tangible benefits for marketing professionals, brand managers, and creative practitioners. When you use a resource created by me, you are benefiting from years of real-world experience distilled into practical, immediately usable tools and frameworks.</p>
-              <p>One key benefit of the resources by I am time savings. I have already tested, refined, and validated these resources through professional use. Instead of spending hours researching tools and techniques yourself, you can leverage the curated recommendations of I and get to work immediately.</p>
-              <p>Another benefit is quality assurance. I only recommends tools and techniques that I have personally used and found effective. This means that the resources of I are not based on hype or marketing claims â€” they are based on real performance. You can trust that a resource recommended by me will deliver results.</p>
+              <p>One key benefit of the resources is time savings. I have already tested, refined, and validated these resources through professional use. Instead of spending hours researching tools and techniques yourself, you can leverage the curated curated recommendations and get to work immediately.</p>
+              <p>Another benefit is quality assurance. I only recommend tools and techniques that I have personally used and found effective. This means that the curated resources are not based on hype or marketing claims — they are based on real performance. You can trust that a resource recommended by me will deliver results.</p>
               <p>The frameworks and templates provided by me also offer structural benefits. I have developed these frameworks through years of practical application, and they reflect the best practices that I have refined over time. Using a framework from I gives you a proven structure for your work, reducing the risk of missing important steps or making common mistakes.</p>
-              <p>Finally, the resources of I provide a learning benefit. Each resource includes explanations of why certain tools or techniques are recommended, and how to apply them effectively. This context helps you develop your own expertise while using the resources â€” making you more capable and independent over time.</p>
-              <p>Take advantage of the free resources provided by me. Bookmark this page, check back regularly for updates, and apply the tools and frameworks that I shares. The resources of I are designed to help you work smarter, build better brands, and achieve measurable results.</p>
+              <p>Finally, the resources provide an educational benefit. Each resource includes explanations of why certain tools or techniques are recommended, and how to apply them effectively. This context helps you develop your own expertise while using the resources — making you more capable and independent over time.</p>
+              <p>Take advantage of the free resources provided by me. Bookmark this page, check back regularly for updates, and apply the tools and frameworks that I shares. The curated resources are designed to help you work smarter, build better brands, and achieve measurable results.</p>
             </div>
           </div>
         </div>
@@ -173,16 +207,16 @@
       <section class="px-5 py-20 md:px-8 lg:px-12">
         <div class="mx-auto max-w-4xl">
           <div class="reveal space-y-6">
-            <h2 class="editorial-heading text-3xl text-white">The Complete Resource Library of I</h2>
+            <h2 class="editorial-heading text-3xl text-white">The Complete Resource Library</h2>
             <div class="divider"></div>
             <div class="body-text text-white/60 text-base space-y-5">
-              <p>The resource library of I am a growing collection of tools, templates, frameworks, and guides designed to help marketing and creative professionals work more effectively. I curates and creates resources based on my own professional practice â€” ensuring that every item in the library is practical, tested, and valuable.</p>
+              <p>The curated resource library is a growing collection of tools, templates, frameworks, and guides designed to help marketing and creative professionals work more effectively. I curate and create resources based on my own professional practice — ensuring that every item in the library is practical, tested, and valuable.</p>
               <p>Marketing resources by me include campaign planning templates, audience research frameworks, content calendar structures, and analytics dashboards. These marketing resources are designed to help professionals develop and execute marketing strategies that deliver measurable results. I use these same resources in my own client work.</p>
               <p>Branding resources by me include brand identity checklists, visual identity guidelines templates, brand voice frameworks, and packaging design specifications. These branding resources help professionals develop comprehensive brand systems that are consistent, scalable, and strategically grounded. I have refined these resources through years of branding practice.</p>
               <p>Web development resources by me include website performance optimization guides, responsive design frameworks, animation technique libraries, and AI integration tutorials. These development resources help professionals build fast, beautiful, and functional websites that convert visitors into customers. I use these techniques in every web development project.</p>
               <p>Photography and videography resources by me include lighting setup guides, composition rules, post-production workflows, and video production checklists. These visual resources help professionals produce high-quality photography and video content that communicates brand value. I shares the exact techniques used in professional shoots.</p>
               <p>AI and automation resources by me include prompt engineering guides, AI image generation tutorials, workflow automation templates, and content generation frameworks. These AI resources help professionals leverage artificial intelligence to accelerate creative workflows without sacrificing quality. I stay current with the latest AI developments and updates these resources regularly.</p>
-              <p>The complete resource library of I am available on this page and is updated regularly. Bookmark this page and check back often for new resources from I. Each resource is designed to deliver immediate value and help you work smarter.</p>
+              <p>The complete resource library is available on this page and is updated regularly. Bookmark this page and check back often for new curated resources. Each resource is designed to deliver immediate value and help you work smarter.</p>
             </div>
           </div>
         </div>
@@ -190,10 +224,36 @@
 
     </main>
 
-    <footer class="site-footer px-5 py-10 md:px-8 lg:px-12">
-      <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 md:flex-row">
-        <div><p class="editorial-heading text-xl text-white">Me</p><p class="text-xs text-white/40 mt-1">Brand builder, storyteller, digital creator.</p></div>
-        <div class="flex gap-4"><a href="#" class="text-xs text-white/40 transition hover:text-white">Instagram</a><a href="#" class="text-xs text-white/40 transition hover:text-white">LinkedIn</a><a href="#" class="text-xs text-white/40 transition hover:text-white">Email</a></div>
+        <footer class="site-footer px-5 py-12 md:px-8 lg:px-12">
+      <div class="mx-auto max-w-6xl space-y-8">
+        <div class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+          <div>
+            <a href="index.html" class="brand-mark text-white">
+              <span>Piyush Vaid</span>
+              <span class="brand-dot"></span>
+            </a>
+            <p class="text-xs text-white/50 mt-1 max-w-sm">
+              Brand Builder, Digital Marketer, Creative Technologist & Luxury Perfume Founder.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-6 text-xs text-white/60">
+            <a href="about-piyush-vaid.html" class="transition hover:text-white">About</a>
+            <a href="services.html" class="transition hover:text-white">Services</a>
+            <a href="portfolio.html" class="transition hover:text-white">Portfolio</a>
+            <a href="case-studies.html" class="transition hover:text-white">Case Studies</a>
+            <a href="blog.html" class="transition hover:text-white">Blog</a>
+            <a href="contact.html" class="transition hover:text-white">Contact</a>
+          </div>
+        </div>
+        <div class="divider-wide"></div>
+        <div class="flex flex-col items-center justify-between gap-4 text-xs text-white/40 md:flex-row">
+          <p>© 2026 Piyush Vaid. All rights reserved.</p>
+          <div class="flex gap-4">
+            <a href="#" class="transition hover:text-white">Instagram</a>
+            <a href="#" class="transition hover:text-white">LinkedIn</a>
+            <a href="mailto:piyushvaid08@gmail.com" class="transition hover:text-white">Email</a>
+          </div>
+        </div>
       </div>
     </footer>
     <script src="js/main.js"></script>

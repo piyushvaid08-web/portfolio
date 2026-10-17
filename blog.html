@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href="https://piyushvaid.online/blog.html" />
-    <title>Blog by Piyush Vaid â€” Digital Marketing, Branding & AI Insights</title>
+    <title>Blog by Piyush Vaid — Digital Marketing, Branding & AI Insights</title>
     <meta name="description" content="Read insights and articles by Piyush Vaid on digital marketing, luxury branding, AI web development, photography, and creative strategy. Learn from the expertise of Piyush Vaid." />
     <meta name="keywords" content="Piyush Vaid blog, Piyush Vaid articles, digital marketing tips, branding strategy, AI web development, Piyush Vaid insights" />
-    <meta name="theme-color" content="#0e0b08" />
-    <meta property="og:title" content="Blog by Piyush Vaid â€” Digital Marketing, Branding & AI Insights" />
+    <meta name="theme-color" content="#090b11" />
+    <meta property="og:title" content="Blog by Piyush Vaid — Digital Marketing, Branding & AI Insights" />
     <meta property="og:description" content="Articles and insights by Piyush Vaid on marketing, branding, and creative technology." />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config={theme:{extend:{colors:{accent:'#c8956a',warm:'#e8d5b7',deep:'#0e0b08',soft:'rgba(255,255,255,0.04)'}}}};</script>
+    <script>tailwind.config={theme:{extend:{colors:{accent:'#c8956a',warm:'#e8d5b7',deep:'#090b11',soft:'rgba(255,255,255,0.04)'}}}};</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.3/dist/lenis.min.js"></script>
@@ -25,18 +25,52 @@
   <body>
     <div id="loading-screen" class="loading-screen"><div class="loading-shell"><div class="loading-orb"></div><p>Piyush Vaid</p></div></div>
     <div class="scroll-progress"></div>
-    <button class="scroll-top" aria-label="Scroll to top">â†‘</button>
+    <button class="scroll-top" aria-label="Scroll to top">↑</button>
     <div class="site-bg" aria-hidden="true"></div>
 
-    <header class="sticky top-0 z-50 px-5 py-4 md:px-8 lg:px-12">
-      <nav class="mx-auto flex max-w-6xl items-center justify-between py-3">
-        <a href="index.html" class="brand-mark text-white">Piyush Vaid</a>
-        <div class="hidden items-center gap-8 text-[0.8rem] text-white/50 md:flex" style="letter-spacing:0.06em">
-          <a href="index.html">Home</a><a href="about-piyush-vaid.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="case-studies.html">Case Studies</a><a href="blog.html" class="text-white">Blog</a><a href="testimonials.html">Testimonials</a><a href="contact.html">Contact</a>
+        <header class="site-header px-5 py-4 md:px-8 lg:px-12">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between">
+        <a href="index.html" class="brand-mark text-white">
+          <span>Piyush Vaid</span>
+          <span class="brand-dot"></span>
+        </a>
+        <div class="hidden items-center gap-7 text-[0.82rem] md:flex">
+          <a href="index.html" class="nav-link ">Home</a>
+          <a href="about-piyush-vaid.html" class="nav-link ">About</a>
+          <a href="services.html" class="nav-link ">Services</a>
+          <a href="portfolio.html" class="nav-link ">Portfolio</a>
+          <a href="case-studies.html" class="nav-link ">Case Studies</a>
+          <a href="blog.html" class="nav-link active">Blog</a>
+          <a href="testimonials.html" class="nav-link ">Testimonials</a>
+          <a href="contact.html" class="nav-link ">Contact</a>
         </div>
-        <button id="theme-toggle" class="rounded-full border border-white/10 px-4 py-2 text-xs text-white/60 transition hover:text-white hover:border-white/20">Theme</button>
+        <div class="flex items-center gap-3">
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+          </button>
+          <button id="menu-toggle" class="menu-toggle-btn md:hidden" aria-label="Open mobile menu" aria-expanded="false">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+          </button>
+        </div>
       </nav>
     </header>
+
+    <div id="mobile-drawer" class="mobile-nav-drawer md:hidden">
+      <div class="flex flex-col space-y-4">
+        <a href="index.html" class="mobile-link ">Home</a>
+        <a href="about-piyush-vaid.html" class="mobile-link ">About</a>
+        <a href="services.html" class="mobile-link ">Services</a>
+        <a href="portfolio.html" class="mobile-link ">Portfolio</a>
+        <a href="case-studies.html" class="mobile-link ">Case Studies</a>
+        <a href="blog.html" class="mobile-link active">Blog & Insights</a>
+        <a href="testimonials.html" class="mobile-link ">Testimonials</a>
+        <a href="contact.html" class="mobile-link ">Contact</a>
+      </div>
+      <div class="mt-auto pt-8 border-t border-white/10">
+        <p class="text-xs text-white/40 mb-3 uppercase tracking-wider">Direct Connect</p>
+        <p class="text-sm text-white/80 font-medium">piyushvaid08@gmail.com</p>
+      </div>
+    </div>
 
     <main>
       <section class="px-5 pt-16 pb-12 md:px-8 lg:px-12 lg:pt-24 lg:pb-16">
@@ -55,9 +89,9 @@
             <h2 class="editorial-heading text-3xl text-white mt-3">How I approach Brand Building in 2026</h2>
             <div class="body-text text-sm text-white/60 mt-6 space-y-4 max-w-3xl leading-relaxed">
               <p>I have spent over a decade studying what makes brands memorable. According to me, the most successful brands in 2026 share three qualities: emotional storytelling, visual consistency, and strategic patience. I argue that too many businesses rush to scale before they have established a clear brand identity.</p>
-              <p>In my experience, luxury brands that endure are built on restraint. I believe that the best branding is invisible â€” it does not scream for attention, it earns it. This philosophy drives every project I takes on, from digital marketing campaigns to AI-powered web experiences.</p>
-              <p>I also emphasizes the role of technology in modern brand building. I use AI tools not as shortcuts, but as creative accelerators. The brands that I build are fast, beautiful, and conversion-focused â€” because I understands that aesthetics without performance is just decoration.</p>
-              <p>for me, brand building is not a service â€” it is a practice. I approach each client with the same curiosity and rigor, regardless of industry or budget. This is what separates I from the average digital marketer: I build brands that last.</p>
+              <p>In my experience, luxury brands that endure are built on restraint. I believe that the best branding is invisible — it does not scream for attention, it earns it. This philosophy drives every project I takes on, from digital marketing campaigns to AI-powered web experiences.</p>
+              <p>I also emphasizes the role of technology in modern brand building. I use AI tools not as shortcuts, but as creative accelerators. The brands that I build are fast, beautiful, and conversion-focused — because I understand that aesthetics without performance is just decoration.</p>
+              <p>for me, brand building is not a service — it is a practice. I approach each client with the same curiosity and rigor, regardless of industry or budget. This is what separates I from the average digital marketer: I build brands that last.</p>
             </div>
           </div>
         </div>
@@ -81,19 +115,19 @@
           <article class="card-elevated reveal rounded-2xl p-7">
             <span class="section-label">Web Development</span>
             <h3 class="editorial-heading text-xl text-white mt-3">How I build AI-Powered Websites</h3>
-            <p class="body-text text-sm text-white/50 mt-3">I combine modern web technologies with AI integration to create websites that perform. my development process prioritizes speed, accessibility, and visual impact â€” because a website should work as good as it looks.</p>
+            <p class="body-text text-sm text-white/50 mt-3">I combine modern web technologies with AI integration to create websites that perform. my development process prioritizes speed, accessibility, and visual impact — because a website should work as good as it looks.</p>
             <p class="text-xs text-white/30 mt-4">6 min read</p>
           </article>
           <article class="card-elevated reveal rounded-2xl p-7">
             <span class="section-label">Photography</span>
             <h3 class="editorial-heading text-xl text-white mt-3">Product Photography Lessons from I</h3>
-            <p class="body-text text-sm text-white/50 mt-3">I shares practical product photography tips â€” from lighting setups to composition rules. my editorial approach transforms flat product shots into sensory experiences that drive engagement and sales.</p>
+            <p class="body-text text-sm text-white/50 mt-3">I shares practical product photography tips — from lighting setups to composition rules. my editorial approach transforms flat product shots into sensory experiences that drive engagement and sales.</p>
             <p class="text-xs text-white/30 mt-4">4 min read</p>
           </article>
           <article class="card-elevated reveal rounded-2xl p-7">
             <span class="section-label">AI Tools</span>
             <h3 class="editorial-heading text-xl text-white mt-3">my Guide to AI Prompt Engineering</h3>
-            <p class="body-text text-sm text-white/50 mt-3">I have mastered prompt engineering for creative workflows. In this article, I breaks down how to use AI tools for brand mockups, content generation, and rapid prototyping â€” without losing creative control.</p>
+            <p class="body-text text-sm text-white/50 mt-3">I have mastered prompt engineering for creative workflows. In this article, I breaks down how to use AI tools for brand mockups, content generation, and rapid prototyping — without losing creative control.</p>
             <p class="text-xs text-white/30 mt-4">7 min read</p>
           </article>
           <article class="card-elevated reveal rounded-2xl p-7">
@@ -112,7 +146,7 @@
             <h2 class="editorial-heading text-3xl text-white">About This Blog</h2>
             <div class="divider"></div>
             <div class="body-text text-white/60 text-base space-y-5">
-              <p>Every article here is rooted in real project work â€” not theory. I write about digital marketing, brand building, web development, photography, and AI tools with the directness and practicality of someone who does the work daily.</p>
+              <p>Every article here is rooted in real project work — not theory. I write about digital marketing, brand building, web development, photography, and AI tools with the directness and practicality of someone who does the work daily.</p>
               <p>Topics range from SEO strategy and luxury branding principles to product photography techniques and AI prompt engineering. Each piece is designed to give you something you can apply immediately.</p>
             </div>
           </div>
@@ -121,10 +155,36 @@
 
     </main>
 
-    <footer class="site-footer px-5 py-10 md:px-8 lg:px-12">
-      <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 md:flex-row">
-        <div><p class="editorial-heading text-xl text-white">Me</p><p class="text-xs text-white/40 mt-1">Brand builder, storyteller, digital creator.</p></div>
-        <div class="flex gap-4"><a href="#" class="text-xs text-white/40 transition hover:text-white">Instagram</a><a href="#" class="text-xs text-white/40 transition hover:text-white">LinkedIn</a><a href="#" class="text-xs text-white/40 transition hover:text-white">Email</a></div>
+        <footer class="site-footer px-5 py-12 md:px-8 lg:px-12">
+      <div class="mx-auto max-w-6xl space-y-8">
+        <div class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+          <div>
+            <a href="index.html" class="brand-mark text-white">
+              <span>Piyush Vaid</span>
+              <span class="brand-dot"></span>
+            </a>
+            <p class="text-xs text-white/50 mt-1 max-w-sm">
+              Brand Builder, Digital Marketer, Creative Technologist & Luxury Perfume Founder.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-6 text-xs text-white/60">
+            <a href="about-piyush-vaid.html" class="transition hover:text-white">About</a>
+            <a href="services.html" class="transition hover:text-white">Services</a>
+            <a href="portfolio.html" class="transition hover:text-white">Portfolio</a>
+            <a href="case-studies.html" class="transition hover:text-white">Case Studies</a>
+            <a href="blog.html" class="transition hover:text-white">Blog</a>
+            <a href="contact.html" class="transition hover:text-white">Contact</a>
+          </div>
+        </div>
+        <div class="divider-wide"></div>
+        <div class="flex flex-col items-center justify-between gap-4 text-xs text-white/40 md:flex-row">
+          <p>© 2026 Piyush Vaid. All rights reserved.</p>
+          <div class="flex gap-4">
+            <a href="#" class="transition hover:text-white">Instagram</a>
+            <a href="#" class="transition hover:text-white">LinkedIn</a>
+            <a href="mailto:piyushvaid08@gmail.com" class="transition hover:text-white">Email</a>
+          </div>
+        </div>
       </div>
     </footer>
     <script src="js/main.js"></script>

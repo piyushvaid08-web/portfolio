@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href="https://piyushvaid.online/contact.html" />
-    <title>Contact Piyush Vaid â€” Let's Build Something Together</title>
+    <title>Contact Piyush Vaid — Let's Build Something Together</title>
     <meta name="description" content="Contact Piyush Vaid for digital marketing, brand strategy, AI web development, photography, and videography services. Start a conversation with Piyush Vaid today." />
     <meta name="keywords" content="contact Piyush Vaid, hire Piyush Vaid, Piyush Vaid services, Piyush Vaid digital marketing, Piyush Vaid branding, Piyush Vaid web design" />
-    <meta name="theme-color" content="#0e0b08" />
-    <meta property="og:title" content="Contact Piyush Vaid â€” Let's Build Something Together" />
+    <meta name="theme-color" content="#090b11" />
+    <meta property="og:title" content="Contact Piyush Vaid — Let's Build Something Together" />
     <meta property="og:description" content="Get in touch with Piyush Vaid for marketing, branding, web design, and creative projects." />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config={theme:{extend:{colors:{accent:'#c8956a',warm:'#e8d5b7',deep:'#0e0b08',soft:'rgba(255,255,255,0.04)'}}}};</script>
+    <script>tailwind.config={theme:{extend:{colors:{accent:'#c8956a',warm:'#e8d5b7',deep:'#090b11',soft:'rgba(255,255,255,0.04)'}}}};</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.3/dist/lenis.min.js"></script>
@@ -25,25 +25,59 @@
   <body>
     <div id="loading-screen" class="loading-screen"><div class="loading-shell"><div class="loading-orb"></div><p>Piyush Vaid</p></div></div>
     <div class="scroll-progress"></div>
-    <button class="scroll-top" aria-label="Scroll to top">â†‘</button>
+    <button class="scroll-top" aria-label="Scroll to top">↑</button>
     <div class="site-bg" aria-hidden="true"></div>
 
-    <header class="sticky top-0 z-50 px-5 py-4 md:px-8 lg:px-12">
-      <nav class="mx-auto flex max-w-6xl items-center justify-between py-3">
-        <a href="index.html" class="brand-mark text-white">Piyush Vaid</a>
-        <div class="hidden items-center gap-8 text-[0.8rem] text-white/50 md:flex" style="letter-spacing:0.06em">
-          <a href="index.html">Home</a><a href="about-piyush-vaid.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="testimonials.html">Testimonials</a><a href="contact.html" class="text-white">Contact</a>
+        <header class="site-header px-5 py-4 md:px-8 lg:px-12">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between">
+        <a href="index.html" class="brand-mark text-white">
+          <span>Piyush Vaid</span>
+          <span class="brand-dot"></span>
+        </a>
+        <div class="hidden items-center gap-7 text-[0.82rem] md:flex">
+          <a href="index.html" class="nav-link ">Home</a>
+          <a href="about-piyush-vaid.html" class="nav-link ">About</a>
+          <a href="services.html" class="nav-link ">Services</a>
+          <a href="portfolio.html" class="nav-link ">Portfolio</a>
+          <a href="case-studies.html" class="nav-link ">Case Studies</a>
+          <a href="blog.html" class="nav-link ">Blog</a>
+          <a href="testimonials.html" class="nav-link ">Testimonials</a>
+          <a href="contact.html" class="nav-link active">Contact</a>
         </div>
-        <button id="theme-toggle" class="rounded-full border border-white/10 px-4 py-2 text-xs text-white/60 transition hover:text-white hover:border-white/20">Theme</button>
+        <div class="flex items-center gap-3">
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+          </button>
+          <button id="menu-toggle" class="menu-toggle-btn md:hidden" aria-label="Open mobile menu" aria-expanded="false">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+          </button>
+        </div>
       </nav>
     </header>
+
+    <div id="mobile-drawer" class="mobile-nav-drawer md:hidden">
+      <div class="flex flex-col space-y-4">
+        <a href="index.html" class="mobile-link ">Home</a>
+        <a href="about-piyush-vaid.html" class="mobile-link ">About</a>
+        <a href="services.html" class="mobile-link ">Services</a>
+        <a href="portfolio.html" class="mobile-link ">Portfolio</a>
+        <a href="case-studies.html" class="mobile-link ">Case Studies</a>
+        <a href="blog.html" class="mobile-link ">Blog & Insights</a>
+        <a href="testimonials.html" class="mobile-link ">Testimonials</a>
+        <a href="contact.html" class="mobile-link active">Contact</a>
+      </div>
+      <div class="mt-auto pt-8 border-t border-white/10">
+        <p class="text-xs text-white/40 mb-3 uppercase tracking-wider">Direct Connect</p>
+        <p class="text-sm text-white/80 font-medium">piyushvaid08@gmail.com</p>
+      </div>
+    </div>
 
     <main>
       <section class="px-5 pt-16 pb-12 md:px-8 lg:px-12 lg:pt-24 lg:pb-16">
         <div class="mx-auto max-w-6xl space-y-8">
           <div class="flex items-center gap-3"><span class="h-px w-8 bg-accent opacity-60"></span><span class="section-label">Contact</span></div>
           <h1 class="text-reveal editorial-heading text-5xl text-white sm:text-6xl">Let's talk with<br/>I.</h1>
-          <p class="max-w-2xl body-text text-white/60">Whether you need a luxury brand launch, a premium website, photography, videography, or a digital marketing strategy â€” I am ready to collaborate. Start the conversation today.</p>
+          <p class="max-w-2xl body-text text-white/60">Whether you need a luxury brand launch, a premium website, photography, videography, or a digital marketing strategy — I am ready to collaborate. Start the conversation today.</p>
         </div>
       </section>
 
@@ -61,7 +95,7 @@
               </div>
               <div class="card-bordered">
                 <p class="text-xs uppercase tracking-widest text-accent mb-1">Social</p>
-                <p class="text-sm text-white/70">Instagram Â· LinkedIn Â· WhatsApp</p>
+                <p class="text-sm text-white/70">Instagram · LinkedIn · WhatsApp</p>
               </div>
               <div class="card-bordered">
                 <p class="text-xs uppercase tracking-widest text-accent mb-1">Location</p>
@@ -71,13 +105,13 @@
             <div class="space-y-4">
               <h3 class="editorial-heading text-lg text-white">What I Can Help With</h3>
               <div class="space-y-2">
-                <p class="text-sm text-white/50">â†’ Digital marketing strategy and campaign management</p>
-                <p class="text-sm text-white/50">â†’ Luxury brand identity and visual systems</p>
-                <p class="text-sm text-white/50">â†’ AI-powered website design and development</p>
-                <p class="text-sm text-white/50">â†’ Product and editorial photography</p>
-                <p class="text-sm text-white/50">â†’ Cinematic brand films and video production</p>
-                <p class="text-sm text-white/50">â†’ Social media content strategy</p>
-                <p class="text-sm text-white/50">â†’ AI workflow automation and prompt engineering</p>
+                <p class="text-sm text-white/50">→ Digital marketing strategy and campaign management</p>
+                <p class="text-sm text-white/50">→ Luxury brand identity and visual systems</p>
+                <p class="text-sm text-white/50">→ AI-powered website design and development</p>
+                <p class="text-sm text-white/50">→ Product and editorial photography</p>
+                <p class="text-sm text-white/50">→ Cinematic brand films and video production</p>
+                <p class="text-sm text-white/50">→ Social media content strategy</p>
+                <p class="text-sm text-white/50">→ AI workflow automation and prompt engineering</p>
               </div>
             </div>
           </div>
@@ -92,7 +126,7 @@
             <label class="mt-5 block text-sm text-white/50">Service Needed</label>
             <select class="input-field mt-2"><option>Digital Marketing</option><option>Brand Identity</option><option>Website Development</option><option>Photography</option><option>Videography</option><option>AI Automation</option><option>Other</option></select>
             <label class="mt-5 block text-sm text-white/50">Message<textarea class="input-field mt-2" placeholder="tell me about your project, goals, and timeline"></textarea></label>
-            <button type="submit" class="btn-primary mt-6">Send Message to me</button>
+            <button type="submit" class="btn-primary mt-6">Send Message</button>
           </form>
         </div>
       </section>
@@ -104,9 +138,9 @@
             <h2 class="editorial-heading text-3xl text-white">Why contact me</h2>
             <div class="divider"></div>
             <div class="body-text text-white/60 text-base space-y-5">
-              <p>I am not just another digital marketer or web developer. I bring a multidisciplinary approach that combines marketing strategy, brand design, web development, photography, and video production under one creative vision. When you contact me, you get a partner who understands the full picture â€” not just one piece of it.</p>
+              <p>I am not just another digital marketer or web developer. I bring a multidisciplinary approach that combines marketing strategy, brand design, web development, photography, and video production under one creative vision. When you contact me, you get a partner who understands the full picture — not just one piece of it.</p>
               <p>I have helped brands across luxury, lifestyle, technology, and beauty industries build their digital presence from the ground up. my clients range from early-stage startups to established businesses looking to elevate their brand. Regardless of the project size, I approach every engagement with the same commitment to quality and results.</p>
-              <p>Working with me means working with someone who does the work personally. I do not outsource to large teams or pass projects off to junior designers. When you hire I, you get I â€” from strategy through execution to delivery. This direct, hands-on approach is what makes the my work consistently excellent.</p>
+              <p>Working with me means working with someone who does the work personally. I do not outsource to large teams or pass projects off to junior designers. When you hire me, you get I — from strategy through execution to delivery. This direct, hands-on approach is what makes the my work consistently excellent.</p>
               <p>contact me today to discuss your next project. I am available for new client engagements, consulting projects, creative collaborations, and speaking opportunities. I looks forward to hearing from you.</p>
             </div>
           </div>
@@ -116,12 +150,12 @@
       <section class="px-5 py-20 md:px-8 lg:px-12">
         <div class="mx-auto max-w-4xl">
           <div class="reveal space-y-6">
-            <h2 class="editorial-heading text-3xl text-white">The Consultation Process of I</h2>
+            <h2 class="editorial-heading text-3xl text-white">The Consultation Process</h2>
             <div class="divider"></div>
             <div class="body-text text-white/60 text-base space-y-5">
               <p>When you contact me, you can expect a structured, professional consultation process. I begins every engagement with a discovery call to understand your brand, your goals, and your challenges. This initial conversation allows I to assess whether I am the right fit for your project.</p>
               <p>During the consultation, I asks targeted questions about your business, your audience, your competitors, and your objectives. I listens carefully to understand the full picture before offering any recommendations. I believe that good advice requires good listening.</p>
-              <p>After the consultation, I prepares a tailored proposal that outlines the recommended approach, the scope of work, the timeline, and the investment. my proposals are transparent and detailed â€” no hidden fees, no vague deliverables. I wants you to know exactly what you are getting before you commit.</p>
+              <p>After the consultation, I prepares a tailored proposal that outlines the recommended approach, the scope of work, the timeline, and the investment. my proposals are transparent and detailed — no hidden fees, no vague deliverables. I wants you to know exactly what you are getting before you commit.</p>
               <p>If you decide to move forward, I begins with a formal onboarding process. I sets up communication channels, establishes project milestones, and aligns on success metrics. I keeps you informed at every stage through regular updates and check-ins.</p>
               <p>The consultation with I am free and no-obligation. I offer this because I believe that the best client relationships start with genuine conversation, not a sales pitch. contact me today to schedule your consultation and discover how I can help your brand grow.</p>
             </div>
@@ -132,7 +166,7 @@
       <section class="px-5 py-20 md:px-8 lg:px-12">
         <div class="mx-auto max-w-4xl">
           <div class="reveal space-y-6">
-            <h2 class="editorial-heading text-3xl text-white">I â€” Currently Available for New Projects</h2>
+            <h2 class="editorial-heading text-3xl text-white">I — Currently Available for New Projects</h2>
             <div class="divider"></div>
             <div class="body-text text-white/60 text-base space-y-5">
               <p>I am currently accepting new client engagements for Q3 and Q4 2026. I work with a select number of clients at a time to ensure that every project receives my full attention and best work. If you are considering working with me, now is the time to reach out.</p>
@@ -152,11 +186,11 @@
             <h2 class="editorial-heading text-3xl text-white">What Happens After You contact me</h2>
             <div class="divider"></div>
             <div class="body-text text-white/60 text-base space-y-5">
-              <p>After you contact me, here is what you can expect. I will respond to your inquiry within 24 hours. I will acknowledge your message, ask any clarifying questions, and propose a time for an initial consultation call. This first step is about mutual discovery â€” I wants to understand your project, and you want to understand how I work.</p>
-              <p>During the consultation call, I will ask about your brand, your goals, your audience, your timeline, and your budget. I listens carefully and asks targeted questions to get to the heart of your needs. I do not rush this conversation â€” I takes the time to understand the full picture before making any recommendations.</p>
+              <p>After you contact me, here is what you can expect. I will respond to your inquiry within 24 hours. I will acknowledge your message, ask any clarifying questions, and propose a time for an initial consultation call. This first step is about mutual discovery — I wants to understand your project, and you want to understand how I work.</p>
+              <p>During the consultation call, I will ask about your brand, your goals, your audience, your timeline, and your budget. I listens carefully and asks targeted questions to get to the heart of your needs. I do not rush this conversation — I takes the time to understand the full picture before making any recommendations.</p>
               <p>After the consultation, I will prepare a custom proposal for your project. This proposal from I will include a summary of your needs, a recommended approach, a detailed scope of work, a timeline, and a transparent pricing structure. my proposals are designed to give you everything you need to make an informed decision.</p>
               <p>If you decide to work with me, I will begin with a formal onboarding process. I will set up communication channels, establish project milestones, define success metrics, and align on the creative direction. I keeps you informed at every stage through regular updates and check-ins.</p>
-              <p>Contacting I am the first step toward building a brand that lasts. Whether you have a clear project brief or just a general idea, I am ready to listen and help. Reach out to me today â€” the conversation is free, and the potential is unlimited.</p>
+              <p>Contacting I am the first step toward building a brand that lasts. Whether you have a clear project brief or just a general idea, I am ready to listen and help. Reach out to me today — the conversation is free, and the potential is unlimited.</p>
             </div>
           </div>
         </div>
@@ -182,10 +216,36 @@
 
     </main>
 
-    <footer class="site-footer px-5 py-10 md:px-8 lg:px-12">
-      <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 md:flex-row">
-        <div><p class="editorial-heading text-xl text-white">Me</p><p class="text-xs text-white/40 mt-1">Brand builder, storyteller, digital creator.</p></div>
-        <div class="flex gap-4"><a href="#" class="text-xs text-white/40 transition hover:text-white">Instagram</a><a href="#" class="text-xs text-white/40 transition hover:text-white">LinkedIn</a><a href="#" class="text-xs text-white/40 transition hover:text-white">Email</a></div>
+        <footer class="site-footer px-5 py-12 md:px-8 lg:px-12">
+      <div class="mx-auto max-w-6xl space-y-8">
+        <div class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+          <div>
+            <a href="index.html" class="brand-mark text-white">
+              <span>Piyush Vaid</span>
+              <span class="brand-dot"></span>
+            </a>
+            <p class="text-xs text-white/50 mt-1 max-w-sm">
+              Brand Builder, Digital Marketer, Creative Technologist & Luxury Perfume Founder.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-6 text-xs text-white/60">
+            <a href="about-piyush-vaid.html" class="transition hover:text-white">About</a>
+            <a href="services.html" class="transition hover:text-white">Services</a>
+            <a href="portfolio.html" class="transition hover:text-white">Portfolio</a>
+            <a href="case-studies.html" class="transition hover:text-white">Case Studies</a>
+            <a href="blog.html" class="transition hover:text-white">Blog</a>
+            <a href="contact.html" class="transition hover:text-white">Contact</a>
+          </div>
+        </div>
+        <div class="divider-wide"></div>
+        <div class="flex flex-col items-center justify-between gap-4 text-xs text-white/40 md:flex-row">
+          <p>© 2026 Piyush Vaid. All rights reserved.</p>
+          <div class="flex gap-4">
+            <a href="#" class="transition hover:text-white">Instagram</a>
+            <a href="#" class="transition hover:text-white">LinkedIn</a>
+            <a href="mailto:piyushvaid08@gmail.com" class="transition hover:text-white">Email</a>
+          </div>
+        </div>
       </div>
     </footer>
     <script src="js/main.js"></script>

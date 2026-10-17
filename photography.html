@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href="https://piyushvaid.online/photography.html" />
-    <title>Photography by Piyush Vaid â€” Product, Editorial & Brand Photography</title>
+    <title>Photography by Piyush Vaid — Product, Editorial & Brand Photography</title>
     <meta name="description" content="Photography portfolio of Piyush Vaid. Product photography, editorial shoots, and brand visual storytelling by Piyush Vaid for luxury and lifestyle brands." />
     <meta name="keywords" content="Piyush Vaid photography, product photography, brand photography, editorial photography, Piyush Vaid photographer" />
-    <meta name="theme-color" content="#0e0b08" />
-    <meta property="og:title" content="Photography by Piyush Vaid â€” Product, Editorial & Brand Photography" />
+    <meta name="theme-color" content="#090b11" />
+    <meta property="og:title" content="Photography by Piyush Vaid — Product, Editorial & Brand Photography" />
     <meta property="og:description" content="Visual storytelling through product and editorial photography by Piyush Vaid." />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,27 +16,61 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config={theme:{extend:{colors:{accent:'#c8956a',warm:'#e8d5b7',deep:'#0e0b08',soft:'rgba(255,255,255,0.04)'}}}};</script>
+    <script>tailwind.config={theme:{extend:{colors:{accent:'#c8956a',warm:'#e8d5b7',deep:'#090b11',soft:'rgba(255,255,255,0.04)'}}}};</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.3/dist/lenis.min.js"></script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Piyush Vaid","jobTitle":"Photographer, Creative Technologist","url":"https://piyushvaid.online/photography.html","description":"Photography by Piyush Vaid â€” product, editorial, and brand visual storytelling."}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Piyush Vaid","jobTitle":"Photographer, Creative Technologist","url":"https://piyushvaid.online/photography.html","description":"Photography by Piyush Vaid — product, editorial, and brand visual storytelling."}</script>
   </head>
   <body>
     <div id="loading-screen" class="loading-screen"><div class="loading-shell"><div class="loading-orb"></div><p>Piyush Vaid</p></div></div>
     <div class="scroll-progress"></div>
-    <button class="scroll-top" aria-label="Scroll to top">â†‘</button>
+    <button class="scroll-top" aria-label="Scroll to top">↑</button>
     <div class="site-bg" aria-hidden="true"></div>
 
-    <header class="sticky top-0 z-50 px-5 py-4 md:px-8 lg:px-12">
-      <nav class="mx-auto flex max-w-6xl items-center justify-between py-3">
-        <a href="index.html" class="brand-mark text-white">Piyush Vaid</a>
-        <div class="hidden items-center gap-8 text-[0.8rem] text-white/50 md:flex" style="letter-spacing:0.06em">
-          <a href="index.html">Home</a><a href="about-piyush-vaid.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="testimonials.html">Testimonials</a><a href="contact.html">Contact</a>
+        <header class="site-header px-5 py-4 md:px-8 lg:px-12">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between">
+        <a href="index.html" class="brand-mark text-white">
+          <span>Piyush Vaid</span>
+          <span class="brand-dot"></span>
+        </a>
+        <div class="hidden items-center gap-7 text-[0.82rem] md:flex">
+          <a href="index.html" class="nav-link ">Home</a>
+          <a href="about-piyush-vaid.html" class="nav-link ">About</a>
+          <a href="services.html" class="nav-link ">Services</a>
+          <a href="portfolio.html" class="nav-link ">Portfolio</a>
+          <a href="case-studies.html" class="nav-link ">Case Studies</a>
+          <a href="blog.html" class="nav-link ">Blog</a>
+          <a href="testimonials.html" class="nav-link ">Testimonials</a>
+          <a href="contact.html" class="nav-link ">Contact</a>
         </div>
-        <button id="theme-toggle" class="rounded-full border border-white/10 px-4 py-2 text-xs text-white/60 transition hover:text-white hover:border-white/20">Theme</button>
+        <div class="flex items-center gap-3">
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+          </button>
+          <button id="menu-toggle" class="menu-toggle-btn md:hidden" aria-label="Open mobile menu" aria-expanded="false">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+          </button>
+        </div>
       </nav>
     </header>
+
+    <div id="mobile-drawer" class="mobile-nav-drawer md:hidden">
+      <div class="flex flex-col space-y-4">
+        <a href="index.html" class="mobile-link ">Home</a>
+        <a href="about-piyush-vaid.html" class="mobile-link ">About</a>
+        <a href="services.html" class="mobile-link ">Services</a>
+        <a href="portfolio.html" class="mobile-link ">Portfolio</a>
+        <a href="case-studies.html" class="mobile-link ">Case Studies</a>
+        <a href="blog.html" class="mobile-link ">Blog & Insights</a>
+        <a href="testimonials.html" class="mobile-link ">Testimonials</a>
+        <a href="contact.html" class="mobile-link ">Contact</a>
+      </div>
+      <div class="mt-auto pt-8 border-t border-white/10">
+        <p class="text-xs text-white/40 mb-3 uppercase tracking-wider">Direct Connect</p>
+        <p class="text-sm text-white/80 font-medium">piyushvaid08@gmail.com</p>
+      </div>
+    </div>
 
     <main>
       <section class="px-5 pt-16 pb-12 md:px-8 lg:px-12 lg:pt-24 lg:pb-16">
@@ -79,11 +113,11 @@
           <div class="grid gap-10 md:grid-cols-2">
             <div class="reveal space-y-4">
               <h3 class="editorial-heading text-xl text-white">Product Photography</h3>
-              <p class="body-text text-sm text-white/60 leading-relaxed">I specializes in product photography that communicates quality, texture, and desire. Whether I am shooting luxury fragrances, lifestyle products, or tech gadgets, the approach remains consistent: dramatic lighting, intentional composition, and a focus on the details that make products irresistible. I have shot product photography for brands across fashion, beauty, and technology â€” and every project reflects the same standard of excellence.</p>
+              <p class="body-text text-sm text-white/60 leading-relaxed">I specializes in product photography that communicates quality, texture, and desire. Whether I am shooting luxury fragrances, lifestyle products, or tech gadgets, the approach remains consistent: dramatic lighting, intentional composition, and a focus on the details that make products irresistible. I have shot product photography for brands across fashion, beauty, and technology — and every project reflects the same standard of excellence.</p>
             </div>
             <div class="reveal space-y-4">
               <h3 class="editorial-heading text-xl text-white">Editorial Photography</h3>
-              <p class="body-text text-sm text-white/60 leading-relaxed">my editorial photography blends narrative storytelling with visual precision. I create photo essays and editorial spreads that go beyond product shots to tell brand stories. The editorial work of I have been featured across digital platforms and social media campaigns, driving engagement and building brand perception. I believe that editorial photography is where art and commerce meet.</p>
+              <p class="body-text text-sm text-white/60 leading-relaxed">my editorial photography blends narrative storytelling with visual precision. I create photo essays and editorial spreads that go beyond product shots to tell brand stories. My editorial work has been featured across digital platforms and social media campaigns, driving engagement and building brand perception. I believe that editorial photography is where art and commerce meet.</p>
             </div>
             <div class="reveal space-y-4">
               <h3 class="editorial-heading text-xl text-white">Brand Photography</h3>
@@ -91,12 +125,12 @@
             </div>
             <div class="reveal space-y-4">
               <h3 class="editorial-heading text-xl text-white">Retouching & Post-Production</h3>
-              <p class="body-text text-sm text-white/60 leading-relaxed">I handle retouching and post-production in-house to maintain creative control. my retouching approach is refined and natural â€” enhancing without over-processing. Every image that leaves the studio of I am polished, color-graded, and optimized for its intended platform. I deliver photography that looks premium whether viewed on a phone screen or printed on a billboard.</p>
+              <p class="body-text text-sm text-white/60 leading-relaxed">I handle retouching and post-production in-house to maintain creative control. my retouching approach is refined and natural — enhancing without over-processing. Every image that leaves the studio is polished, color-graded, and optimized for its intended platform. I deliver photography that looks premium whether viewed on a phone screen or printed on a billboard.</p>
             </div>
           </div>
           <div class="reveal body-text text-white/60 text-base space-y-5">
             <p>I approach photography as a discipline, not just a service. I invests time in understanding the product, the audience, and the brand before any shoot begins. This preparation is what allows I to consistently deliver images that feel intentional and elevated.</p>
-            <p>Whether you need product photography for an e-commerce launch, editorial imagery for a brand campaign, or a complete visual library for your digital presence, I bring the same commitment to craft. my photography is designed to work â€” not just look beautiful, but drive engagement, conversions, and brand loyalty.</p>
+            <p>Whether you need product photography for an e-commerce launch, editorial imagery for a brand campaign, or a complete visual library for your digital presence, I bring the same commitment to craft. my photography is designed to work — not just look beautiful, but drive engagement, conversions, and brand loyalty.</p>
             <p>contact me to discuss your photography needs. I am available for product shoots, editorial projects, brand photography, and creative direction across India and internationally.</p>
           </div>
         </div>
@@ -105,16 +139,16 @@
       <section class="px-5 py-20 md:px-8 lg:px-12">
         <div class="mx-auto max-w-4xl">
           <div class="reveal space-y-6">
-            <h2 class="editorial-heading text-3xl text-white">Photography Equipment and Technique of I</h2>
+            <h2 class="editorial-heading text-3xl text-white">Equipment and Technique</h2>
             <div class="divider"></div>
             <div class="body-text text-white/60 text-base space-y-5">
-              <p>I use professional-grade photography equipment to ensure consistent, high-quality results. The equipment selection of I am guided by the specific needs of each project â€” I do not rely on a single setup for all shoots. Instead, I tailors the equipment and technique to match the product, the brand aesthetic, and the intended platform.</p>
-              <p>In product photography, I use controlled lighting setups that create dramatic shadows and highlights. my lighting technique emphasizes texture, form, and material quality â€” making products feel tangible and desirable. The lighting setups used by me are refined through years of experimentation and professional practice.</p>
-              <p>For editorial photography, I combine natural and artificial lighting to create mood-driven images. my editorial technique focuses on composition, depth of field, and color grading to create images that tell stories. The editorial work of I am influenced by high-fashion and luxury brand aesthetics.</p>
-              <p>In post-production, I handle color grading, retouching, and optimization personally. my retouching philosophy is natural and refined â€” enhancing without over-processing. Every image that leaves the studio of I am color-graded to match the brand's visual identity and optimized for its intended platform.</p>
-              <p>I also specializes in photography for specific platforms. I knows that product photography for e-commerce requires different considerations than photography for social media or print advertising. I optimizes every image for its intended use, ensuring maximum impact regardless of where it appears.</p>
-              <p>The photography services of I include product shoots, editorial sessions, brand photography, lifestyle imagery, and social media content creation. I handle all aspects of the photography process â€” from concept development and art direction to shooting and post-production. When you hire I for photography, you get a complete visual solution.</p>
-              <p>my photography has been used by brands across luxury, fashion, beauty, technology, and e-commerce industries. The versatility of I in photography is one of my greatest strengths â€” I adapts to any product category while maintaining a consistent standard of quality and visual excellence.</p>
+              <p>I use professional-grade photography equipment to ensure consistent, high-quality results. The equipment selection is guided by the specific needs of each project — I do not rely on a single setup for all shoots. Instead, I tailor the equipment and technique to match the product, the brand aesthetic, and the intended platform.</p>
+              <p>In product photography, I use controlled lighting setups that create dramatic shadows and highlights. my lighting technique emphasizes texture, form, and material quality — making products feel tangible and desirable. The lighting setups used by me are refined through years of experimentation and professional practice.</p>
+              <p>For editorial photography, I combine natural and artificial lighting to create mood-driven images. my editorial technique focuses on composition, depth of field, and color grading to create images that tell stories. The editorial work is influenced by high-fashion and luxury brand aesthetics.</p>
+              <p>In post-production, I handle color grading, retouching, and optimization personally. my retouching philosophy is natural and refined — enhancing without over-processing. Every image that leaves the studio is color-graded to match the brand's visual identity and optimized for its intended platform.</p>
+              <p>I also specializes in photography for specific platforms. I know that product photography for e-commerce requires different considerations than photography for social media or print advertising. I optimize every image for its intended use, ensuring maximum impact regardless of where it appears.</p>
+              <p>The photography services include product shoots, editorial sessions, brand photography, lifestyle imagery, and social media content creation. I handle all aspects of the photography process — from concept development and art direction to shooting and post-production. When you hire I for photography, you get a complete visual solution.</p>
+              <p>my photography has been used by brands across luxury, fashion, beauty, technology, and e-commerce industries. The versatility in photography is one of my greatest strengths — I adapt to any product category while maintaining a consistent standard of quality and visual excellence.</p>
             </div>
           </div>
         </div>
@@ -123,13 +157,13 @@
       <section class="px-5 py-20 md:px-8 lg:px-12">
         <div class="mx-auto max-w-4xl">
           <div class="reveal space-y-6">
-            <h2 class="editorial-heading text-3xl text-white">The Photography Philosophy of I</h2>
+            <h2 class="editorial-heading text-3xl text-white">The Photography Philosophy</h2>
             <div class="divider"></div>
             <div class="body-text text-white/60 text-base space-y-5">
-              <p>I believe that great photography is not about equipment â€” it is about vision. I approach every shoot with a clear creative concept and a deep understanding of the brand's visual identity. The photography philosophy of I am rooted in intentionality: every element in the frame serves a purpose.</p>
-              <p>I draws inspiration from fashion editorial, luxury advertising, and fine art photography. The visual language of I combine dramatic lighting, rich textures, and careful composition to create images that feel premium and emotionally resonant. my photography does not just document products â€” it elevates them.</p>
-              <p>I also understands the commercial context of photography. I knows that product photography must not only look beautiful â€” it must drive sales. I optimizes every image for its intended platform, whether it is an e-commerce product page, a social media feed, or a print advertisement. This commercial awareness is what makes the photography of I both artistically excellent and commercially effective.</p>
-              <p>The photography of I have been recognized for its distinctive style. I have developed a visual signature that clients and audiences associate with quality and sophistication. This brand recognition for my photography is built on consistency â€” every shoot by me meets the same high standard of creative and technical excellence.</p>
+              <p>I believe that great photography is not about equipment — it is about vision. I approach every shoot with a clear creative concept and a deep understanding of the brand's visual identity. The photography philosophy is rooted in intentionality: every element in the frame serves a purpose.</p>
+              <p>I draw inspiration from fashion editorial, luxury advertising, and fine art photography. The visual language combines dramatic lighting, rich textures, and careful composition to create images that feel premium and emotionally resonant. my photography does not just document products — it elevates them.</p>
+              <p>I also understands the commercial context of photography. I know that product photography must not only look beautiful — it must drive sales. I optimize every image for its intended platform, whether it is an e-commerce product page, a social media feed, or a print advertisement. This commercial awareness is what makes the photography both artistically excellent and commercially effective.</p>
+              <p>The photography has been recognized for its distinctive style. I have developed a visual signature that clients and audiences associate with quality and sophistication. This brand recognition for my photography is built on consistency — every shoot meets the same high standard of creative and technical excellence.</p>
               <p>If you are looking for a photographer who combines creative vision with strategic thinking, I am the right choice. my photography is designed to make your products irresistible and your brand unforgettable. contact me to discuss your next photography project.</p>
             </div>
           </div>
@@ -143,12 +177,12 @@
             <h2 class="editorial-heading text-3xl text-white">Photography Portfolio Highlights by me</h2>
             <div class="divider"></div>
             <div class="body-text text-white/60 text-base space-y-5">
-              <p>The photography my portfolio showcases work across product, editorial, and brand photography. Each project in the my portfolio demonstrates my ability to create images that communicate quality, evoke emotion, and drive engagement. The photography of I am used by brands across luxury, fashion, beauty, technology, and e-commerce industries.</p>
+              <p>My photography portfolio showcases work across product, editorial, and brand photography. Each project in the my portfolio demonstrates my ability to create images that communicate quality, evoke emotion, and drive engagement. The photography is used by brands across luxury, fashion, beauty, technology, and e-commerce industries.</p>
               <p>In product photography, I have shot luxury fragrances, fashion accessories, beauty products, tech gadgets, and lifestyle items. The product photography by I use dramatic lighting, controlled compositions, and meticulous post-production to make every product feel premium and desirable. my product photography has been used on e-commerce platforms, social media feeds, and advertising campaigns.</p>
               <p>In editorial photography, I have created photo essays and editorial spreads for fashion brands, beauty companies, and lifestyle publications. The editorial photography by I combine narrative storytelling with visual precision, creating images that go beyond product documentation to tell brand stories. my editorial work has driven significant engagement across digital platforms.</p>
-              <p>In brand photography, I have built comprehensive visual libraries for businesses that need consistent, high-quality imagery across all touchpoints. The brand photography by me captures the essence of a business â€” its people, its culture, its values â€” in images that feel authentic and premium. my brand photography is used on websites, social media, print materials, and presentations.</p>
-              <p>I also specializes in e-commerce product photography optimized for conversion. I understands that product photography for online stores must not only look beautiful â€” it must communicate quality, build trust, and drive purchase decisions. The e-commerce photography by I am designed to maximize conversion rates while maintaining visual excellence.</p>
-              <p>The photography services of I include concept development, art direction, professional shooting, retouching, color grading, and platform optimization. I handle the entire photography process from start to finish, ensuring consistency and quality at every stage. When you hire I for photography, you get a complete, end-to-end visual solution.</p>
+              <p>In brand photography, I have built comprehensive visual libraries for businesses that need consistent, high-quality imagery across all touchpoints. The brand photography by me captures the essence of a business — its people, its culture, its values — in images that feel authentic and premium. my brand photography is used on websites, social media, print materials, and presentations.</p>
+              <p>I also specializes in e-commerce product photography optimized for conversion. I understand that product photography for online stores must not only look beautiful — it must communicate quality, build trust, and drive purchase decisions. The e-commerce photography by I am designed to maximize conversion rates while maintaining visual excellence.</p>
+              <p>The photography services include concept development, art direction, professional shooting, retouching, color grading, and platform optimization. I handle the entire photography process from start to finish, ensuring consistency and quality at every stage. When you hire I for photography, you get a complete, end-to-end visual solution.</p>
               <p>contact me to discuss your photography needs. Whether you need product shots for a new e-commerce launch, editorial imagery for a brand campaign, or a complete visual library for your digital presence, I am ready to deliver work that exceeds your expectations.</p>
             </div>
           </div>
@@ -157,10 +191,36 @@
 
     </main>
 
-    <footer class="site-footer px-5 py-10 md:px-8 lg:px-12">
-      <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 md:flex-row">
-        <div><p class="editorial-heading text-xl text-white">Me</p><p class="text-xs text-white/40 mt-1">Brand builder, storyteller, digital creator.</p></div>
-        <div class="flex gap-4"><a href="#" class="text-xs text-white/40 transition hover:text-white">Instagram</a><a href="#" class="text-xs text-white/40 transition hover:text-white">LinkedIn</a><a href="#" class="text-xs text-white/40 transition hover:text-white">Email</a></div>
+        <footer class="site-footer px-5 py-12 md:px-8 lg:px-12">
+      <div class="mx-auto max-w-6xl space-y-8">
+        <div class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+          <div>
+            <a href="index.html" class="brand-mark text-white">
+              <span>Piyush Vaid</span>
+              <span class="brand-dot"></span>
+            </a>
+            <p class="text-xs text-white/50 mt-1 max-w-sm">
+              Brand Builder, Digital Marketer, Creative Technologist & Luxury Perfume Founder.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-6 text-xs text-white/60">
+            <a href="about-piyush-vaid.html" class="transition hover:text-white">About</a>
+            <a href="services.html" class="transition hover:text-white">Services</a>
+            <a href="portfolio.html" class="transition hover:text-white">Portfolio</a>
+            <a href="case-studies.html" class="transition hover:text-white">Case Studies</a>
+            <a href="blog.html" class="transition hover:text-white">Blog</a>
+            <a href="contact.html" class="transition hover:text-white">Contact</a>
+          </div>
+        </div>
+        <div class="divider-wide"></div>
+        <div class="flex flex-col items-center justify-between gap-4 text-xs text-white/40 md:flex-row">
+          <p>© 2026 Piyush Vaid. All rights reserved.</p>
+          <div class="flex gap-4">
+            <a href="#" class="transition hover:text-white">Instagram</a>
+            <a href="#" class="transition hover:text-white">LinkedIn</a>
+            <a href="mailto:piyushvaid08@gmail.com" class="transition hover:text-white">Email</a>
+          </div>
+        </div>
       </div>
     </footer>
     <script src="js/main.js"></script>
