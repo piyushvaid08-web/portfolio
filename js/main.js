@@ -34,7 +34,7 @@
     });
   }
 
-  // ── 2. Loading Screen Dismissal ──
+  // ── 2. Loading Screen Dismissal (Instant & Responsive) ──
   const loadingScreen = document.getElementById('loading-screen');
   const gsapAvailable = typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined';
 
@@ -47,15 +47,20 @@
     loadingScreen.style.opacity = '0';
     loadingScreen.style.pointerEvents = 'none';
     setTimeout(() => {
-      if (loadingScreen.parentNode) {
+      if (loadingScreen && loadingScreen.parentNode) {
         loadingScreen.remove();
       }
-    }, 400);
+    }, 280);
   }
 
-  window.addEventListener('load', dismissLoader);
-  // Fallback so user is never stuck
-  setTimeout(dismissLoader, 1200);
+  if (document.readyState === 'interactive' || document.readyState === 'complete') {
+    requestAnimationFrame(dismissLoader);
+  } else {
+    document.addEventListener('DOMContentLoaded', dismissLoader);
+    window.addEventListener('load', dismissLoader);
+  }
+  // Fast fallback so user is never kept waiting
+  setTimeout(dismissLoader, 400);
 
   // ── 3. Mobile Navigation Drawer ──
   const menuToggle = document.getElementById('menu-toggle');
@@ -83,72 +88,127 @@
     });
   }
 
-  // ── 4. Scroll Progress & Back-to-Top ──
+  // ── 4. Scroll Progress & Back-to-Top (Throttled via rAF to avoid layout thrashing) ──
   const progressBar = document.querySelector('.scroll-progress');
   const scrollTopBtn = document.querySelector('.scroll-top');
+  let scrollTicking = false;
+  let cachedMaxScroll = 1;
+  let isScrollTopVisible = false;
 
-  function updateScrollState() {
-    const scrollTop = window.scrollY;
-    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = maxScroll > 0 ? scrollTop / maxScroll : 0;
+  function calculateMaxScroll() {
+    cachedMaxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+  }
 
-    if (progressBar) {
-      progressBar.style.transform = `scaleX(${progress})`;
-    }
+  function handleScroll() {
+    if (!scrollTicking) {
+      requestAnimationFrame(() => {
+        const scrollTop = window.scrollY || window.pageYOffset;
+        const progress = Math.min(1, Math.max(0, scrollTop / cachedMaxScroll));
 
-    if (scrollTopBtn) {
-      scrollTopBtn.style.display = scrollTop > 500 ? 'grid' : 'none';
+        if (progressBar) {
+          progressBar.style.transform = `scaleX(${progress})`;
+        }
+
+        const shouldShow = scrollTop > 400;
+        if (scrollTopBtn && shouldShow !== isScrollTopVisible) {
+          isScrollTopVisible = shouldShow;
+          scrollTopBtn.classList.toggle('visible', shouldShow);
+        }
+
+        scrollTicking = false;
+      });
+      scrollTicking = true;
     }
   }
 
-  window.addEventListener('scroll', updateScrollState, { passive: true });
-  window.addEventListener('resize', updateScrollState);
-  updateScrollState();
+  calculateMaxScroll();
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  window.addEventListener('resize', () => {
+    calculateMaxScroll();
+    handleScroll();
+  }, { passive: true });
 
   if (scrollTopBtn) {
     scrollTopBtn.addEventListener('click', () => {
       if (window.lenisInstance) {
-        window.lenisInstance.scrollTo(0);
+        window.lenisInstance.scrollTo(0, { duration: 0.8 });
       } else {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     });
   }
 
-  // ── 5. Smooth Scroll (Lenis) ──
+  // ── 5. Smooth Scroll (Lenis - Optimized & Synced with GSAP) ──
   if (typeof Lenis !== 'undefined') {
-    const lenis = new Lenis({
-      duration: 1.1,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true
-    });
-    window.lenisInstance = lenis;
+    const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    // On touch screens, native momentum scroll is faster and more natural
+    if (!isTouch) {
+      const lenis = new Lenis({
+        duration: 0.65,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true,
+        wheelMultiplier: 1.15,
+        touchMultiplier: 1.0,
+        syncTouch: false,
+        autoResize: true
+      });
+      window.lenisInstance = lenis;
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
+      // Synchronize Lenis with GSAP ScrollTrigger to prevent frame jitter
+      if (gsapAvailable) {
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => {
+          lenis.raf(time * 1000);
+        });
+        gsap.ticker.lagSmoothing(0);
+      } else {
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+      }
     }
-    requestAnimationFrame(raf);
   }
 
-  // ── 6. GSAP Entrance Animations ──
+  // Smooth scroll for internal anchor links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (!targetId || targetId === '#') return;
+      const targetEl = document.querySelector(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        if (window.lenisInstance) {
+          window.lenisInstance.scrollTo(targetEl, { offset: -70 });
+        } else {
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+
+  // ── 6. GSAP Entrance Animations (Optimized with once: true) ──
   if (gsapAvailable) {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Reveal elements on scroll
+    // Reveal elements on scroll - triggers detach after running to conserve CPU/GPU
     gsap.utils.toArray('.reveal').forEach((el) => {
       gsap.fromTo(
         el,
-        { opacity: 0, y: 24 },
+        { opacity: 0, y: 22 },
         {
           opacity: 1,
           y: 0,
-          duration: 0.7,
+          duration: 0.6,
           ease: 'power2.out',
           scrollTrigger: {
             trigger: el,
             start: 'top 88%',
-            toggleActions: 'play none none none'
+            once: true
+          },
+          onComplete: () => {
+            el.style.willChange = 'auto';
           }
         }
       );
@@ -156,11 +216,11 @@
 
     // Hero title entrance
     gsap.from('.text-reveal', {
-      y: 32,
+      y: 28,
       opacity: 0,
-      duration: 0.9,
+      duration: 0.8,
       ease: 'power3.out',
-      delay: 0.1
+      delay: 0.05
     });
   }
 
