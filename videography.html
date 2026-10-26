@@ -79,20 +79,202 @@
         </div>
       </section>
 
-      <!-- Featured Film -->
+      <!-- Featured Film Showcase -->
       <section class="px-5 py-12 md:px-8 lg:px-12">
         <div class="mx-auto max-w-6xl">
-          <div class="reveal card-warm overflow-hidden rounded-2xl p-8 lg:p-12">
-            <span class="section-label">Featured Film</span>
-            <h2 class="editorial-heading text-3xl text-white mt-3">Cinematic Brand Film</h2>
-            <div class="body-text text-sm text-white/60 mt-6 space-y-4 max-w-3xl leading-relaxed">
-              <p>I directed and edited a cinematic brand film for a luxury fragrance company. The brief was simple: communicate premium quality in 45 seconds without resorting to generic advertising tropes. I chose to focus on macro details — liquid motion, light playing on glass bottles, and textured surfaces — creating an emotional connection through ambient sound design and rhythmic pacing.</p>
-              <p>The film created by me achieved over 100,000 organic views on digital platforms and drove direct traffic to the brand's digital store. my approach to brand filmmaking is rooted in sensory storytelling: I believe that video should make the viewer feel something, not just see something.</p>
-              <p>This project exemplifies the I philosophy: strategy informs every creative decision, and every frame serves a purpose. I do not create videos to fill space — I create films that build brands.</p>
+          <div class="reveal card-warm overflow-hidden rounded-3xl border border-white/10 lg:grid lg:grid-cols-12 lg:gap-0">
+            <!-- Video Preview Trigger -->
+            <div class="lg:col-span-6 relative video-trigger group" data-video-src="videos/featured-brand-film.mp4" data-video-title="Cinematic Brand Film — Luxury Fragrance" data-video-category="Featured Film">
+              <img src="images/logo-videography.png" alt="Cinematic Brand Film preview" class="h-72 w-full object-cover transition duration-700 group-hover:scale-105 lg:h-full" loading="lazy" />
+              <div class="video-play-overlay">
+                <div class="video-play-btn-circle">
+                  <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                </div>
+              </div>
+              <span class="video-duration-badge">0:45 • 4K Film</span>
+            </div>
+            <!-- Video Details & Actions -->
+            <div class="lg:col-span-6 p-8 lg:p-12 flex flex-col justify-between space-y-6">
+              <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                  <span class="section-label">Featured Film</span>
+                  <span class="tag text-indigo-400 border-indigo-500/20">100k+ Views</span>
+                </div>
+                <h2 class="editorial-heading text-3xl sm:text-4xl text-white">Cinematic Brand Film</h2>
+                <div class="body-text text-sm text-white/60 space-y-3 leading-relaxed">
+                  <p>Directed and edited for an artisanal luxury fragrance house. The brief: communicate visceral sensory luxury in 45 seconds without resorting to cliché advertising tropes.</p>
+                  <p>Focused on macro liquid motion, light refractions on hand-cut glass, and deep ambient sound design — accumulating over 100,000 organic impressions across digital platforms.</p>
+                </div>
+              </div>
+              <div class="pt-4 border-t border-white/10 flex flex-wrap items-center gap-4">
+                <button type="button" class="btn-primary" data-video-src="videos/featured-brand-film.mp4" data-video-title="Cinematic Brand Film — Luxury Fragrance" data-video-category="Featured Film">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                  <span>Watch Featured Film</span>
+                </button>
+                <a href="#showcases" class="btn-ghost text-xs">
+                  <span>Explore More Videos</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Brand Showcases & Videography Reel Grid -->
+      <section id="showcases" class="px-5 py-16 md:px-8 lg:px-12 bg-white/[0.01]">
+        <div class="mx-auto max-w-6xl space-y-10">
+          <div class="reveal space-y-3">
+            <span class="section-label">Video Portfolio</span>
+            <h2 class="editorial-heading text-3xl sm:text-4xl text-white">Brand Showcases & Video Reel</h2>
+            <p class="body-text text-sm text-white/60 max-w-2xl">
+              High-impact visual narratives tailored for digital flagship experiences, editorial campaigns, and social channels. Click any film to watch in full resolution.
+            </p>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Showcase 1 -->
+            <article class="card-elevated reveal overflow-hidden rounded-2xl flex flex-col justify-between">
+              <div>
+                <div class="video-trigger group" data-video-src="videos/brand-showcase.mp4" data-video-title="Haute Parfumerie Brand Showcase" data-video-category="Brand Identity Showcase">
+                  <img src="images/logo-branding.png" alt="Brand Showcase" class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+                  <div class="video-play-overlay">
+                    <div class="video-play-btn-circle" style="width: 48px; height: 48px;">
+                      <svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                    </div>
+                  </div>
+                  <span class="video-duration-badge">1:15 • Brand Story</span>
+                </div>
+                <div class="p-6 space-y-3">
+                  <span class="section-label text-xs">Brand Showcase</span>
+                  <h3 class="editorial-heading text-xl text-white">Luxury Brand Identity Reveal</h3>
+                  <p class="body-text text-xs leading-relaxed">
+                    A cinematic overview demonstrating typography, unboxing rituals, and packaging craftsmanship formulated for a bespoke perfume brand.
+                  </p>
+                </div>
+              </div>
+              <div class="p-6 pt-0 flex items-center justify-between">
+                <span class="tag text-[0.7rem]">Identity Film</span>
+                <button type="button" class="btn-ghost text-xs py-2 px-4" data-video-src="videos/brand-showcase.mp4" data-video-title="Haute Parfumerie Brand Showcase" data-video-category="Brand Identity Showcase">
+                  <span>Watch Video</span>
+                </button>
+              </div>
+            </article>
+
+            <!-- Showcase 2 -->
+            <article class="card-elevated reveal overflow-hidden rounded-2xl flex flex-col justify-between">
+              <div>
+                <div class="video-trigger group" data-video-src="videos/product-reel.mp4" data-video-title="Macro Sensory Product Motion Reel" data-video-category="Product Videography">
+                  <img src="images/logo-photography.png" alt="Macro Product Video" class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+                  <div class="video-play-overlay">
+                    <div class="video-play-btn-circle" style="width: 48px; height: 48px;">
+                      <svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                    </div>
+                  </div>
+                  <span class="video-duration-badge">0:30 • Macro 4K</span>
+                </div>
+                <div class="p-6 space-y-3">
+                  <span class="section-label text-xs">Product Videography</span>
+                  <h3 class="editorial-heading text-xl text-white">Sensory Liquid & Bottle Motion</h3>
+                  <p class="body-text text-xs leading-relaxed">
+                    Studio lighting and high-speed shutter choreography capturing liquid viscosity, mist dispersion, and crystal reflections.
+                  </p>
+                </div>
+              </div>
+              <div class="p-6 pt-0 flex items-center justify-between">
+                <span class="tag text-[0.7rem]">Product Reel</span>
+                <button type="button" class="btn-ghost text-xs py-2 px-4" data-video-src="videos/product-reel.mp4" data-video-title="Macro Sensory Product Motion Reel" data-video-category="Product Videography">
+                  <span>Watch Video</span>
+                </button>
+              </div>
+            </article>
+
+            <!-- Showcase 3 -->
+            <article class="card-elevated reveal overflow-hidden rounded-2xl flex flex-col justify-between">
+              <div>
+                <div class="video-trigger group" data-video-src="videos/commercial-campaign.mp4" data-video-title="Commercial Brand Campaign & Social Reel" data-video-category="Commercial Campaign">
+                  <img src="images/logo-marketing.png" alt="Commercial Campaign Film" class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+                  <div class="video-play-overlay">
+                    <div class="video-play-btn-circle" style="width: 48px; height: 48px;">
+                      <svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                    </div>
+                  </div>
+                  <span class="video-duration-badge">0:42 • Social Cut</span>
+                </div>
+                <div class="p-6 space-y-3">
+                  <span class="section-label text-xs">Commercial Motion</span>
+                  <h3 class="editorial-heading text-xl text-white">Social Campaign & Growth Cuts</h3>
+                  <p class="body-text text-xs leading-relaxed">
+                    Fast-paced, hook-optimized short cuts engineered for high retention across Instagram Reels, YouTube Shorts, and paid ad funnels.
+                  </p>
+                </div>
+              </div>
+              <div class="p-6 pt-0 flex items-center justify-between">
+                <span class="tag text-[0.7rem]">Growth Reel</span>
+                <button type="button" class="btn-ghost text-xs py-2 px-4" data-video-src="videos/commercial-campaign.mp4" data-video-title="Commercial Brand Campaign & Social Reel" data-video-category="Commercial Campaign">
+                  <span>Watch Video</span>
+                </button>
+              </div>
+            </article>
+
+            <!-- Showcase 4 -->
+            <article class="card-elevated reveal overflow-hidden rounded-2xl flex flex-col justify-between">
+              <div>
+                <div class="video-trigger group" data-video-src="videos/brand-reel-cinematic.mp4" data-video-title="Cinematic Lifestyle & Visual Narrative" data-video-category="Cinematography Reel">
+                  <img src="images/logo-videography.png" alt="Cinematic Lifestyle Film" class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+                  <div class="video-play-overlay">
+                    <div class="video-play-btn-circle" style="width: 48px; height: 48px;">
+                      <svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                    </div>
+                  </div>
+                  <span class="video-duration-badge">0:27 • 4K Reel</span>
+                </div>
+                <div class="p-6 space-y-3">
+                  <span class="section-label text-xs">Cinematic Storytelling</span>
+                  <h3 class="editorial-heading text-xl text-white">Atmospheric Visual Narrative</h3>
+                  <p class="body-text text-xs leading-relaxed">
+                    Sensory compositions exploring shadow dynamics, natural light balance, and fluid motion designed to evoke intimacy and connection.
+                  </p>
+                </div>
+              </div>
+              <div class="p-6 pt-0 flex items-center justify-between">
+                <span class="tag text-[0.7rem]">Atmospheric</span>
+                <button type="button" class="btn-ghost text-xs py-2 px-4" data-video-src="videos/brand-reel-cinematic.mp4" data-video-title="Cinematic Lifestyle & Visual Narrative" data-video-category="Cinematography Reel">
+                  <span>Watch Video</span>
+                </button>
+              </div>
+            </article>
+
+            <!-- Showcase 5 -->
+            <article class="card-elevated reveal overflow-hidden rounded-2xl flex flex-col justify-between">
+              <div>
+                <div class="video-trigger group" data-video-src="videos/brand-reel-editorial.mp4" data-video-title="Editorial Brand Sequence & Color Grade" data-video-category="Post-Production & Grade">
+                  <img src="images/logo-branding.png" alt="Editorial Brand Sequence" class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+                  <div class="video-play-overlay">
+                    <div class="video-play-btn-circle" style="width: 48px; height: 48px;">
+                      <svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                    </div>
+                  </div>
+                  <span class="video-duration-badge">0:29 • Color Grade</span>
+                </div>
+                <div class="p-6 space-y-3">
+                  <span class="section-label text-xs">Post-Production</span>
+                  <h3 class="editorial-heading text-xl text-white">Editorial Grade & Pacing</h3>
+                  <p class="body-text text-xs leading-relaxed">
+                    Custom film-emulation color grading, micro-transitions, and audio soundscapes crafted to communicate quiet luxury and restraint.
+                  </p>
+                </div>
+              </div>
+              <div class="p-6 pt-0 flex items-center justify-between">
+                <span class="tag text-[0.7rem]">Color Grade</span>
+                <button type="button" class="btn-ghost text-xs py-2 px-4" data-video-src="videos/brand-reel-editorial.mp4" data-video-title="Editorial Brand Sequence & Color Grade" data-video-category="Post-Production & Grade">
+                  <span>Watch Video</span>
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
 
       <!-- Videography Services -->
       <section class="px-5 py-16 md:px-8 lg:px-12">
@@ -212,8 +394,8 @@
         <div class="flex flex-col items-center justify-between gap-4 text-xs text-white/40 md:flex-row">
           <p>© 2026 Piyush Vaid. All rights reserved.</p>
           <div class="flex gap-4">
-            <a href="#" class="transition hover:text-white">Instagram</a>
-            <a href="#" class="transition hover:text-white">LinkedIn</a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="transition hover:text-white">Instagram</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="transition hover:text-white">LinkedIn</a>
             <a href="mailto:piyushvaid08@gmail.com" class="transition hover:text-white">Email</a>
           </div>
         </div>

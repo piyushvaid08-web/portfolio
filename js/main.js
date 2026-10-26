@@ -261,4 +261,185 @@
     });
   });
 
+  // ── 8. Global Video Player Lightbox / Modal ──
+  const SAMPLE_BRAND_VIDEO = 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4';
+
+  let videoModalEl = null;
+  let videoViewportEl = null;
+  let videoTitleEl = null;
+  let videoCategoryEl = null;
+  let activeMediaEl = null;
+
+  function initVideoModal() {
+    if (document.getElementById('pv-video-modal')) {
+      videoModalEl = document.getElementById('pv-video-modal');
+      videoViewportEl = videoModalEl.querySelector('.video-modal-viewport');
+      videoTitleEl = videoModalEl.querySelector('.video-modal-title');
+      videoCategoryEl = videoModalEl.querySelector('.video-modal-category');
+      return;
+    }
+
+    videoModalEl = document.createElement('div');
+    videoModalEl.id = 'pv-video-modal';
+    videoModalEl.className = 'video-modal-backdrop';
+    videoModalEl.setAttribute('role', 'dialog');
+    videoModalEl.setAttribute('aria-modal', 'true');
+    videoModalEl.innerHTML = `
+      <div class="video-modal-dialog">
+        <div class="video-modal-header">
+          <div class="flex items-center gap-3">
+            <span class="brand-dot"></span>
+            <div>
+              <span class="video-modal-category text-[0.7rem] uppercase tracking-wider text-indigo-400 font-bold block">Brand Showcasing & Videography</span>
+              <h3 class="video-modal-title text-lg font-serif">Cinematic Video</h3>
+            </div>
+          </div>
+          <button type="button" class="video-modal-close-btn" aria-label="Close Video Player">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="video-modal-viewport"></div>
+        <div class="video-modal-footer">
+          <span class="flex items-center gap-2">
+            <svg class="w-3.5 h-3.5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+            </svg>
+            Directed & Produced by Piyush Vaid
+          </span>
+          <span class="text-white/40">Press ESC or click outside to close</span>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(videoModalEl);
+    videoViewportEl = videoModalEl.querySelector('.video-modal-viewport');
+    videoTitleEl = videoModalEl.querySelector('.video-modal-title');
+    videoCategoryEl = videoModalEl.querySelector('.video-modal-category');
+
+    // Close on backdrop click
+    videoModalEl.addEventListener('click', (e) => {
+      if (e.target === videoModalEl || e.target.closest('.video-modal-close-btn')) {
+        closeVideoModal();
+      }
+    });
+
+    // Close on ESC key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && videoModalEl.classList.contains('is-active')) {
+        closeVideoModal();
+      }
+    });
+  }
+
+  function parseVideoUrl(url) {
+    if (!url) return { type: 'none', src: '' };
+    // YouTube
+    const ytMatch = url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
+    if (ytMatch) {
+      return { type: 'youtube', id: ytMatch[1] };
+    }
+    // Vimeo
+    const vimeoMatch = url.match(/vimeo\.com\/(?:channels\/(?:\w+\/)?|groups\/(?:[^\/]*)\/videos\/|album\/(?:\d+)\/video\/|video\/|)(\d+)/);
+    if (vimeoMatch) {
+      return { type: 'vimeo', id: vimeoMatch[1] };
+    }
+    // Direct / Local video file
+    return { type: 'direct', src: url };
+  }
+
+  function openVideoModal(videoSrc, title, category) {
+    initVideoModal();
+    if (title && videoTitleEl) videoTitleEl.textContent = title;
+    if (category && videoCategoryEl) videoCategoryEl.textContent = category;
+
+    videoViewportEl.innerHTML = '';
+    const parsed = parseVideoUrl(videoSrc);
+
+    if (parsed.type === 'youtube') {
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube.com/embed/${parsed.id}?autoplay=1&rel=0&modestbranding=1`;
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen');
+      iframe.setAttribute('allowfullscreen', 'true');
+      videoViewportEl.appendChild(iframe);
+      activeMediaEl = iframe;
+    } else if (parsed.type === 'vimeo') {
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://player.vimeo.com/video/${parsed.id}?autoplay=1`;
+      iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
+      iframe.setAttribute('allowfullscreen', 'true');
+      videoViewportEl.appendChild(iframe);
+      activeMediaEl = iframe;
+    } else {
+      // Direct video file
+      const video = document.createElement('video');
+      video.src = parsed.src || SAMPLE_BRAND_VIDEO;
+      video.controls = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      video.className = 'w-full h-full object-contain';
+
+      // Fallback if local file isn't uploaded yet
+      video.addEventListener('error', () => {
+        videoViewportEl.innerHTML = `
+          <div class="p-8 text-center max-w-md space-y-4">
+            <div class="w-12 h-12 mx-auto rounded-full bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+            </div>
+            <h4 class="text-white font-medium text-base">Video File Ready to Link</h4>
+            <p class="text-xs text-white/60 leading-relaxed">
+              Place your video file at <code class="text-indigo-300 font-mono">${parsed.src}</code> in the <code class="text-indigo-300 font-mono">videos/</code> folder, or link to a YouTube/Vimeo URL.
+            </p>
+            <button type="button" class="btn-primary text-xs py-2 px-4 demo-preview-btn">
+              Play Demo Luxury Reel Instead
+            </button>
+          </div>
+        `;
+        const demoBtn = videoViewportEl.querySelector('.demo-preview-btn');
+        if (demoBtn) {
+          demoBtn.addEventListener('click', () => {
+            openVideoModal(SAMPLE_BRAND_VIDEO, `${title} (Demo Reel)`, category);
+          });
+        }
+      });
+
+      videoViewportEl.appendChild(video);
+      activeMediaEl = video;
+      video.play().catch(() => {});
+    }
+
+    videoModalEl.classList.add('is-active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeVideoModal() {
+    if (!videoModalEl) return;
+    videoModalEl.classList.remove('is-active');
+    document.body.style.overflow = '';
+
+    if (activeMediaEl) {
+      if (typeof activeMediaEl.pause === 'function') {
+        activeMediaEl.pause();
+      }
+      activeMediaEl = null;
+    }
+    if (videoViewportEl) {
+      videoViewportEl.innerHTML = '';
+    }
+  }
+
+  // Delegated event listener for all video triggers and buttons
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('[data-video-src], [data-open-video]');
+    if (trigger) {
+      e.preventDefault();
+      const src = trigger.getAttribute('data-video-src') || SAMPLE_BRAND_VIDEO;
+      const title = trigger.getAttribute('data-video-title') || 'Brand Showcase & Videography';
+      const category = trigger.getAttribute('data-video-category') || 'Videography Portfolio';
+      openVideoModal(src, title, category);
+    }
+  });
+
 })();
+
