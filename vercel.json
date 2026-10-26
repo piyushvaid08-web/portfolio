@@ -20,6 +20,11 @@
   ],
   "redirects": [
     {
+      "source": "/testimonials(.*)",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/(.*)",
       "destination": "https://piyushvaid.online/$1",
       "has": [
