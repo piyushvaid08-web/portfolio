@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href="https://piyushvaid.online/" />
     <meta name="google-site-verification" content="CZytKD1dVpU1-fLDEgqpeqdpvo94lJ0yr19hGoxhodY" />
-    <title>Piyush Vaid — Brand Builder, Digital Marketer & Creative Technologist</title>
+    <title>Piyush Vaid — Brand Builder, Digital Marketer &amp; Creative Technologist</title>
     <meta name="description" content="Piyush Vaid is a digital marketer, entrepreneur, and creative technologist. Piyush Vaid builds brands through strategy, design, photography, and technology. Work with Piyush Vaid to grow your brand." />
     <meta name="keywords" content="Piyush Vaid, digital marketer Piyush Vaid, entrepreneur Piyush Vaid, creative technologist Piyush Vaid, brand builder Piyush Vaid, Piyush Vaid marketing, Piyush Vaid branding" />
-    <meta name="theme-color" content="#090b11" />
-    <meta property="og:title" content="Piyush Vaid — Brand Builder, Digital Marketer & Creative Technologist" />
+    <meta name="theme-color" content="#070910" />
+    <meta property="og:title" content="Piyush Vaid — Brand Builder, Digital Marketer &amp; Creative Technologist" />
     <meta property="og:description" content="Piyush Vaid builds brands through strategy, design, and technology." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80" />
@@ -28,8 +28,8 @@
               accent: '#6366f1',
               accentLight: '#818cf8',
               accentCyan: '#38bdf8',
-              deep: '#090b11',
-              surface: 'rgba(255,255,255,0.035)'
+              deep: '#070910',
+              surface: 'rgba(255,255,255,0.045)'
             }
           }
         }
@@ -49,7 +49,77 @@
         "sameAs": ["https://piyushvaid.online/portfolio.html", "https://piyushvaid.online/services.html"]
       }
     </script>
+
+    <style>
+      /* ── Inline theme-aware overrides for elements that use Tailwind hardcoded classes ── */
+
+      /* Ensure all text respects theme variables */
+      .theme-text        { color: var(--text) !important; }
+      .theme-text-sub    { color: var(--text-sub) !important; }
+      .theme-text-muted  { color: var(--text-muted) !important; }
+      .theme-text-faint  { color: var(--text-faint) !important; }
+      .theme-text-accent { color: var(--accent-lit) !important; }
+      [data-theme="light"] .theme-text-accent { color: var(--accent) !important; }
+
+      .theme-border       { border-color: var(--border) !important; }
+      .theme-border-mid   { border-color: var(--border-mid) !important; }
+      .theme-border-accent{ border-color: var(--border-accent) !important; }
+      .theme-bg-surface   { background: var(--surface) !important; }
+
+      /* Hero heading gradient */
+      .hero-gradient-text {
+        background: linear-gradient(135deg, var(--accent-lit) 0%, var(--accent-cyan) 50%, var(--accent-purple) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      [data-theme="light"] .hero-gradient-text {
+        background: linear-gradient(135deg, var(--accent) 0%, var(--accent-cyan) 60%, var(--accent-purple) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* Stats border */
+      .metrics-border { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 2rem; }
+
+      /* Card overlay gradient (always dark as it's over an image) */
+      .img-overlay-gradient {
+        background: linear-gradient(to top, rgba(7,9,16,0.95) 0%, rgba(7,9,16,0.3) 55%, transparent 100%);
+      }
+
+      /* Fixed inline white texts on cards that are always over images */
+      .over-image-text    { color: rgba(240,244,255,0.95) !important; }
+      .over-image-muted   { color: rgba(240,244,255,0.70) !important; }
+      .over-image-faint   { color: rgba(240,244,255,0.50) !important; }
+
+      /* Mobile drawer connect section */
+      .drawer-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-faint); margin-bottom: 0.4rem; }
+      .drawer-email { font-size: 0.9rem; font-weight: 600; color: var(--text-sub); }
+
+      /* Venture stat boxes */
+      .venture-stat-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.18em; font-weight: 700; color: var(--accent-lit); margin-bottom: 0.25rem; }
+      [data-theme="light"] .venture-stat-label { color: var(--accent); }
+      .venture-stat-desc  { font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; }
+
+      /* Footer links */
+      .footer-nav-link { font-size: 0.82rem; color: var(--text-muted); transition: color 0.2s; }
+      .footer-nav-link:hover { color: var(--text); }
+      .footer-copy { color: var(--text-faint); }
+      .footer-social { color: var(--text-faint); transition: color 0.2s; }
+      .footer-social:hover { color: var(--text); }
+
+      /* Form labels */
+      .form-label { display: block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); margin-bottom: 0.5rem; }
+
+      /* Contact anchors */
+      .contact-email-link { display: flex; align-items: center; gap: 0.75rem; font-size: 0.9rem; color: var(--text-muted); transition: color 0.2s; }
+      .contact-email-link:hover { color: var(--accent-lit); }
+      .contact-icon { width: 36px; height: 36px; border-radius: 50%; background: var(--surface); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1rem; flex-shrink: 0; transition: background 0.2s, border-color 0.2s; }
+      .contact-email-link:hover .contact-icon { background: var(--accent-soft); border-color: var(--border-accent); }
+    </style>
   </head>
+
   <body>
     <!-- Loading screen -->
     <div id="loading-screen" class="loading-screen">
@@ -63,32 +133,31 @@
     <div class="scroll-progress"></div>
     <button class="scroll-top" aria-label="Scroll to top">↑</button>
 
-    <!-- Ambient background light -->
+    <!-- Ambient background -->
     <div class="site-bg" aria-hidden="true"></div>
 
-    <!-- Header & Navigation -->
+    <!-- ── Header ── -->
     <header class="site-header px-5 py-4 md:px-8 lg:px-12">
       <nav class="mx-auto flex max-w-6xl items-center justify-between">
-        <a href="index.html" class="brand-mark text-white">
+        <a href="index.html" class="brand-mark">
           <span>Piyush Vaid</span>
           <span class="brand-dot"></span>
         </a>
 
-        <!-- Desktop Navigation -->
+        <!-- Desktop Nav -->
         <div class="hidden items-center gap-7 text-[0.82rem] md:flex">
-          <a href="index.html" class="nav-link active">Home</a>
-          <a href="about-piyush-vaid.html" class="nav-link">About</a>
-          <a href="services.html" class="nav-link">Services</a>
-          <a href="portfolio.html" class="nav-link">Portfolio</a>
-          <a href="case-studies.html" class="nav-link">Case Studies</a>
-          <a href="blog.html" class="nav-link">Blog</a>
-          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="index.html"              class="nav-link active">Home</a>
+          <a href="about-piyush-vaid.html"  class="nav-link">About</a>
+          <a href="services.html"           class="nav-link">Services</a>
+          <a href="portfolio.html"          class="nav-link">Portfolio</a>
+          <a href="case-studies.html"       class="nav-link">Case Studies</a>
+          <a href="blog.html"               class="nav-link">Blog</a>
+          <a href="contact.html"            class="nav-link">Contact</a>
         </div>
 
-        <!-- Action tools: Theme toggle & Mobile menu button -->
+        <!-- Controls -->
         <div class="flex items-center gap-3">
           <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
-            <!-- Icon will be inserted by main.js -->
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
           </button>
           <button id="menu-toggle" class="menu-toggle-btn md:hidden" aria-label="Open mobile menu" aria-expanded="false">
@@ -98,56 +167,55 @@
       </nav>
     </header>
 
-    <!-- Mobile Navigation Drawer -->
+    <!-- Mobile Drawer -->
     <div id="mobile-drawer" class="mobile-nav-drawer md:hidden">
       <div class="flex flex-col space-y-4">
-        <a href="index.html" class="mobile-link active">Home</a>
-        <a href="about-piyush-vaid.html" class="mobile-link">About</a>
-        <a href="services.html" class="mobile-link">Services</a>
-        <a href="portfolio.html" class="mobile-link">Portfolio</a>
-        <a href="case-studies.html" class="mobile-link">Case Studies</a>
-        <a href="blog.html" class="mobile-link">Blog & Insights</a>
-        <a href="contact.html" class="mobile-link">Contact</a>
+        <a href="index.html"              class="mobile-link active">Home</a>
+        <a href="about-piyush-vaid.html"  class="mobile-link">About</a>
+        <a href="services.html"           class="mobile-link">Services</a>
+        <a href="portfolio.html"          class="mobile-link">Portfolio</a>
+        <a href="case-studies.html"       class="mobile-link">Case Studies</a>
+        <a href="blog.html"               class="mobile-link">Blog &amp; Insights</a>
+        <a href="contact.html"            class="mobile-link">Contact</a>
       </div>
-      <div class="mt-auto pt-8 border-t border-white/10">
-        <p class="text-xs text-white/40 mb-3 uppercase tracking-wider">Direct Connect</p>
-        <p class="text-sm text-white/80 font-medium">piyushvaid08@gmail.com</p>
+      <div class="mt-auto pt-8" style="border-top: 1px solid var(--border);">
+        <p class="drawer-label">Direct Connect</p>
+        <p class="drawer-email">piyushvaid08@gmail.com</p>
       </div>
     </div>
 
     <main>
-      <!-- HERO SECTION -->
+      <!-- ══ HERO ══ -->
       <section id="hero" class="relative isolate px-5 pt-12 pb-20 md:px-8 lg:px-12 lg:pt-20 lg:pb-32">
         <div class="mx-auto max-w-6xl">
           <div class="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
             <div class="space-y-8">
-              <!-- Status Pill -->
-              <div class="inline-flex items-center gap-2.5 rounded-full border border-indigo-500/20 bg-indigo-500/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-indigo-300">
+
+              <!-- Status pill -->
+              <div class="hero-badge inline-flex items-center gap-2.5">
                 <span class="status-indicator"></span>
                 <span>Available for Select Brand Engagements</span>
               </div>
 
-              <!-- Main Heading -->
-              <h1 class="text-reveal editorial-heading text-4xl sm:text-6xl lg:text-[4.75rem] text-white">
+              <!-- Main heading -->
+              <h1 class="text-reveal editorial-heading text-4xl sm:text-6xl lg:text-[4.75rem]">
                 I Build Brands<br />
-                <span class="bg-gradient-to-r from-indigo-300 via-sky-300 to-indigo-400 bg-clip-text text-transparent">
-                  That People Remember.
-                </span>
+                <span class="hero-gradient-text">That People Remember.</span>
               </h1>
 
-              <!-- Value Prop -->
+              <!-- Value prop -->
               <p class="max-w-xl body-text text-base sm:text-lg">
                 I help visionary businesses carve their market distinction. Combining high-converting digital marketing, AI-accelerated web architecture, and luxury sensory branding into experiences that captivate and convert.
               </p>
 
-              <!-- CTA Actions -->
+              <!-- CTAs -->
               <div class="flex flex-wrap items-center gap-4 pt-2">
                 <a href="#portfolio" class="btn-primary">
                   <span>Explore Selected Work</span>
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
-                <button type="button" class="btn-ghost inline-flex items-center gap-2" data-video-src="videos/featured-brand-film.mp4" data-video-title="Piyush Vaid — 2026 Showreel & Brand Films" data-video-category="Showreel & Videography">
-                  <svg class="w-4 h-4 text-indigo-400 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                <button type="button" class="btn-ghost inline-flex items-center gap-2" data-video-src="videos/featured-brand-film.mp4" data-video-title="Piyush Vaid — 2026 Showreel &amp; Brand Films" data-video-category="Showreel &amp; Videography">
+                  <svg class="w-4 h-4 fill-current" style="color:var(--accent-lit);" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
                   <span>Watch Showreel</span>
                 </button>
                 <a href="#contact" class="btn-ghost">
@@ -155,14 +223,14 @@
                 </a>
               </div>
 
-              <!-- Metrics Strip -->
-              <div class="grid grid-cols-3 gap-6 pt-8 border-t border-white/[0.08]">
+              <!-- Metrics strip -->
+              <div class="metrics-border grid grid-cols-3 gap-6">
                 <div>
-                  <div class="stat-number">3<span class="text-indigo-400">+</span></div>
-                  <div class="stat-label">Years of Craft & Strategy</div>
+                  <div class="stat-number">3<span style="color:var(--accent-lit)">+</span></div>
+                  <div class="stat-label">Years of Craft &amp; Strategy</div>
                 </div>
                 <div>
-                  <div class="stat-number">3.2<span class="text-sky-400">x</span></div>
+                  <div class="stat-number">3.2<span style="color:var(--accent-cyan)">x</span></div>
                   <div class="stat-label">Average Campaign ROAS</div>
                 </div>
                 <div>
@@ -174,23 +242,21 @@
 
             <!-- Hero Feature Card -->
             <div class="reveal">
-              <div class="card-glass overflow-hidden rounded-3xl p-3 border border-white/10 shadow-2xl">
+              <div class="card-glass overflow-hidden rounded-3xl p-3" style="border-radius:1.75rem; box-shadow: 0 25px 60px rgba(0,0,0,0.4), 0 0 40px var(--accent-soft);">
                 <div class="relative overflow-hidden rounded-2xl">
-                  <img src="images/1000105058.jpg" alt="Piyush Vaid - Brand Builder and Creative Technologist" class="h-[400px] w-full object-cover lg:h-[480px]" loading="eager" decoding="async" fetchpriority="high" />
-                  <div class="absolute inset-0 bg-gradient-to-t from-[#090b11] via-transparent to-transparent opacity-80"></div>
-                  
+                  <img src="images/1000105058.jpg" alt="Piyush Vaid - Brand Builder and Creative Technologist" class="w-full object-cover" style="height:400px;" loading="eager" decoding="async" fetchpriority="high" />
+                  <div class="absolute inset-0 img-overlay-gradient"></div>
                   <div class="absolute bottom-0 inset-x-0 p-6 space-y-3">
                     <div class="flex items-center justify-between">
-                      <span class="text-xs uppercase tracking-widest text-indigo-300 font-semibold">Creative Technologist</span>
+                      <span style="font-size:0.68rem; text-transform:uppercase; letter-spacing:0.18em; font-weight:700; color:var(--accent-lit);">Creative Technologist</span>
                       <span class="tag">Founder · Marketer</span>
                     </div>
-                    <p class="text-white text-base font-medium">Piyush Vaid</p>
-                    <p class="text-xs text-white/70 leading-relaxed">
+                    <p class="over-image-text" style="font-size:1rem; font-weight:600;">Piyush Vaid</p>
+                    <p class="over-image-muted" style="font-size:0.78rem; line-height:1.55;">
                       Transforming ideas into resonant digital products, brand identities, and profitable growth engines.
                     </p>
                   </div>
                 </div>
-
                 <!-- Live Focus Pills -->
                 <div class="flex flex-wrap gap-2 p-4">
                   <span class="tag">Performance Growth</span>
@@ -204,42 +270,42 @@
         </div>
       </section>
 
-      <!-- CAPABILITIES BENTO SECTION -->
-      <section id="skills" class="px-5 py-24 md:px-8 lg:px-12 bg-white/[0.01]">
+      <!-- ══ CAPABILITIES BENTO ══ -->
+      <section id="skills" class="px-5 py-24 md:px-8 lg:px-12" style="background: var(--surface);">
         <div class="mx-auto max-w-6xl">
           <div class="reveal mb-14 space-y-3">
-            <span class="section-label">Capabilities & Stack</span>
-            <h2 class="editorial-heading text-3xl sm:text-5xl text-white">
+            <span class="section-label">Capabilities &amp; Stack</span>
+            <h2 class="editorial-heading text-3xl sm:text-5xl">
               A multidisciplinary toolkit<br />engineered for modern brands.
             </h2>
           </div>
 
           <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            <!-- Large Bento Card -->
+            <!-- Card 1 – Large -->
             <div class="card-elevated reveal rounded-3xl p-8 lg:col-span-2 lg:p-10 flex flex-col justify-between">
               <div>
                 <div class="flex items-center justify-between mb-6">
-                  <span class="section-label">Growth & Strategy</span>
+                  <span class="section-label">Growth &amp; Strategy</span>
                   <span class="tag">Core Engine</span>
                 </div>
-                <h3 class="editorial-heading text-2xl sm:text-4xl text-white">Full-Funnel Digital Marketing</h3>
+                <h3 class="editorial-heading text-2xl sm:text-4xl">Full-Funnel Digital Marketing</h3>
                 <p class="body-text text-sm sm:text-base mt-4 max-w-xl">
                   Strategic growth systems that turn cold audiences into loyal advocates. From high-intent SEO capture to precision Meta and Google ad architectures, I build campaigns optimized for return on ad spend and enduring retention.
                 </p>
               </div>
               <div class="flex flex-wrap gap-2 mt-8">
-                <span class="tag">Paid Social & Search</span>
+                <span class="tag">Paid Social &amp; Search</span>
                 <span class="tag">Advanced SEO</span>
                 <span class="tag">Retention Architecture</span>
                 <span class="tag">Attribution Analytics</span>
               </div>
             </div>
 
-            <!-- Bento Card 2 -->
+            <!-- Card 2 -->
             <div class="card-elevated reveal rounded-3xl p-8 flex flex-col justify-between">
               <div>
                 <span class="section-label">Digital Craft</span>
-                <h3 class="editorial-heading text-xl text-white mt-3">AI Web Architecture</h3>
+                <h3 class="editorial-heading text-xl mt-3">AI Web Architecture</h3>
                 <p class="body-text text-sm mt-3">
                   Fast, responsive, conversion-engineered websites built with clean semantic code, GSAP micro-interactions, and modern AI acceleration.
                 </p>
@@ -251,11 +317,11 @@
               </div>
             </div>
 
-            <!-- Bento Card 3 -->
+            <!-- Card 3 -->
             <div class="card-elevated reveal rounded-3xl p-8 flex flex-col justify-between">
               <div>
                 <span class="section-label">Aesthetics</span>
-                <h3 class="editorial-heading text-xl text-white mt-3">Luxury Identity Systems</h3>
+                <h3 class="editorial-heading text-xl mt-3">Luxury Identity Systems</h3>
                 <p class="body-text text-sm mt-3">
                   Restrained, timeless visual languages. Typography, color theory, and packaging shaped to position your brand at a defensible premium.
                 </p>
@@ -267,11 +333,11 @@
               </div>
             </div>
 
-            <!-- Bento Card 4 -->
+            <!-- Card 4 -->
             <div class="card-elevated reveal rounded-3xl p-8 flex flex-col justify-between">
               <div>
                 <span class="section-label">Visual Direction</span>
-                <h3 class="editorial-heading text-xl text-white mt-3">Cinematic Photo & Video</h3>
+                <h3 class="editorial-heading text-xl mt-3">Cinematic Photo &amp; Video</h3>
                 <p class="body-text text-sm mt-3">
                   High-end visual storytelling tailored for luxury consumer goods, digital campaigns, and social media resonance.
                 </p>
@@ -283,11 +349,11 @@
               </div>
             </div>
 
-            <!-- Bento Card 5 -->
+            <!-- Card 5 -->
             <div class="card-elevated reveal rounded-3xl p-8 flex flex-col justify-between">
               <div>
                 <span class="section-label">Innovation</span>
-                <h3 class="editorial-heading text-xl text-white mt-3">AI Pipelines & Automation</h3>
+                <h3 class="editorial-heading text-xl mt-3">AI Pipelines &amp; Automation</h3>
                 <p class="body-text text-sm mt-3">
                   Custom prompt engineering and generative content pipelines that accelerate creative production by up to 80% without losing soul.
                 </p>
@@ -302,13 +368,13 @@
         </div>
       </section>
 
-      <!-- SELECTED WORKS / PORTFOLIO -->
+      <!-- ══ SELECTED WORKS ══ -->
       <section id="portfolio" class="px-5 py-24 md:px-8 lg:px-12">
         <div class="mx-auto max-w-6xl">
           <div class="reveal mb-14 flex flex-col justify-between gap-4 md:flex-row md:items-end">
             <div>
               <span class="section-label">Selected Works</span>
-              <h2 class="editorial-heading text-3xl sm:text-5xl text-white mt-2">
+              <h2 class="editorial-heading text-3xl sm:text-5xl mt-2">
                 Proven strategy.<br />Executed with precision.
               </h2>
             </div>
@@ -322,10 +388,10 @@
             <!-- Project 1 -->
             <article class="card-elevated reveal overflow-hidden rounded-3xl lg:row-span-2 flex flex-col justify-between">
               <div>
-                <div class="video-trigger group" data-video-src="videos/commercial-campaign.mp4" data-video-title="Full-Funnel Growth Engine & Campaign Reel" data-video-category="Digital Marketing & Campaign Reel">
+                <div class="video-trigger group" data-video-src="videos/commercial-campaign.mp4" data-video-title="Full-Funnel Growth Engine &amp; Campaign Reel" data-video-category="Digital Marketing &amp; Campaign Reel">
                   <img src="images/logo-marketing.png" alt="Digital Marketing Campaign" class="h-60 w-full object-cover transition duration-500 group-hover:scale-105 lg:h-72" loading="lazy" decoding="async" />
                   <div class="video-play-overlay">
-                    <div class="video-play-btn-circle" style="width: 52px; height: 52px;">
+                    <div class="video-play-btn-circle" style="width:52px;height:52px;">
                       <svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
                     </div>
                   </div>
@@ -334,9 +400,9 @@
                 <div class="p-8">
                   <div class="flex items-center justify-between mb-3">
                     <span class="section-label">Digital Marketing</span>
-                    <span class="tag text-indigo-400 border-indigo-500/20">3.2x ROAS</span>
+                    <span class="tag" style="color:var(--accent-lit);border-color:var(--border-accent);">3.2x ROAS</span>
                   </div>
-                  <h3 class="editorial-heading text-2xl text-white">Full-Funnel Growth Engine</h3>
+                  <h3 class="editorial-heading text-2xl">Full-Funnel Growth Engine</h3>
                   <p class="body-text text-sm mt-3">
                     Engineered an omni-channel acquisition and content distribution strategy for a premium DTC product, achieving a 140% boost in organic visibility and scalable ROAS.
                   </p>
@@ -347,7 +413,7 @@
                   <span class="tag">Meta Ads</span>
                   <span class="tag">SEO</span>
                 </div>
-                <button type="button" class="btn-primary text-xs py-2 px-4 inline-flex items-center gap-1.5" data-video-src="videos/commercial-campaign.mp4" data-video-title="Full-Funnel Growth Engine & Campaign Reel" data-video-category="Digital Marketing & Campaign Reel">
+                <button type="button" class="btn-primary text-xs py-2 px-4 inline-flex items-center gap-1.5" data-video-src="videos/commercial-campaign.mp4" data-video-title="Full-Funnel Growth Engine &amp; Campaign Reel" data-video-category="Digital Marketing &amp; Campaign Reel">
                   <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
                   <span>Watch Reel</span>
                 </button>
@@ -360,7 +426,7 @@
                 <div class="video-trigger group" data-video-src="videos/brand-showcase.mp4" data-video-title="Luxury Fragrance Visual System — Brand Showcase" data-video-category="Brand Identity Showcase">
                   <img src="images/logo-branding.png" alt="Luxury Brand Identity" class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async" />
                   <div class="video-play-overlay">
-                    <div class="video-play-btn-circle" style="width: 48px; height: 48px;">
+                    <div class="video-play-btn-circle" style="width:48px;height:48px;">
                       <svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
                     </div>
                   </div>
@@ -368,7 +434,7 @@
                 </div>
                 <div class="p-7">
                   <span class="section-label">Brand Identity</span>
-                  <h3 class="editorial-heading text-xl text-white mt-2">Luxury Fragrance Visual System</h3>
+                  <h3 class="editorial-heading text-xl mt-2">Luxury Fragrance Visual System</h3>
                   <p class="body-text text-sm mt-2">
                     Formulated a bespoke visual identity, packaging language, and storytelling framework for an artisanal fragrance house.
                   </p>
@@ -391,7 +457,7 @@
                 </div>
                 <div class="p-7">
                   <span class="section-label">Web Architecture</span>
-                  <h3 class="editorial-heading text-xl text-white mt-2">High-Performance Portfolio Site</h3>
+                  <h3 class="editorial-heading text-xl mt-2">High-Performance Portfolio Site</h3>
                   <p class="body-text text-sm mt-2">
                     Engineered an interactive, sub-second loading web experience with fluid GSAP transitions and 90+ Core Web Vitals score.
                   </p>
@@ -409,10 +475,10 @@
             <!-- Project 4 -->
             <article class="card-elevated reveal overflow-hidden rounded-3xl flex flex-col justify-between">
               <div>
-                <div class="video-trigger group" data-video-src="videos/product-reel.mp4" data-video-title="Sensory Product Photography & Motion Reel" data-video-category="Product Visuals Reel">
+                <div class="video-trigger group" data-video-src="videos/product-reel.mp4" data-video-title="Sensory Product Photography &amp; Motion Reel" data-video-category="Product Visuals Reel">
                   <img src="images/logo-photography.png" alt="Editorial Photography" class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async" />
                   <div class="video-play-overlay">
-                    <div class="video-play-btn-circle" style="width: 48px; height: 48px;">
+                    <div class="video-play-btn-circle" style="width:48px;height:48px;">
                       <svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
                     </div>
                   </div>
@@ -420,7 +486,7 @@
                 </div>
                 <div class="p-7">
                   <span class="section-label">Photography</span>
-                  <h3 class="editorial-heading text-xl text-white mt-2">Sensory Product Photography</h3>
+                  <h3 class="editorial-heading text-xl mt-2">Sensory Product Photography</h3>
                   <p class="body-text text-sm mt-2">
                     Crafted tactile, lighting-mastered product visuals capturing glass refraction and the nuanced aura of luxury goods.
                   </p>
@@ -428,7 +494,7 @@
               </div>
               <div class="p-7 pt-0 flex items-center justify-between">
                 <span class="tag">Lighting</span>
-                <button type="button" class="btn-ghost text-xs py-2 px-4 inline-flex items-center gap-1.5" data-video-src="videos/product-reel.mp4" data-video-title="Sensory Product Photography & Motion Reel" data-video-category="Product Visuals Reel">
+                <button type="button" class="btn-ghost text-xs py-2 px-4 inline-flex items-center gap-1.5" data-video-src="videos/product-reel.mp4" data-video-title="Sensory Product Photography &amp; Motion Reel" data-video-category="Product Visuals Reel">
                   <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
                   <span>Watch Reel</span>
                 </button>
@@ -438,10 +504,10 @@
             <!-- Project 5 -->
             <article class="card-elevated reveal overflow-hidden rounded-3xl flex flex-col justify-between">
               <div>
-                <div class="video-trigger group" data-video-src="videos/featured-brand-film.mp4" data-video-title="Cinematic Brand Narrative — Luxury Fragrance" data-video-category="Brand Showcasing & Videography">
+                <div class="video-trigger group" data-video-src="videos/featured-brand-film.mp4" data-video-title="Cinematic Brand Narrative — Luxury Fragrance" data-video-category="Brand Showcasing &amp; Videography">
                   <img src="images/logo-videography.png" alt="Cinematic Brand Film" class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async" />
                   <div class="video-play-overlay">
-                    <div class="video-play-btn-circle" style="width: 48px; height: 48px;">
+                    <div class="video-play-btn-circle" style="width:48px;height:48px;">
                       <svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
                     </div>
                   </div>
@@ -449,7 +515,7 @@
                 </div>
                 <div class="p-7">
                   <span class="section-label">Motion</span>
-                  <h3 class="editorial-heading text-xl text-white mt-2">Cinematic Brand Narrative</h3>
+                  <h3 class="editorial-heading text-xl mt-2">Cinematic Brand Narrative</h3>
                   <p class="body-text text-sm mt-2">
                     Directed and edited a cinematic brand film that accumulated over 100,000 organic views and elevated viewer sentiment.
                   </p>
@@ -457,7 +523,7 @@
               </div>
               <div class="p-7 pt-0 flex items-center justify-between">
                 <span class="tag">100k+ Views</span>
-                <button type="button" class="btn-ghost text-xs py-2 px-4 inline-flex items-center gap-1.5" data-video-src="videos/featured-brand-film.mp4" data-video-title="Cinematic Brand Narrative — Luxury Fragrance" data-video-category="Brand Showcasing & Videography">
+                <button type="button" class="btn-ghost text-xs py-2 px-4 inline-flex items-center gap-1.5" data-video-src="videos/featured-brand-film.mp4" data-video-title="Cinematic Brand Narrative — Luxury Fragrance" data-video-category="Brand Showcasing &amp; Videography">
                   <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
                   <span>Watch Film</span>
                 </button>
@@ -467,13 +533,13 @@
         </div>
       </section>
 
-      <!-- VENTURE / FRAGRANCE SPOTLIGHT -->
-      <section id="venture" class="px-5 py-24 md:px-8 lg:px-12 bg-gradient-to-b from-transparent via-indigo-950/20 to-transparent">
+      <!-- ══ VENTURE / FRAGRANCE SPOTLIGHT ══ -->
+      <section id="venture" class="px-5 py-24 md:px-8 lg:px-12" style="background: linear-gradient(to bottom, transparent, var(--accent-soft), transparent);">
         <div class="mx-auto max-w-6xl">
-          <div class="card-warm overflow-hidden rounded-3xl border border-white/10 p-8 lg:p-12">
+          <div class="card-warm overflow-hidden rounded-3xl p-8 lg:p-12">
             <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-              <div class="reveal overflow-hidden rounded-2xl border border-white/10 relative video-trigger group" data-video-src="videos/brand-showcase.mp4" data-video-title="Luxury Fragrance Founder Story & Brand Showcase" data-video-category="Brand Showcasing">
-                <img src="images/WhatsApp Image 2026-08-02 at 8.07.16 PM.png" alt="Luxury Perfume Brand founded by Piyush Vaid" class="h-[360px] w-full object-cover lg:h-[480px] transition duration-700 group-hover:scale-105" loading="lazy" decoding="async" />
+              <div class="reveal overflow-hidden rounded-2xl relative video-trigger group" style="border:1px solid var(--border);" data-video-src="videos/brand-showcase.mp4" data-video-title="Luxury Fragrance Founder Story &amp; Brand Showcase" data-video-category="Brand Showcasing">
+                <img src="images/WhatsApp Image 2026-08-02 at 8.07.16 PM.png" alt="Luxury Perfume Brand founded by Piyush Vaid" class="w-full object-cover transition duration-700 group-hover:scale-105" style="height:360px;" loading="lazy" decoding="async" />
                 <div class="video-play-overlay">
                   <div class="video-play-btn-circle">
                     <svg class="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
@@ -481,34 +547,35 @@
                 </div>
                 <span class="video-duration-badge">Brand Showcase Film</span>
               </div>
+
               <div class="reveal space-y-6">
-                <div class="inline-flex items-center gap-2 rounded-full border border-indigo-500/20 bg-indigo-500/10 px-3.5 py-1 text-xs font-semibold text-indigo-300">
+                <div class="hero-badge inline-flex items-center gap-2">
                   <span>Founder's Venture</span>
                 </div>
-                <h2 class="editorial-heading text-3xl sm:text-5xl text-white">
+                <h2 class="editorial-heading text-3xl sm:text-5xl">
                   Founded on restraint, detail, and sensory emotion.
                 </h2>
                 <p class="body-text text-base leading-relaxed">
                   As the founder of an artisanal luxury fragrance house, I don't just advise brands theoretically — I live the journey with real skin in the game. From olfactory formulation and bespoke packaging to narrative-driven e-commerce, every detail was built from the ground up.
                 </p>
-                
+
                 <div class="grid gap-4 sm:grid-cols-3 pt-4">
                   <div class="card-bordered">
-                    <p class="text-xs uppercase tracking-wider text-indigo-400 font-semibold mb-1">Aspiration</p>
-                    <p class="text-xs text-white/70">Scents that evoke intimacy, depth, and memory.</p>
+                    <p class="venture-stat-label">Aspiration</p>
+                    <p class="venture-stat-desc">Scents that evoke intimacy, depth, and memory.</p>
                   </div>
                   <div class="card-bordered">
-                    <p class="text-xs uppercase tracking-wider text-indigo-400 font-semibold mb-1">Restraint</p>
-                    <p class="text-xs text-white/70">True luxury speaks through subtlety rather than noise.</p>
+                    <p class="venture-stat-label">Restraint</p>
+                    <p class="venture-stat-desc">True luxury speaks through subtlety rather than noise.</p>
                   </div>
                   <div class="card-bordered">
-                    <p class="text-xs uppercase tracking-wider text-indigo-400 font-semibold mb-1">Execution</p>
-                    <p class="text-xs text-white/70">End-to-end design, packaging, and digital launch.</p>
+                    <p class="venture-stat-label">Execution</p>
+                    <p class="venture-stat-desc">End-to-end design, packaging, and digital launch.</p>
                   </div>
                 </div>
 
                 <div class="pt-2 flex flex-wrap items-center gap-4">
-                  <button type="button" class="btn-primary inline-flex items-center gap-2" data-video-src="videos/brand-showcase.mp4" data-video-title="Luxury Fragrance Founder Story & Brand Showcase" data-video-category="Brand Showcasing">
+                  <button type="button" class="btn-primary inline-flex items-center gap-2" data-video-src="videos/brand-showcase.mp4" data-video-title="Luxury Fragrance Founder Story &amp; Brand Showcase" data-video-category="Brand Showcasing">
                     <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
                     <span>Watch Brand Story</span>
                   </button>
@@ -523,41 +590,41 @@
         </div>
       </section>
 
-      <!-- STRATEGIC APPROACH -->
+      <!-- ══ STRATEGIC APPROACH ══ -->
       <section class="px-5 py-24 md:px-8 lg:px-12">
         <div class="mx-auto max-w-6xl">
           <div class="reveal mb-14 space-y-3">
-            <span class="section-label">Process & Philosophy</span>
-            <h2 class="editorial-heading text-3xl sm:text-5xl text-white">
+            <span class="section-label">Process &amp; Philosophy</span>
+            <h2 class="editorial-heading text-3xl sm:text-5xl">
               How ideas become market leaders.
             </h2>
           </div>
 
           <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             <div class="card-elevated reveal rounded-2xl p-7 space-y-4">
-              <span class="text-indigo-400 text-3xl font-light font-mono">01</span>
-              <h3 class="editorial-heading text-xl text-white">Discovery & Insight</h3>
+              <span class="process-number">01</span>
+              <h3 class="editorial-heading text-xl">Discovery &amp; Insight</h3>
               <p class="body-text text-sm">
                 Uncovering the core truths: brand equity, competitive whitespace, customer psychographics, and measurable KPIs.
               </p>
             </div>
             <div class="card-elevated reveal rounded-2xl p-7 space-y-4">
-              <span class="text-indigo-400 text-3xl font-light font-mono">02</span>
-              <h3 class="editorial-heading text-xl text-white">Strategic Architecture</h3>
+              <span class="process-number">02</span>
+              <h3 class="editorial-heading text-xl">Strategic Architecture</h3>
               <p class="body-text text-sm">
                 Formulating brand positioning, creative directions, digital marketing funnels, and messaging architectures.
               </p>
             </div>
             <div class="card-elevated reveal rounded-2xl p-7 space-y-4">
-              <span class="text-indigo-400 text-3xl font-light font-mono">03</span>
-              <h3 class="editorial-heading text-xl text-white">Precision Craft</h3>
+              <span class="process-number">03</span>
+              <h3 class="editorial-heading text-xl">Precision Craft</h3>
               <p class="body-text text-sm">
                 Executing visual assets, custom web development, cinematic content, and technical optimization in-house.
               </p>
             </div>
             <div class="card-elevated reveal rounded-2xl p-7 space-y-4">
-              <span class="text-indigo-400 text-3xl font-light font-mono">04</span>
-              <h3 class="editorial-heading text-xl text-white">Scaled Growth</h3>
+              <span class="process-number">04</span>
+              <h3 class="editorial-heading text-xl">Scaled Growth</h3>
               <p class="body-text text-sm">
                 Deploying multi-channel campaigns, analyzing performance data, and continuously optimizing for long-term ROI.
               </p>
@@ -566,51 +633,51 @@
         </div>
       </section>
 
-      <!-- CONTACT SECTION -->
+      <!-- ══ CONTACT ══ -->
       <section id="contact" class="px-5 py-24 md:px-8 lg:px-12">
         <div class="mx-auto max-w-6xl">
           <div class="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             <div class="reveal space-y-6">
               <span class="section-label">Let's Connect</span>
-              <h2 class="editorial-heading text-3xl sm:text-5xl text-white">
+              <h2 class="editorial-heading text-3xl sm:text-5xl">
                 Have a vision in mind?<br />Let's bring it to life.
               </h2>
               <p class="body-text text-base">
                 Whether you need a high-converting digital marketing campaign, an AI-powered web presence, or a complete luxury brand identity, I am available for select engagements.
               </p>
-              
+
               <div class="divider"></div>
 
               <div class="space-y-4 pt-2">
-                <a href="mailto:piyushvaid08@gmail.com" class="flex items-center gap-3 text-sm text-white/70 transition hover:text-indigo-300">
-                  <span class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-indigo-400">✉</span>
+                <a href="mailto:piyushvaid08@gmail.com" class="contact-email-link">
+                  <span class="contact-icon">✉</span>
                   <span>piyushvaid08@gmail.com</span>
                 </a>
-                <a href="contact.html" class="flex items-center gap-3 text-sm text-white/70 transition hover:text-indigo-300">
-                  <span class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-indigo-400">⚡</span>
+                <a href="contact.html" class="contact-email-link">
+                  <span class="contact-icon">⚡</span>
                   <span>Direct Consultation Booking Page →</span>
                 </a>
               </div>
             </div>
 
             <!-- Contact Form -->
-            <form class="reveal card-glass rounded-3xl p-8 lg:p-10 space-y-5 border border-white/10 shadow-2xl">
+            <form class="reveal card-glass rounded-3xl p-8 lg:p-10 space-y-5" style="border:1px solid var(--border-mid); box-shadow: var(--shadow-lg);">
               <div class="grid gap-5 md:grid-cols-2">
                 <div>
-                  <label class="block text-xs uppercase tracking-wider text-white/60 mb-2 font-semibold">Your Name</label>
+                  <label class="form-label">Your Name</label>
                   <input class="input-field" type="text" placeholder="e.g. Alex Morgan" required />
                 </div>
                 <div>
-                  <label class="block text-xs uppercase tracking-wider text-white/60 mb-2 font-semibold">Email Address</label>
+                  <label class="form-label">Email Address</label>
                   <input class="input-field" type="email" placeholder="alex@company.com" required />
                 </div>
               </div>
               <div>
-                <label class="block text-xs uppercase tracking-wider text-white/60 mb-2 font-semibold">Brand / Project</label>
+                <label class="form-label">Brand / Project</label>
                 <input class="input-field" type="text" placeholder="Project name or website URL" />
               </div>
               <div>
-                <label class="block text-xs uppercase tracking-wider text-white/60 mb-2 font-semibold">Tell Me About Your Goals</label>
+                <label class="form-label">Tell Me About Your Goals</label>
                 <textarea class="input-field" placeholder="What are you building and how can we collaborate?" required></textarea>
               </div>
               <button type="submit" class="btn-primary w-full py-3.5 text-base font-semibold">
@@ -623,35 +690,37 @@
       </section>
     </main>
 
-    <!-- FOOTER -->
+    <!-- ── FOOTER ── -->
     <footer class="site-footer px-5 py-12 md:px-8 lg:px-12">
       <div class="mx-auto max-w-6xl space-y-8">
         <div class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <div>
-            <a href="index.html" class="brand-mark text-white">
+            <a href="index.html" class="brand-mark">
               <span>Piyush Vaid</span>
               <span class="brand-dot"></span>
             </a>
-            <p class="text-xs text-white/50 mt-1 max-w-sm">
-              Brand Builder, Digital Marketer, Creative Technologist & Luxury Perfume Founder.
+            <p class="footer-copy" style="font-size:0.78rem; margin-top:0.3rem; max-width:22rem;">
+              Brand Builder, Digital Marketer, Creative Technologist &amp; Luxury Perfume Founder.
             </p>
           </div>
-          <div class="flex flex-wrap gap-6 text-xs text-white/60">
-            <a href="about-piyush-vaid.html" class="transition hover:text-white">About</a>
-            <a href="services.html" class="transition hover:text-white">Services</a>
-            <a href="portfolio.html" class="transition hover:text-white">Portfolio</a>
-            <a href="case-studies.html" class="transition hover:text-white">Case Studies</a>
-            <a href="blog.html" class="transition hover:text-white">Blog</a>
-            <a href="contact.html" class="transition hover:text-white">Contact</a>
+          <div class="flex flex-wrap gap-6">
+            <a href="about-piyush-vaid.html" class="footer-nav-link">About</a>
+            <a href="services.html"          class="footer-nav-link">Services</a>
+            <a href="portfolio.html"         class="footer-nav-link">Portfolio</a>
+            <a href="case-studies.html"      class="footer-nav-link">Case Studies</a>
+            <a href="blog.html"              class="footer-nav-link">Blog</a>
+            <a href="contact.html"           class="footer-nav-link">Contact</a>
           </div>
         </div>
+
         <div class="divider-wide"></div>
-        <div class="flex flex-col items-center justify-between gap-4 text-xs text-white/40 md:flex-row">
-          <p>© 2026 Piyush Vaid. All rights reserved.</p>
+
+        <div class="flex flex-col items-center justify-between gap-4 md:flex-row" style="font-size:0.78rem;">
+          <p class="footer-copy">© 2026 Piyush Vaid. All rights reserved.</p>
           <div class="flex gap-4">
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="transition hover:text-white">Instagram</a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="transition hover:text-white">LinkedIn</a>
-            <a href="mailto:piyushvaid08@gmail.com" class="transition hover:text-white">Email</a>
+            <a href="https://www.instagram.com/"  target="_blank" rel="noopener noreferrer" class="footer-social">Instagram</a>
+            <a href="https://www.linkedin.com/"   target="_blank" rel="noopener noreferrer" class="footer-social">LinkedIn</a>
+            <a href="mailto:piyushvaid08@gmail.com" class="footer-social">Email</a>
           </div>
         </div>
       </div>
