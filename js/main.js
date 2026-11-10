@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Piyush Vaid - Main Application Script
  * Smooth Scrolling, Ambient Theme Switching, Mobile Nav, Interactive Animations
  */
@@ -24,7 +24,7 @@
     // Sync browser chrome colour with current theme
     const metaThemeColor = document.querySelector('meta[name="theme-color"]');
     if (metaThemeColor) {
-      metaThemeColor.setAttribute('content', theme === 'dark' ? '#070910' : '#f5f7fd');
+      metaThemeColor.setAttribute('content', theme === 'dark' ? '#0b0d12' : '#f9f8f5');
     }
   }
 

@@ -1,12 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>404 — Page Not Found</title>
+    <meta name="theme-color" content="#0b0d12" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <style>
       body {
@@ -15,20 +16,24 @@
         min-height: 100vh;
         text-align: center;
         padding: 2rem;
+        background: var(--bg);
+        color: var(--text);
       }
       .card-404 {
         max-width: 480px;
         padding: 3rem;
-        border-radius: 1rem;
+        border-radius: 1.5rem;
         border: 1px solid var(--border);
+        background: var(--surface);
+        box-shadow: var(--shadow-lg);
       }
     </style>
   </head>
   <body>
     <div class="card-404">
       <p class="section-label" style="font-size: 0.65rem; margin-bottom: 1rem;">404</p>
-      <h1 class="editorial-heading" style="font-size: 2.5rem; color: white;">This page is not here.</h1>
-      <p style="font-family: 'DM Sans', sans-serif; line-height: 1.8; color: var(--muted); margin-top: 1rem; font-size: 0.9rem;">
+      <h1 class="editorial-heading" style="font-size: 2.5rem; color: var(--text);">This page is not here.</h1>
+      <p style="font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.8; color: var(--text-muted); margin-top: 1rem; font-size: 0.9rem;">
         The page you're looking for has moved, vanished, or never existed. Let's get you back on track.
       </p>
       <a href="index.html" class="btn-primary" style="margin-top: 1.5rem; display: inline-flex;">Return Home</a>

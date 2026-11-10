@@ -8,7 +8,7 @@
     <title>Piyush Vaid — Brand Builder, Digital Marketer &amp; Creative Technologist</title>
     <meta name="description" content="Piyush Vaid is a digital marketer, entrepreneur, and creative technologist. Piyush Vaid builds brands through strategy, design, photography, and technology. Work with Piyush Vaid to grow your brand." />
     <meta name="keywords" content="Piyush Vaid, digital marketer Piyush Vaid, entrepreneur Piyush Vaid, creative technologist Piyush Vaid, brand builder Piyush Vaid, Piyush Vaid marketing, Piyush Vaid branding" />
-    <meta name="theme-color" content="#070910" />
+    <meta name="theme-color" content="#0b0d12" />
     <meta property="og:title" content="Piyush Vaid — Brand Builder, Digital Marketer &amp; Creative Technologist" />
     <meta property="og:description" content="Piyush Vaid builds brands through strategy, design, and technology." />
     <meta property="og:type" content="website" />
@@ -25,11 +25,14 @@
         theme: {
           extend: {
             colors: {
-              accent: '#6366f1',
-              accentLight: '#818cf8',
-              accentCyan: '#38bdf8',
-              deep: '#070910',
-              surface: 'rgba(255,255,255,0.045)'
+              accent: '#c5a059',
+              accentLight: '#dfbf7d',
+              accentLit: '#dfbf7d',
+              accentCyan: '#dfbf7d',
+              accentPurple: '#b89047',
+              warm: '#e8d7b8',
+              deep: '#0b0d12',
+              surface: 'rgba(255,255,255,0.04)'
             }
           }
         }
@@ -68,13 +71,13 @@
 
       /* Hero heading gradient */
       .hero-gradient-text {
-        background: linear-gradient(135deg, var(--accent-lit) 0%, var(--accent-cyan) 50%, var(--accent-purple) 100%);
+        background: var(--grad-text);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
       }
       [data-theme="light"] .hero-gradient-text {
-        background: linear-gradient(135deg, var(--accent) 0%, var(--accent-cyan) 60%, var(--accent-purple) 100%);
+        background: var(--grad-text);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -85,7 +88,7 @@
 
       /* Card overlay gradient (always dark as it's over an image) */
       .img-overlay-gradient {
-        background: linear-gradient(to top, rgba(7,9,16,0.95) 0%, rgba(7,9,16,0.3) 55%, transparent 100%);
+        background: linear-gradient(to top, rgba(11,13,18,0.95) 0%, rgba(11,13,18,0.3) 55%, transparent 100%);
       }
 
       /* Fixed inline white texts on cards that are always over images */
@@ -226,7 +229,7 @@
                   <div class="stat-label">Years of Craft &amp; Strategy</div>
                 </div>
                 <div>
-                  <div class="stat-number">3.2<span style="color:var(--accent-cyan)">x</span></div>
+                  <div class="stat-number">3.2<span style="color:var(--accent-lit)">x</span></div>
                   <div class="stat-label">Average Campaign ROAS</div>
                 </div>
                 <div>
